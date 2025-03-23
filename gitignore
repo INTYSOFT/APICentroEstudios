@@ -1,0 +1,72 @@
+# Archivos de compilación y build
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.DS_Store
+*.vscode/
+
+# Configuración de Rider y VSCode
+.idea/
+.vscode/
+
+# Configuración de Visual Studio
+*.vs/
+.vs/
+
+# Archivos de publicación
+publish/
+out/
+dist/
+
+# Configuración específica de usuario
+appsettings.Development.json
+appsettings.Local.json
+
+# Secretos o configuraciones sensibles
+secrets.json
+
+# Archivos de lock de dependencias (si no compartes el mismo entorno)
+project.lock.json
+project.fragment.lock.json
+
+# Paquetes NuGet descargados
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Certificados de desarrollo (si aplica)
+*.pfx
+*.key
+*.crt
+*.pem
+
+# Coverage de pruebas
+coverage/
+TestResults/
+*.coverage
+*.coveragexml
+
+# Docker
+docker-compose.override.yml
+
+# Archivos de sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Archivos de backup personales
+*.bak
+*.old
+*.orig
