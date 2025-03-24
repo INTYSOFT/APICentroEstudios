@@ -1,137 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\inti\\APIWeb\\api_intiSoft\\",
+  "WorkspaceRootPath": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\seguridad\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\seguridad\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\contabilidad\\ctplancontablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\contabilidad\\ctplancontablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\contabilidad\\ctplancontablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\seguridad\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\seguridad\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\seguridad\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\seguridad\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\seguridad\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\seguridad\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\seguridad\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\seguridad\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\data\\conecdinamicacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\data\\conecdinamicacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:data\\conecdinamicacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lgproductopresentacionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lgproductopresentacionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lgproductopresentacionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgproductovariante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgproductovariante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgproductovariante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lgmarcacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lgmarcacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lgmarcacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lglineacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lglineacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lglineacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgmarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\data\\tenantsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\data\\tenantsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:data\\tenantsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\api_intisoft.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\api_intisoft.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:api_intisoft.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lglistafichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lglistafichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lglistafichatecnicascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgdetallelistafichatecnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgdetallelistafichatecnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgdetallelistafichatecnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lglistafichatecnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lglistafichatecnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lglistafichatecnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lgatributoasignadoproductoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lgatributoasignadoproductoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lgatributoasignadoproductoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgempaque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgempaque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgempaque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgdetalleguiaremision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgdetalleguiaremision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgdetalleguiaremision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lginventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lginventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lginventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgprecio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgprecio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgprecio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\contabilidad\\dbintisoftcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\contabilidad\\dbintisoftcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\contabilidad\\dbintisoftcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lgempresaasociadaproductoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lgempresaasociadaproductoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lgempresaasociadaproductoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lgempresaasociadumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lgempresaasociadumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lgempresaasociadumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\controllers\\logistica\\producto\\lgtipomarcascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\controllers\\logistica\\producto\\lgtipomarcascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:controllers\\logistica\\producto\\lgtipomarcascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgtipomarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgtipomarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgtipomarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgtipomonedum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\logistica\\producto\\lgtipomonedum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgtipomonedum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\api_intisoft.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\api_intisoft.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:api_intisoft.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\data\\customtenantinfo .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft git\\intibackend\\models\\data\\customtenantinfo .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\data\\customtenantinfo .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -153,14 +149,18 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CtPlanContablesController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Contabilidad\\CtPlanContablesController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Contabilidad\\CtPlanContablesController.cs",
               "RelativeDocumentMoniker": "Controllers\\Contabilidad\\CtPlanContablesController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Contabilidad\\CtPlanContablesController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Contabilidad\\CtPlanContablesController.cs",
               "RelativeToolTip": "Controllers\\Contabilidad\\CtPlanContablesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T20:02:31.474Z",
               "EditorCaption": ""
@@ -169,82 +169,58 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Seguridad\\AuthController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Seguridad\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\Seguridad\\AuthController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Seguridad\\AuthController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Seguridad\\AuthController.cs",
               "RelativeToolTip": "Controllers\\Seguridad\\AuthController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAACUAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:00:04.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T20:00:04.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Seguridad\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "Models\\Seguridad\\AuthResponse.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Seguridad\\AuthResponse.cs",
+              "RelativeToolTip": "Models\\Seguridad\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T19:59:01.212Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AuthResponse.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Seguridad\\AuthResponse.cs",
-              "RelativeDocumentMoniker": "Models\\Seguridad\\AuthResponse.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Seguridad\\AuthResponse.cs",
-              "RelativeToolTip": "Models\\Seguridad\\AuthResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T19:59:01.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "UserModel.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Seguridad\\UserModel.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Seguridad\\UserModel.cs",
               "RelativeDocumentMoniker": "Models\\Seguridad\\UserModel.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Seguridad\\UserModel.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Seguridad\\UserModel.cs",
               "RelativeToolTip": "Models\\Seguridad\\UserModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T19:57:39.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T19:57:39.783Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Program.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Program.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAawHYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAQwGEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T01:09:49.288Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-13T00:19:35.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "LgMarcaController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgMarcaController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgMarcaController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgMarcaController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgMarcaController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgMarcaController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgMarcaController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAcwDgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -252,11 +228,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "LgLineaController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgLineaController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgLineaController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgLineaController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgLineaController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgLineaController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgLineaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -264,24 +240,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ConecDinamicaContext.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Data\\ConecDinamicaContext.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Data\\ConecDinamicaContext.cs",
               "RelativeDocumentMoniker": "Data\\ConecDinamicaContext.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Data\\ConecDinamicaContext.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Data\\ConecDinamicaContext.cs",
               "RelativeToolTip": "Data\\ConecDinamicaContext.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAD4v0oAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T06:26:07.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T06:26:07.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "LgProductoPresentacionsController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgProductoPresentacionsController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgProductoPresentacionsController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgProductoPresentacionsController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgProductoPresentacionsController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgProductoPresentacionsController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgProductoPresentacionsController.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAAAAFoAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -289,11 +264,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "TenantsDbContext.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Data\\TenantsDbContext.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Data\\TenantsDbContext.cs",
               "RelativeDocumentMoniker": "Data\\TenantsDbContext.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Data\\TenantsDbContext.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Data\\TenantsDbContext.cs",
               "RelativeToolTip": "Data\\TenantsDbContext.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -301,11 +276,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "LgMarca.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgMarca.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgMarca.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgMarca.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgMarca.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgMarca.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgMarca.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAmwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -313,22 +288,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "api_intiSoft",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\api_intiSoft.csproj",
               "RelativeDocumentMoniker": "api_intiSoft.csproj",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\api_intiSoft.csproj",
               "RelativeToolTip": "api_intiSoft.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-11-28T01:15:17.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "LgProductoVariante.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgProductoVariante.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgProductoVariante.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgProductoVariante.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgProductoVariante.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgProductoVariante.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgProductoVariante.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAkwGAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -336,11 +311,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\WeatherForecast.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\WeatherForecast.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\WeatherForecast.cs",
               "RelativeToolTip": "WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -348,11 +323,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "LgAtributoAsignadoProductoesController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgAtributoAsignadoProductoesController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgAtributoAsignadoProductoesController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgAtributoAsignadoProductoesController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgAtributoAsignadoProductoesController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgAtributoAsignadoProductoesController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgAtributoAsignadoProductoesController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -360,11 +335,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "LgListaFichaTecnicasController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgListaFichaTecnicasController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgListaFichaTecnicasController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgListaFichaTecnicasController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgListaFichaTecnicasController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgListaFichaTecnicasController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgListaFichaTecnicasController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAcwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -372,11 +347,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "LgDetalleGuiaRemision.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -384,11 +359,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "LgDetalleListaFichaTecnica.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgDetalleListaFichaTecnica.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgDetalleListaFichaTecnica.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgDetalleListaFichaTecnica.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgDetalleListaFichaTecnica.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgDetalleListaFichaTecnica.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgDetalleListaFichaTecnica.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -396,11 +371,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "LgListaFichaTecnica.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgListaFichaTecnica.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgListaFichaTecnica.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgListaFichaTecnica.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgListaFichaTecnica.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgListaFichaTecnica.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgListaFichaTecnica.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -408,11 +383,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "LgInventario.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgInventario.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgInventario.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgInventario.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgInventario.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgInventario.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgInventario.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA2wBIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -420,11 +395,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "LgProducto.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgProducto.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgProducto.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgProducto.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgProducto.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgProducto.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgProducto.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAIA3wFkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -432,11 +407,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "LgPrecio.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgPrecio.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgPrecio.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgPrecio.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgPrecio.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgPrecio.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgPrecio.cs",
               "ViewState": "AgIAACgAAAAAAAAAAADwvy0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -444,11 +419,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "LgEmpaque.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgEmpaque.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgEmpaque.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgEmpaque.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgEmpaque.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgEmpaque.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgEmpaque.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -456,11 +431,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "DbIntisoftContext.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Contabilidad\\DbIntisoftContext.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Contabilidad\\DbIntisoftContext.cs",
               "RelativeDocumentMoniker": "Models\\Contabilidad\\DbIntisoftContext.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Contabilidad\\DbIntisoftContext.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Contabilidad\\DbIntisoftContext.cs",
               "RelativeToolTip": "Models\\Contabilidad\\DbIntisoftContext.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAWwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -468,11 +443,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "LgCategoria.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgCategoria.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgCategoria.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgCategoria.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgCategoria.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgCategoria.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgCategoria.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAswCoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -480,11 +455,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "LgEmpresaAsociadaProductoesController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadaProductoesController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadaProductoesController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgEmpresaAsociadaProductoesController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadaProductoesController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadaProductoesController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgEmpresaAsociadaProductoesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -492,11 +467,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "LgEmpresaAsociadumsController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadumsController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadumsController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgEmpresaAsociadumsController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadumsController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgEmpresaAsociadumsController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgEmpresaAsociadumsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -504,11 +479,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "LgTipoMarca.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgTipoMarca.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgTipoMarca.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgTipoMarca.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgTipoMarca.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgTipoMarca.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgTipoMarca.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAuwA8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -516,11 +491,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "LgTipoMonedum.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgTipoMonedum.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgTipoMonedum.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgTipoMonedum.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgTipoMonedum.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Logistica\\Producto\\LgTipoMonedum.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgTipoMonedum.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -528,11 +503,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "LgTipoMarcasController.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgTipoMarcasController.cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgTipoMarcasController.cs",
               "RelativeDocumentMoniker": "Controllers\\Logistica\\Producto\\LgTipoMarcasController.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Controllers\\Logistica\\Producto\\LgTipoMarcasController.cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Controllers\\Logistica\\Producto\\LgTipoMarcasController.cs",
               "RelativeToolTip": "Controllers\\Logistica\\Producto\\LgTipoMarcasController.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAkwC4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -540,11 +515,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "api_intiSoft.csproj",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\api_intiSoft.csproj",
               "RelativeDocumentMoniker": "api_intiSoft.csproj",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\api_intiSoft.csproj",
               "RelativeToolTip": "api_intiSoft.csproj",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -552,11 +527,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "CustomTenantInfo .cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Data\\CustomTenantInfo .cs",
+              "DocumentMoniker": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Data\\CustomTenantInfo .cs",
               "RelativeDocumentMoniker": "Models\\Data\\CustomTenantInfo .cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Data\\CustomTenantInfo .cs",
+              "ToolTip": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\Models\\Data\\CustomTenantInfo .cs",
               "RelativeToolTip": "Models\\Data\\CustomTenantInfo .cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

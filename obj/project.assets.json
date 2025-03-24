@@ -7851,11 +7851,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+      "projectUniqueName": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\api_intiSoft.csproj",
       "projectName": "api_intiSoft",
-      "projectPath": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+      "projectPath": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\api_intiSoft.csproj",
       "packagesPath": "C:\\Users\\omara\\.nuget\\packages\\",
-      "outputPath": "D:\\inti\\APIWeb\\api_intiSoft\\obj\\",
+      "outputPath": "D:\\INTI\\APIWeb\\api_intiSoft GIT\\IntiBackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7870,7 +7870,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7889,7 +7888,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -7963,7 +7962,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

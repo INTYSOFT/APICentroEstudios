@@ -86,26 +86,35 @@ builder.Services.AddSwaggerGen(c =>
         Description = "API con autenticación JWT"
     });
 
-    // Definir esquema de seguridad para JWT
-    var securitySchema = new OpenApiSecurityScheme
+    // Esquema de seguridad JWT para Swagger
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Name = "Authorization",
         Description = "Ingrese el token JWT en este formato: Bearer {token}",
+        Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
         BearerFormat = "JWT"
-    };
+    });
 
-    c.AddSecurityDefinition("Bearer", securitySchema);
-
-    // Requerimiento de seguridad global
-    var securityRequirement = new OpenApiSecurityRequirement
+    // Requerimiento global
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
-        { securitySchema, new string[] {} }
-    };
-
-    c.AddSecurityRequirement(securityRequirement);
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                },
+                Scheme = "Bearer",
+                Name = "Bearer",
+                In = ParameterLocation.Header,
+            },
+            new List<string>()
+        }
+    });
 });
 
 
