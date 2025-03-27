@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 namespace api_intiSoft.Models.Logistica.Producto;
 
 [Table("lg_tipo_marca")]
-//[Index("Nombre", Name = "idx_lg_tipo_marca_nombre")]
-//[Index("Nombre", Name = "lg_tipo_marca_nombre_key", IsUnique = true)]
+[Index("Nombre", Name = "idx_lg_tipo_marca_nombre")]
+[Index("Nombre", Name = "lg_tipo_marca_nombre_key", IsUnique = true)]
 public partial class LgTipoMarca
 {
     [Key]

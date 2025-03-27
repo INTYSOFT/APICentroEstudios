@@ -19,8 +19,9 @@ public partial class LgItemOrdenCompra
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
-    [Column("variante_producto_id")]
-    public int? VarianteProductoId { get; set; }
+    [Column("producto_variante_id")]
+    public int? ProductoVarianteId { get; set; }
+
 
     [Column("inventario_id")]
     public int? InventarioId { get; set; }
@@ -51,7 +52,10 @@ public partial class LgItemOrdenCompra
     [InverseProperty("LgItemOrdenCompras")]
     public virtual LgProducto Producto { get; set; } = null!;
 
-    [ForeignKey("VarianteProductoId")]
+    // ForeignKey producto variante, producto_variante_id
+    [ForeignKey("ProductoVarianteId")]
     [InverseProperty("LgItemOrdenCompras")]
-    public virtual LgProductoVariante? VarianteProducto { get; set; }
+    public virtual LgProductoVariante? ProductoVariante { get; set; }
+
+
 }

@@ -80,7 +80,7 @@ public partial class LgVentum
     public virtual LgFormaPago FormaPago { get; set; } = null!;
 
     [InverseProperty("Venta")]
-    public virtual ICollection<LgItemVentum> LgItemVenta { get; set; } = new List<LgItemVentum>();
+    public virtual ICollection<LgDetalleVentum> LgDetalleVenta { get; set; } = new List<LgDetalleVentum>();
 
     [ForeignKey("SucursalId")]
     [InverseProperty("LgVenta")]

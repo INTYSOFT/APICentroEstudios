@@ -6,21 +6,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.Logistica.Producto;
 
-[Table("lg_item_venta")]
-public partial class LgItemVentum
+[Table("lg_detalle_venta")]
+public partial class LgDetalleVentum
 {
     [Key]
-    [Column("item_venta_id")]
-    public int ItemVentaId { get; set; }
+    [Column("detalle_venta_id")]
+    public int DetalleVentaId { get; set; }
 
     [Column("venta_id")]
     public int VentaId { get; set; }
 
     [Column("producto_id")]
     public int ProductoId { get; set; }
-
-    [Column("producto_variante_id")]
-    public int? ProductoVarianteId { get; set; }
 
     [Column("cantidad")]
     public int Cantidad { get; set; }
@@ -48,15 +45,15 @@ public partial class LgItemVentum
     [Column("activo")]
     public bool? Activo { get; set; }
 
-    [ForeignKey("ProductoId")]
-    [InverseProperty("LgItemVenta")]
-    public virtual LgProducto Producto { get; set; } = null!;
+    [Column("producto_variante_id")]
+    public int? ProductoVarianteId { get; set; }
 
+    [Column("producto_presentacion_id")]
+    public int? ProductoPresentacionId { get; set; }
+
+    // ForeignKey producto_variante
     [ForeignKey("ProductoVarianteId")]
-    [InverseProperty("LgItemVenta")]
+    [InverseProperty("LgDetalleVenta")]
     public virtual LgProductoVariante? ProductoVariante { get; set; }
 
-    [ForeignKey("VentaId")]
-    [InverseProperty("LgItemVenta")]
-    public virtual LgVentum Venta { get; set; } = null!;
 }

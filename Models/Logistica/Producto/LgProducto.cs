@@ -13,6 +13,10 @@ public partial class LgProducto
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
+    //tipo_producto_id
+    [Column("tipo_producto_id")]
+    public int? TipoProductoId { get; set; }
+
     [Column("categoria_id")]
     public int? CategoriaId { get; set; }
 
@@ -33,13 +37,7 @@ public partial class LgProducto
     //marca_id
     [Column("marca_id")]
     public int? MarcaId { get; set; }
-
-    [Column("is_producto")]
-    public bool? IsProducto { get; set; }
-
-    [Column("tipo_transaccion_id")]
-    public short? TipoTransaccionId { get; set; }
-
+    
     [Column("lista_precio_id")]
     public short? ListaPrecioId { get; set; }
 
@@ -65,8 +63,7 @@ public partial class LgProducto
     [InverseProperty("Producto")]
     public virtual ICollection<LgItemOrdenCompra> LgItemOrdenCompras { get; set; } = new List<LgItemOrdenCompra>();
 
-    [InverseProperty("Producto")]
-    public virtual ICollection<LgItemVentum> LgItemVenta { get; set; } = new List<LgItemVentum>();
+
 
     [InverseProperty("Producto")]
     public virtual ICollection<LgMovimientoStock> LgMovimientoStocks { get; set; } = new List<LgMovimientoStock>();
@@ -77,19 +74,31 @@ public partial class LgProducto
     
     [InverseProperty("Producto")]
     public virtual ICollection<LgProductoFichaTecnica> LgProductoFichaTecnicas { get; set; } = new List<LgProductoFichaTecnica>();
-
-    [InverseProperty("Producto")]
-    public ICollection<LgProductoVariante>? lgProductoVariantes { get; set; }
-        
+             
 
 
     [InverseProperty("Producto")]
     public virtual ICollection<LgPromocionProducto> LgPromocionProductos { get; set; } = new List<LgPromocionProducto>();
 
-    [ForeignKey("TipoTransaccionId")]
-    [InverseProperty("LgProductos")]
-    public virtual LgTipoTransaccion? TipoTransaccion { get; set; }
     
+
+    //modelo_id
+    [Column("modelo_id")]
+    public int? ModeloId { get; set; }
+
+    //is_comprable
+    [Column("is_comprable")]
+    public bool? IsComprable { get; set; }
+
+    //is_vendible 
+    [Column("is_vendible")]
+    public bool? IsVendible { get; set; }
+
+    //is_gasto 
+    [Column("is_gasto")]
+    public bool? IsGasto { get; set; }
+
+
 }
 
 //ProductoDto

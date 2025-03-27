@@ -18,9 +18,9 @@ public partial class LgPromocionProducto
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
-    [Key]
-    [Column("variante_producto_id")]
-    public int VarianteProductoId { get; set; }
+    [Column("producto_variante_id")]
+    public int? ProductoVarianteId  { get; set; }
+
 
     [Column("activo")]
     public bool? Activo { get; set; }
@@ -33,7 +33,9 @@ public partial class LgPromocionProducto
     [InverseProperty("LgPromocionProductos")]
     public virtual LgPromocion Promocion { get; set; } = null!;
 
-    [ForeignKey("VarianteProductoId")]
+    //producto variante
+    [ForeignKey("ProductoVarianteId")]
     [InverseProperty("LgPromocionProductos")]
-    public virtual LgProductoVariante VarianteProducto { get; set; } = null!;
+    public virtual LgProductoVariante? ProductoVariante { get; set; }
+
 }

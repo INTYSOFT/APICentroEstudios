@@ -29,7 +29,5 @@ public partial class LgTipoTransaccion
     [Column("activo")]
     public bool? Activo { get; set; }
 
-
-    [InverseProperty("TipoTransaccion")]
-    public virtual ICollection<LgProducto> LgProductos { get; set; } = new List<LgProducto>();
+    
 }

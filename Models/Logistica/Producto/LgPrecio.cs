@@ -16,8 +16,9 @@ public partial class LgPrecio
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
-    [Column("variante_producto_id")]
-    public int? VarianteProductoId { get; set; }
+    [Column("producto_variante_id")]    
+    public int? ProductoVarianteId { get; set; }
+
 
     [Column("precio_compra")]
     [Precision(10, 2)]
@@ -40,7 +41,8 @@ public partial class LgPrecio
     [InverseProperty("LgPrecios")]
     public virtual LgProducto Producto { get; set; } = null!;
 
-    [ForeignKey("VarianteProductoId")]
+    //producto_variante_id
+    [ForeignKey("ProductoVarianteId")]
     [InverseProperty("LgPrecios")]
-    public virtual LgProductoVariante? VarianteProducto { get; set; }
+    public virtual LgProductoVariante? ProductoVariante { get; set; }
 }

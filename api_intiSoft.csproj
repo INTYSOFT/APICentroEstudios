@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Configuracion\" />
     <Folder Include="Models\Configuracion\" />
     <Folder Include="Models\Contabilidad\" />
   </ItemGroup>

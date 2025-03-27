@@ -16,8 +16,8 @@ public partial class LgInventario
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
-    [Column("variante_producto_id")]
-    public int? VarianteProductoId { get; set; }
+    [Column("producto_variante_id")]
+    public int? ProductoVarianteId { get; set; }
 
     [Column("almacen_id")]
     public int AlmacenId { get; set; }
@@ -44,14 +44,18 @@ public partial class LgInventario
     [InverseProperty("LgInventarios")]
     public virtual LgAlmacen Almacen { get; set; } = null!;
 
-    [InverseProperty("Inventario")]
-    public virtual ICollection<LgItemOrdenCompra> LgItemOrdenCompras { get; set; } = new List<LgItemOrdenCompra>();
-
     [ForeignKey("ProductoId")]
     [InverseProperty("LgInventarios")]
     public virtual LgProducto Producto { get; set; } = null!;
 
-    [ForeignKey("VarianteProductoId")]
+    [ForeignKey("ProductoVarianteId")]
     [InverseProperty("LgInventarios")]
-    public virtual LgProductoVariante? VarianteProducto { get; set; }
+    public virtual LgProductoVariante? ProductoVariante { get; set; }
+
+    //lg_item_orden_compra
+    [InverseProperty("Inventario")]
+    public virtual ICollection<LgItemOrdenCompra> LgItemOrdenCompras { get; set; } = new HashSet<LgItemOrdenCompra>();
+
+
+
 }

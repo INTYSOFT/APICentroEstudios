@@ -19,9 +19,6 @@ public partial class LgDetalleGuiaRemision
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
-    [Column("variante_producto_id")]
-    public int? VarianteProductoId { get; set; }
-
     [Column("cantidad")]
     public int Cantidad { get; set; }
 
@@ -36,15 +33,14 @@ public partial class LgDetalleGuiaRemision
     [Column("activo")]
     public bool? Activo { get; set; }
 
-    [ForeignKey("GuiaId")]
-    [InverseProperty("LgDetalleGuiaRemisions")]
-    public virtual LgGuiaRemision Guia { get; set; } = null!;
+    [Column("producto_variante_id")]
+    public int? ProductoVarianteId { get; set; }
+
+    [Column("producto_presentacion_id")]
+    public int? ProductoPresentacionId { get; set; }
 
     [ForeignKey("ProductoId")]
     [InverseProperty("LgDetalleGuiaRemisions")]
     public virtual LgProducto Producto { get; set; } = null!;
 
-    [ForeignKey("VarianteProductoId")]
-    [InverseProperty("LgDetalleGuiaRemisions")]
-    public virtual LgProductoVariante? VarianteProducto { get; set; }
 }

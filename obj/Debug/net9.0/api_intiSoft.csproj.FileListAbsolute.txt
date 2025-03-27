@@ -519,3 +519,4 @@ D:\INTI\APIWeb\api_intiSoft GIT\IntiBackEnd\obj\Debug\net9.0\refint\api_intiSoft
 D:\INTI\APIWeb\api_intiSoft GIT\IntiBackEnd\obj\Debug\net9.0\api_intiSoft.pdb
 D:\INTI\APIWeb\api_intiSoft GIT\IntiBackEnd\obj\Debug\net9.0\api_intiSoft.genruntimeconfig.cache
 D:\INTI\APIWeb\api_intiSoft GIT\IntiBackEnd\obj\Debug\net9.0\ref\api_intiSoft.dll
+D:\inti\APIWeb\api_intiSoft\obj\Debug\net9.0\api_intiSoft.sourcelink.json

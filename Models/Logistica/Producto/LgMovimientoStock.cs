@@ -16,7 +16,7 @@ public partial class LgMovimientoStock
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
-    [Column("variante_producto_id")]
+    [Column("producto_variante_id")]
     public int? VarianteProductoId { get; set; }
 
     [Column("almacen_id")]
@@ -46,7 +46,8 @@ public partial class LgMovimientoStock
     [InverseProperty("LgMovimientoStocks")]
     public virtual LgTipoMovimientoStock TipoMovimiento { get; set; } = null!;
 
+    //producto_variante_id
     [ForeignKey("VarianteProductoId")]
     [InverseProperty("LgMovimientoStocks")]
-    public virtual LgProductoVariante? VarianteProducto { get; set; }
+    public virtual LgProductoVariante? ProductoVariante { get; set; }
 }

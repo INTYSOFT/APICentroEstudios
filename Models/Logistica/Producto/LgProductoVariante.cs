@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 namespace api_intiSoft.Models.Logistica.Producto;
 
 [Table("lg_producto_variante")]
-[Index("CodigoBarras", Name = "idx_codigo_barras", IsUnique = true)]
-[Index("CodigoQr", Name = "idx_codigo_qr")]
-[Index("VarianteSku", Name = "lg_variante_producto_variante_sku_key", IsUnique = true)]
+[Index("CodigoBarras", Name = "lg_producto_variacion_codigo_barras_key", IsUnique = true)]
+[Index("Nombre", Name = "lg_producto_variacion_nombre_key", IsUnique = true)]
+[Index("VarianteSku", Name = "lg_producto_variacion_variante_sku_key", IsUnique = true)]
 public partial class LgProductoVariante
 {
     [Key]
@@ -20,109 +20,72 @@ public partial class LgProductoVariante
     public int ProductoId { get; set; }
 
     [Column("variante_sku")]
-    [StringLength(32)]
-    public string VarianteSku { get; set; } = null!;
+    [StringLength(64)]
+    public string? VarianteSku { get; set; }
 
     [Column("nombre")]
-    [StringLength(255)]
+    [StringLength(64)]
     public string? Nombre { get; set; }
 
-    [Column("atributos", TypeName = "jsonb")]
-    public string? Atributos { get; set; }
-
-    [Column("descripcion")]
-    public string? Descripcion { get; set; }
-
-    [Column("activo")]
-    public bool? Activo { get; set; }
-
-    [Column("codigo_barras")]
-    [StringLength(32)]
-    public string? CodigoBarras { get; set; }
-
-    [Column("codigo_qr")]
-    public byte[]? CodigoQr { get; set; }
+    [Column("descripcon")]
+    [StringLength(512)]
+    public string? Descripcon { get; set; }
 
     [Column("codigo_interno")]
     [StringLength(32)]
     public string? CodigoInterno { get; set; }
 
-    [Column("empaque_id")]
-    public int? EmpaqueId { get; set; }
+    [Column("codigo_barras")]
+    [StringLength(64)]
+    public string? CodigoBarras { get; set; }
 
-    [Column("largo")]
-    [Precision(10, 2)]
-    public decimal? Largo { get; set; }
+    [Column("codigo_qr")]
+    public string? CodigoQr { get; set; }
 
-    [Column("ancho")]
-    [Precision(10, 2)]
-    public decimal? Ancho { get; set; }
+    [Column("gestionar_precio")]
+    public bool? GestionarPrecio { get; set; }
 
-    [Column("altura")]
-    [Precision(10, 2)]
-    public decimal? Altura { get; set; }
+    [Column("ficha_tecnica_id")]
+    public int? FichaTecnicaId { get; set; }
 
-    [Column("unidad_medida_longitud_id")]
-    public int? UnidadMedidaLongitudId { get; set; }
-
-    [Column("peso")]
-    [Precision(10, 2)]
-    public decimal? Peso { get; set; }
-
-    [Column("unidad_medida_peso_id")]
-    public int? UnidadMedidaPesoId { get; set; }
+    [Column("categoria_ficha_tecnica_id")]
+    public int? CategoriaFichaTecnicaId { get; set; }
 
     [Column("categoria_ficha_tecnica_detalle_id")]
     public int? CategoriaFichaTecnicaDetalleId { get; set; }
 
-    [Column("incluye_variante")]
-    public bool IncluyeVariante { get; set; } = false;
+    [Column("categoria_ficha_tecnica_detalle_valor_id")]
+    public int? CategoriaFichaTecnicaDetalleValorId { get; set; }
 
-    [Column("producto_variante_id_incluye")]
-    public int? ProductoVarianteIdIncluye { get; set; }
+    [Column("activo")]
+    public bool? Activo { get; set; }
 
-    [Column("unidad_medida_contenido_id")]
-    public int? UnidadMedidaContenidoId { get; set; }
+    [Column("producto_presentacion_id")]
+    public int? ProductoPresentacionId { get; set; }
 
-    [Column("contenido")]
-    [Precision(10, 2)]
-    public decimal? Contenido { get; set; }
-
-    [Column("cantidad_incluye_variante")]
-    [Precision(10, 2)]
-    public decimal? CantidadIncluyeVariante { get; set; }
-
-
-    [InverseProperty("lgProductoVariantes")]
-    public LgProducto? Producto { get; set; }
-
-
-    public int Id { get; set; }
-    public ICollection<LgDetalleGuiaRemision>? LgDetalleGuiaRemisions { get; set; }
-
-    public int Ids { get; set; }
-
-    [InverseProperty("VarianteProducto")]
-    public ICollection<LgInventario>? LgInventarios { get; set; }
-
-
-    [InverseProperty("VarianteProducto")]
-    public virtual ICollection<LgItemOrdenCompra> LgItemOrdenCompras { get; set; } = new List<LgItemOrdenCompra>();
-
-    public int Idss { get; set; }
-
+    //LgInventario
     [InverseProperty("ProductoVariante")]
-    public virtual ICollection<LgItemVentum>? LgItemVenta { get; set; }
+    public virtual ICollection<LgInventario> LgInventarios { get; set; } = new HashSet<LgInventario>();
 
-    public int MovimientoStockId { get; set; }
+    //lg_item_orden_compra
+    [InverseProperty("ProductoVariante")]
+    public virtual ICollection<LgItemOrdenCompra> LgItemOrdenCompras { get; set; } = new HashSet<LgItemOrdenCompra>();
+    
+    //lg_movimiento_stock
+    [InverseProperty("ProductoVariante")]
+    public virtual ICollection<LgMovimientoStock> LgMovimientoStocks { get; set; } = new HashSet<LgMovimientoStock>();
 
-    public ICollection<LgMovimientoStock>? LgMovimientoStocks { get; set; }
+    //lg_precio
+    [InverseProperty("ProductoVariante")]
+    public virtual ICollection<LgPrecio> LgPrecios { get; set; } = new HashSet<LgPrecio>();
+    //lg_promocion_producto
+    [InverseProperty("ProductoVariante")]
+    public virtual ICollection<LgPromocionProducto> LgPromocionProductos { get; set; } = new HashSet<LgPromocionProducto>();
 
+    //lg_detalle_venta
+    [InverseProperty("ProductoVariante")]
+    public virtual ICollection<LgDetalleVentum> LgDetalleVentas { get; set; } = new HashSet<LgDetalleVentum>();
 
-    public int PrecioId { get; set; }
-    public ICollection<LgPrecio>? LgPrecios { get; set; }
-
-    public ICollection<LgPromocionProducto>? LgPromocionProductos { get; set; }
 
 
 }

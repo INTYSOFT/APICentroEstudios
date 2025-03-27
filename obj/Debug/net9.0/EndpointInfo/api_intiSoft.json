@@ -42,6 +42,201 @@
         }
       }
     },
+    "/api/CfProductoes": {
+      "get": {
+        "tags": [
+          "CfProductoes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CfProducto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CfProducto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CfProducto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CfProductoes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CfProducto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CfProducto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CfProducto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CfProductoes/{id}": {
+      "get": {
+        "tags": [
+          "CfProductoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CfProducto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CfProducto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CfProducto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CfProductoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CfProducto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CfProductoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/CtPlanContables": {
       "get": {
         "tags": [
@@ -3416,6 +3611,201 @@
         }
       }
     },
+    "/api/LgModeloes": {
+      "get": {
+        "tags": [
+          "LgModeloes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgModelo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgModelo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgModelo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgModeloes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgModelo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgModelo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgModelo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgModeloes/{id}": {
+      "get": {
+        "tags": [
+          "LgModeloes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgModelo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgModelo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgModelo"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgModeloes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgModelo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgModeloes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LgProductoes/GetLgProductoByCategoriaId/{categoria_id}": {
       "get": {
         "tags": [
@@ -4090,6 +4480,201 @@
         }
       }
     },
+    "/api/LgProductoServicios": {
+      "get": {
+        "tags": [
+          "LgProductoServicios"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgProductoServicio"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgProductoServicio"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgProductoServicio"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgProductoServicios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoServicio"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoServicio"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoServicio"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgProductoServicios/{id}": {
+      "get": {
+        "tags": [
+          "LgProductoServicios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoServicio"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoServicio"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoServicio"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgProductoServicios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoServicio"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgProductoServicios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LgTipoMarcas": {
       "get": {
         "tags": [
@@ -4266,6 +4851,201 @@
       "delete": {
         "tags": [
           "LgTipoMarcas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LgTipoProductoes": {
+      "get": {
+        "tags": [
+          "LgTipoProductoes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgTipoProducto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgTipoProducto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgTipoProducto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgTipoProductoes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoProducto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoProducto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoProducto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgTipoProductoes/{id}": {
+      "get": {
+        "tags": [
+          "LgTipoProductoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoProducto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoProducto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoProducto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgTipoProductoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoProducto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgTipoProductoes"
         ],
         "parameters": [
           {
@@ -4910,6 +5690,60 @@
         },
         "additionalProperties": false
       },
+      "CfProducto": {
+        "type": "object",
+        "properties": {
+          "withPresentacionSku": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withCodigoBarras": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withCodigoQr": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withCodigoInterno": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withVariantes": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withDimensionesPeso": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withGestionIncluyePresentacion": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "productoConfigId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "withEmpaque": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withMarca": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withModelo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "withTiempoServicio": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CtElementoCuentaContable": {
         "type": "object",
         "properties": {
@@ -5469,67 +6303,6 @@
         },
         "additionalProperties": false
       },
-      "LgDestinatario": {
-        "type": "object",
-        "properties": {
-          "destinatarioId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombreRazonSocial": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "tipoDocumento": {
-            "maxLength": 3,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "geoLatitudOrigen": {
-            "type": "number",
-            "format": "double"
-          },
-          "geoLongitudOrigen": {
-            "type": "number",
-            "format": "double"
-          },
-          "numeroDocumento": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "direccion": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "telefono": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "lgGuiaRemisions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgGuiaRemision"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "LgDetalleGuiaRemision": {
         "type": "object",
         "properties": {
@@ -5544,11 +6317,6 @@
           "productoId": {
             "type": "integer",
             "format": "int32"
-          },
-          "varianteProductoId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
           },
           "cantidad": {
             "type": "integer",
@@ -5569,14 +6337,18 @@
             "type": "boolean",
             "nullable": true
           },
-          "guia": {
-            "$ref": "#/components/schemas/LgGuiaRemision"
+          "productoVarianteId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "productoPresentacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           },
           "producto": {
             "$ref": "#/components/schemas/LgProducto"
-          },
-          "varianteProducto": {
-            "$ref": "#/components/schemas/LgProductoVariante"
           }
         },
         "additionalProperties": false
@@ -5604,6 +6376,69 @@
           },
           "estado": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LgDetalleVentum": {
+        "type": "object",
+        "properties": {
+          "detalleVentaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ventaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "precioUnitario": {
+            "type": "number",
+            "format": "double"
+          },
+          "subtotal": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "otrosCargos": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalIgv": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "productoVarianteId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "productoPresentacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "productoVariante": {
+            "$ref": "#/components/schemas/LgProductoVariante"
           }
         },
         "additionalProperties": false
@@ -5860,39 +6695,6 @@
         },
         "additionalProperties": false
       },
-      "LgEstadoGuium": {
-        "type": "object",
-        "properties": {
-          "estadoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombreEstado": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "lgHistorialEstadoGuia": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgHistorialEstadoGuium"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "LgEstadoOrdenCompra": {
         "type": "object",
         "properties": {
@@ -5990,148 +6792,6 @@
         },
         "additionalProperties": false
       },
-      "LgGuiaRemision": {
-        "type": "object",
-        "properties": {
-          "guiaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "transportistaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "vehiculoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "destinatarioId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "numeroGuia": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "fechaEmision": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechaInicioTraslado": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechaFinTraslado": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "geoLatitudOrigen": {
-            "type": "number",
-            "format": "double"
-          },
-          "geoLongitudOrigen": {
-            "type": "number",
-            "format": "double"
-          },
-          "puntoPartida": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "geoLatitudLlegada": {
-            "type": "number",
-            "format": "double"
-          },
-          "geoLongitudLlegada": {
-            "type": "number",
-            "format": "double"
-          },
-          "puntoLlegada": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "motivoTraslado": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "usuarioId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "activo": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "destinatario": {
-            "$ref": "#/components/schemas/LgDestinatario"
-          },
-          "lgDetalleGuiaRemisions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgDetalleGuiaRemision"
-            },
-            "nullable": true
-          },
-          "lgHistorialEstadoGuia": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgHistorialEstadoGuium"
-            },
-            "nullable": true
-          },
-          "transportista": {
-            "$ref": "#/components/schemas/LgTransportistum"
-          },
-          "vehiculo": {
-            "$ref": "#/components/schemas/LgVehiculo"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LgHistorialEstadoGuium": {
-        "type": "object",
-        "properties": {
-          "historialId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "guiaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "estadoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fechaCambio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "usuarioId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "observaciones": {
-            "type": "string",
-            "nullable": true
-          },
-          "estado": {
-            "$ref": "#/components/schemas/LgEstadoGuium"
-          },
-          "guia": {
-            "$ref": "#/components/schemas/LgGuiaRemision"
-          }
-        },
-        "additionalProperties": false
-      },
       "LgInventario": {
         "type": "object",
         "properties": {
@@ -6143,7 +6803,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "varianteProductoId": {
+          "productoVarianteId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -6183,18 +6843,18 @@
           "almacen": {
             "$ref": "#/components/schemas/LgAlmacen"
           },
+          "producto": {
+            "$ref": "#/components/schemas/LgProducto"
+          },
+          "productoVariante": {
+            "$ref": "#/components/schemas/LgProductoVariante"
+          },
           "lgItemOrdenCompras": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LgItemOrdenCompra"
             },
             "nullable": true
-          },
-          "producto": {
-            "$ref": "#/components/schemas/LgProducto"
-          },
-          "varianteProducto": {
-            "$ref": "#/components/schemas/LgProductoVariante"
           }
         },
         "additionalProperties": false
@@ -6214,7 +6874,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "varianteProductoId": {
+          "productoVarianteId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -6250,72 +6910,8 @@
           "producto": {
             "$ref": "#/components/schemas/LgProducto"
           },
-          "varianteProducto": {
-            "$ref": "#/components/schemas/LgProductoVariante"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LgItemVentum": {
-        "type": "object",
-        "properties": {
-          "itemVentaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "ventaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "productoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "productoVarianteId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "cantidad": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "precioUnitario": {
-            "type": "number",
-            "format": "double"
-          },
-          "subtotal": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "descuento": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "otrosCargos": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "totalIgv": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "producto": {
-            "$ref": "#/components/schemas/LgProducto"
-          },
           "productoVariante": {
             "$ref": "#/components/schemas/LgProductoVariante"
-          },
-          "venta": {
-            "$ref": "#/components/schemas/LgVentum"
           }
         },
         "additionalProperties": false
@@ -6435,6 +7031,43 @@
         },
         "additionalProperties": false
       },
+      "LgModelo": {
+        "type": "object",
+        "properties": {
+          "modeloId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 256,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "codigoModelo": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "LgMovimientoStock": {
         "type": "object",
         "properties": {
@@ -6480,7 +7113,7 @@
           "tipoMovimiento": {
             "$ref": "#/components/schemas/LgTipoMovimientoStock"
           },
-          "varianteProducto": {
+          "productoVariante": {
             "$ref": "#/components/schemas/LgProductoVariante"
           }
         },
@@ -6537,7 +7170,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "varianteProductoId": {
+          "productoVarianteId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -6566,7 +7199,7 @@
           "producto": {
             "$ref": "#/components/schemas/LgProducto"
           },
-          "varianteProducto": {
+          "productoVariante": {
             "$ref": "#/components/schemas/LgProductoVariante"
           }
         },
@@ -6578,6 +7211,11 @@
           "productoId": {
             "type": "integer",
             "format": "int32"
+          },
+          "tipoProductoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           },
           "categoriaId": {
             "type": "integer",
@@ -6606,15 +7244,6 @@
             "nullable": true
           },
           "marcaId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "isProducto": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "tipoTransaccionId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -6659,13 +7288,6 @@
             },
             "nullable": true
           },
-          "lgItemVenta": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgItemVentum"
-            },
-            "nullable": true
-          },
           "lgMovimientoStocks": {
             "type": "array",
             "items": {
@@ -6687,13 +7309,6 @@
             },
             "nullable": true
           },
-          "lgProductoVariantes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgProductoVariante"
-            },
-            "nullable": true
-          },
           "lgPromocionProductos": {
             "type": "array",
             "items": {
@@ -6701,8 +7316,22 @@
             },
             "nullable": true
           },
-          "tipoTransaccion": {
-            "$ref": "#/components/schemas/LgTipoTransaccion"
+          "modeloId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isComprable": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isVendible": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isGasto": {
+            "type": "boolean",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -6787,7 +7416,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "varianteSku": {
+          "presentacionSku": {
             "maxLength": 32,
             "minLength": 0,
             "type": "string",
@@ -6895,6 +7524,36 @@
         },
         "additionalProperties": false
       },
+      "LgProductoServicio": {
+        "type": "object",
+        "properties": {
+          "productoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dias": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "horas": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "minutos": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "segundos": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "LgProductoVariante": {
         "type": "object",
         "properties": {
@@ -6907,38 +7566,21 @@
             "format": "int32"
           },
           "varianteSku": {
-            "maxLength": 32,
+            "maxLength": 64,
             "minLength": 0,
             "type": "string",
             "nullable": true
           },
           "nombre": {
-            "maxLength": 255,
+            "maxLength": 64,
             "minLength": 0,
             "type": "string",
             "nullable": true
           },
-          "atributos": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "codigoBarras": {
-            "maxLength": 32,
+          "descripcon": {
+            "maxLength": 512,
             "minLength": 0,
             "type": "string",
-            "nullable": true
-          },
-          "codigoQr": {
-            "type": "string",
-            "format": "byte",
             "nullable": true
           },
           "codigoInterno": {
@@ -6947,37 +7589,26 @@
             "type": "string",
             "nullable": true
           },
-          "empaqueId": {
+          "codigoBarras": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "codigoQr": {
+            "type": "string",
+            "nullable": true
+          },
+          "gestionarPrecio": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "fichaTecnicaId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
-          "largo": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "ancho": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "altura": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "unidadMedidaLongitudId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "peso": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "unidadMedidaPesoId": {
+          "categoriaFichaTecnicaId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -6987,46 +7618,19 @@
             "format": "int32",
             "nullable": true
           },
-          "incluyeVariante": {
-            "type": "boolean"
-          },
-          "productoVarianteIdIncluye": {
+          "categoriaFichaTecnicaDetalleValorId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
-          "unidadMedidaContenidoId": {
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "productoPresentacionId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
-          },
-          "contenido": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "cantidadIncluyeVariante": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "producto": {
-            "$ref": "#/components/schemas/LgProducto"
-          },
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lgDetalleGuiaRemisions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgDetalleGuiaRemision"
-            },
-            "nullable": true
-          },
-          "ids": {
-            "type": "integer",
-            "format": "int32"
           },
           "lgInventarios": {
             "type": "array",
@@ -7042,31 +7646,12 @@
             },
             "nullable": true
           },
-          "idss": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lgItemVenta": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgItemVentum"
-            },
-            "nullable": true
-          },
-          "movimientoStockId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "lgMovimientoStocks": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LgMovimientoStock"
             },
             "nullable": true
-          },
-          "precioId": {
-            "type": "integer",
-            "format": "int32"
           },
           "lgPrecios": {
             "type": "array",
@@ -7079,6 +7664,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LgPromocionProducto"
+            },
+            "nullable": true
+          },
+          "lgDetalleVentas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LgDetalleVentum"
             },
             "nullable": true
           }
@@ -7136,9 +7728,10 @@
             "type": "integer",
             "format": "int32"
           },
-          "varianteProductoId": {
+          "productoVarianteId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "activo": {
             "type": "boolean",
@@ -7150,7 +7743,7 @@
           "promocion": {
             "$ref": "#/components/schemas/LgPromocion"
           },
-          "varianteProducto": {
+          "productoVariante": {
             "$ref": "#/components/schemas/LgProductoVariante"
           }
         },
@@ -7407,6 +8000,31 @@
         },
         "additionalProperties": false
       },
+      "LgTipoProducto": {
+        "type": "object",
+        "properties": {
+          "tipoProductoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoProducto": {
+            "maxLength": 32,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "LgTipoTransaccion": {
         "type": "object",
         "properties": {
@@ -7435,13 +8053,6 @@
           "activo": {
             "type": "boolean",
             "nullable": true
-          },
-          "lgProductos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgProducto"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -7467,63 +8078,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LgUnidadMedidum"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "LgTransportistum": {
-        "type": "object",
-        "properties": {
-          "transportistaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "tipoDocumento": {
-            "maxLength": 3,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "numeroDocumento": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "nombreRazonSocial": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "direccion": {
-            "maxLength": 255,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "telefono": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "lgGuiaRemisions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgGuiaRemision"
             },
             "nullable": true
           }
@@ -7578,56 +8132,6 @@
           },
           "tipoUnidadMedida": {
             "$ref": "#/components/schemas/LgTipoUnidadMedidum"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LgVehiculo": {
-        "type": "object",
-        "properties": {
-          "vehiculoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "numeroPlaca": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "marca": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "modelo": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "anio": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "color": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "lgGuiaRemisions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgGuiaRemision"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -7720,10 +8224,10 @@
           "formaPago": {
             "$ref": "#/components/schemas/LgFormaPago"
           },
-          "lgItemVenta": {
+          "lgDetalleVenta": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/LgItemVentum"
+              "$ref": "#/components/schemas/LgDetalleVentum"
             },
             "nullable": true
           },

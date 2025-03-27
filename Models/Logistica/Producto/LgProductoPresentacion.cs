@@ -9,7 +9,7 @@ namespace api_intiSoft.Models.Logistica.Producto;
 [Table("lg_producto_presentacion")]
 [Index("CodigoBarras", Name = "idx_codigo_barras", IsUnique = true)]
 [Index("CodigoQr", Name = "idx_codigo_qr")]
-[Index("VarianteSku", Name = "lg_variante_producto_variante_sku_key", IsUnique = true)]
+
 public partial class LgProductoPresentacion
 {
     [Key]
@@ -19,9 +19,9 @@ public partial class LgProductoPresentacion
     [Column("producto_id")]
     public int ProductoId { get; set; }
 
-    [Column("variante_sku")]
+    [Column("presentacion_sku")]
     [StringLength(32)]
-    public string VarianteSku { get; set; } = null!;
+    public string PresentacionSku { get; set; } = null!;
 
     [Column("nombre")]
     [StringLength(255)]

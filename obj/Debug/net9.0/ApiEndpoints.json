@@ -16,6 +16,115 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.Configuracion.CfProductoesController",
+    "Method": "GetCfProducto",
+    "RelativePath": "api/CfProductoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Configuracion.CfProducto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Configuracion.CfProductoesController",
+    "Method": "PostCfProducto",
+    "RelativePath": "api/CfProductoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cfProducto",
+        "Type": "api_intiSoft.Models.Configuracion.CfProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Configuracion.CfProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Configuracion.CfProductoesController",
+    "Method": "GetCfProducto",
+    "RelativePath": "api/CfProductoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Configuracion.CfProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Configuracion.CfProductoesController",
+    "Method": "PutCfProducto",
+    "RelativePath": "api/CfProductoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cfProducto",
+        "Type": "api_intiSoft.Models.Configuracion.CfProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Configuracion.CfProductoesController",
+    "Method": "DeleteCfProducto",
+    "RelativePath": "api/CfProductoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.Contabilidad.CtPlanContablesController",
     "Method": "GetCtPlanContable",
     "RelativePath": "api/CtPlanContables",
@@ -1879,6 +1988,115 @@
     ]
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgModeloesController",
+    "Method": "GetLgModelo",
+    "RelativePath": "api/LgModeloes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgModelo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgModeloesController",
+    "Method": "PostLgModelo",
+    "RelativePath": "api/LgModeloes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgModelo",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgModelo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgModelo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgModeloesController",
+    "Method": "GetLgModelo",
+    "RelativePath": "api/LgModeloes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgModelo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgModeloesController",
+    "Method": "PutLgModelo",
+    "RelativePath": "api/LgModeloes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgModelo",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgModelo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgModeloesController",
+    "Method": "DeleteLgModelo",
+    "RelativePath": "api/LgModeloes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoesController",
     "Method": "GetLgProducto",
     "RelativePath": "api/LgProductoes",
@@ -2258,6 +2476,115 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoServiciosController",
+    "Method": "GetLgProductoServicio",
+    "RelativePath": "api/LgProductoServicios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgProductoServicio, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoServiciosController",
+    "Method": "PostLgProductoServicio",
+    "RelativePath": "api/LgProductoServicios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgProductoServicio",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoServicio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoServicio",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoServiciosController",
+    "Method": "GetLgProductoServicio",
+    "RelativePath": "api/LgProductoServicios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoServicio",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoServiciosController",
+    "Method": "PutLgProductoServicio",
+    "RelativePath": "api/LgProductoServicios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgProductoServicio",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoServicio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoServiciosController",
+    "Method": "DeleteLgProductoServicio",
+    "RelativePath": "api/LgProductoServicios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoMarcasController",
     "Method": "GetLgTipoMarca",
     "RelativePath": "api/LgTipoMarcas",
@@ -2361,6 +2688,115 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoProductoesController",
+    "Method": "GetLgTipoProducto",
+    "RelativePath": "api/LgTipoProductoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgTipoProducto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoProductoesController",
+    "Method": "PostLgTipoProducto",
+    "RelativePath": "api/LgTipoProductoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgTipoProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoProductoesController",
+    "Method": "GetLgTipoProducto",
+    "RelativePath": "api/LgTipoProductoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoProductoesController",
+    "Method": "PutLgTipoProducto",
+    "RelativePath": "api/LgTipoProductoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgTipoProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoProductoesController",
+    "Method": "DeleteLgTipoProducto",
+    "RelativePath": "api/LgTipoProductoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
         "IsRequired": true
       }
     ],
