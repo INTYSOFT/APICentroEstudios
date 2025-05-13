@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\inti\\APIWeb\\api_intiSoft\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgpromocionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgpromocionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgproductovariante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgproductovariante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgdetalleguiaremision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgdetalleguiaremision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgpromocionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|solutionrelative:models\\logistica\\producto\\lgpromocionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69B756D7-5C62-491E-BCAD-633C8334D9B6}|api_intiSoft.csproj|d:\\inti\\apiweb\\api_intisoft\\models\\logistica\\producto\\lgprecio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,12 +61,8 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LgDetalleVentum.cs",
               "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgDetalleVentum.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgDetalleVentum.cs",
@@ -74,8 +70,7 @@
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgDetalleVentum.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAcwC0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T21:05:05.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T21:05:05.04Z"
             },
             {
               "$type": "Document",
@@ -91,16 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LgProductoVariante.cs",
               "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgProductoVariante.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgProductoVariante.cs",
               "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgProductoVariante.cs",
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgProductoVariante.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAcwEYAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAcwEkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T20:27:44.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T20:27:44.161Z"
             },
             {
               "$type": "Document",
@@ -128,6 +122,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LgPromocionProducto.cs",
+              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgPromocionProducto.cs",
+              "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgPromocionProducto.cs",
+              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgPromocionProducto.cs",
+              "RelativeToolTip": "Models\\Logistica\\Producto\\LgPromocionProducto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:00:41.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
               "Title": "LgItemOrdenCompra.cs",
               "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgItemOrdenCompra.cs",
@@ -140,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LgDetalleGuiaRemision.cs",
               "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
               "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
@@ -148,20 +155,7 @@
               "RelativeToolTip": "Models\\Logistica\\Producto\\LgDetalleGuiaRemision.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T19:57:14.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LgPromocionProducto.cs",
-              "DocumentMoniker": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgPromocionProducto.cs",
-              "RelativeDocumentMoniker": "Models\\Logistica\\Producto\\LgPromocionProducto.cs",
-              "ToolTip": "D:\\inti\\APIWeb\\api_intiSoft\\Models\\Logistica\\Producto\\LgPromocionProducto.cs",
-              "RelativeToolTip": "Models\\Logistica\\Producto\\LgPromocionProducto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T21:00:41.744Z"
+              "WhenOpened": "2025-03-26T19:57:14.515Z"
             },
             {
               "$type": "Document",
@@ -186,6 +180,10 @@
               "ViewState": "AgIAACQAAAAAAAAAAAAYwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T20:00:05.196Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }
