@@ -432,6 +432,2313 @@
         }
       }
     },
+    "/api/GmCitaMedicas": {
+      "get": {
+        "tags": [
+          "GmCitaMedicas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmCitaMedica"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmCitaMedica"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmCitaMedica"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmCitaMedicas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmCitaMedica"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmCitaMedica"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmCitaMedica"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmCitaMedicas/{id}": {
+      "get": {
+        "tags": [
+          "GmCitaMedicas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmCitaMedica"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmCitaMedica"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmCitaMedica"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmCitaMedicas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmCitaMedica"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmCitaMedicas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmEspecialidads": {
+      "get": {
+        "tags": [
+          "GmEspecialidads"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmEspecialidad"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmEspecialidad"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmEspecialidad"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmEspecialidads"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEspecialidad"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEspecialidad"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEspecialidad"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmEspecialidads/{id}": {
+      "get": {
+        "tags": [
+          "GmEspecialidads"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEspecialidad"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEspecialidad"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEspecialidad"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmEspecialidads"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEspecialidad"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmEspecialidads"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmEstadoCitums": {
+      "get": {
+        "tags": [
+          "GmEstadoCitums"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmEstadoCitum"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmEstadoCitum"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmEstadoCitum"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmEstadoCitums"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEstadoCitum"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEstadoCitum"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEstadoCitum"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmEstadoCitums/{id}": {
+      "get": {
+        "tags": [
+          "GmEstadoCitums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEstadoCitum"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEstadoCitum"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmEstadoCitum"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmEstadoCitums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmEstadoCitum"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmEstadoCitums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmHistoriaClinicaEventoes": {
+      "get": {
+        "tags": [
+          "GmHistoriaClinicaEventoes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmHistoriaClinicaEventoes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmHistoriaClinicaEventoes/{id}": {
+      "get": {
+        "tags": [
+          "GmHistoriaClinicaEventoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmHistoriaClinicaEventoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmHistoriaClinicaEventoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmHistoriaClinicas": {
+      "get": {
+        "tags": [
+          "GmHistoriaClinicas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHistoriaClinica"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHistoriaClinica"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHistoriaClinica"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmHistoriaClinicas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinica"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinica"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinica"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmHistoriaClinicas/{id}": {
+      "get": {
+        "tags": [
+          "GmHistoriaClinicas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinica"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinica"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHistoriaClinica"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmHistoriaClinicas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHistoriaClinica"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmHistoriaClinicas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmHorarioAperturas": {
+      "get": {
+        "tags": [
+          "GmHorarioAperturas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioApertura"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioApertura"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioApertura"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmHorarioAperturas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioApertura"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioApertura"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioApertura"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmHorarioAperturas/{id}": {
+      "get": {
+        "tags": [
+          "GmHorarioAperturas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioApertura"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioApertura"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioApertura"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmHorarioAperturas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioApertura"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmHorarioAperturas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmHorarioAperturas/gethorarios": {
+      "get": {
+        "tags": [
+          "GmHorarioAperturas"
+        ],
+        "parameters": [
+          {
+            "name": "sucursalId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "mes",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioApertura"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioApertura"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioApertura"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmHorarioMedicoes": {
+      "get": {
+        "tags": [
+          "GmHorarioMedicoes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioMedico"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioMedico"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioMedico"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmHorarioMedicoes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioMedico"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioMedico"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioMedico"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmHorarioMedicoes/{id}": {
+      "get": {
+        "tags": [
+          "GmHorarioMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioMedico"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioMedico"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmHorarioMedico"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmHorarioMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmHorarioMedico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmHorarioMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmHorarioMedicoes/gethorarios/{fecha}": {
+      "get": {
+        "tags": [
+          "GmHorarioMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "fecha",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioMedico"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioMedico"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmHorarioMedico"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmMedicoes": {
+      "get": {
+        "tags": [
+          "GmMedicoes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmMedico"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmMedico"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmMedico"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmMedicoes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmMedico"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmMedico"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmMedico"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmMedicoes/{id}": {
+      "get": {
+        "tags": [
+          "GmMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmMedico"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmMedico"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmMedico"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmMedico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmMedicoes/getmedicoses/{especialidadId}": {
+      "get": {
+        "tags": [
+          "GmMedicoes"
+        ],
+        "parameters": [
+          {
+            "name": "especialidadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmMedico"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmMedico"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmMedico"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmSalas": {
+      "get": {
+        "tags": [
+          "GmSalas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmSala"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmSala"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmSala"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmSalas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmSala"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmSala"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmSala"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmSalas/{id}": {
+      "get": {
+        "tags": [
+          "GmSalas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmSala"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmSala"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmSala"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmSalas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmSala"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmSalas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmTipoEventoClinicoes": {
+      "get": {
+        "tags": [
+          "GmTipoEventoClinicoes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmTipoEventoClinico"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmTipoEventoClinico"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmTipoEventoClinico"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmTipoEventoClinicoes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoEventoClinico"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoEventoClinico"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoEventoClinico"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmTipoEventoClinicoes/{id}": {
+      "get": {
+        "tags": [
+          "GmTipoEventoClinicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoEventoClinico"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoEventoClinico"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoEventoClinico"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmTipoEventoClinicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoEventoClinico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmTipoEventoClinicoes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/GmTipoHorarios": {
+      "get": {
+        "tags": [
+          "GmTipoHorarios"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmTipoHorario"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmTipoHorario"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GmTipoHorario"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GmTipoHorarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoHorario"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoHorario"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoHorario"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GmTipoHorarios/{id}": {
+      "get": {
+        "tags": [
+          "GmTipoHorarios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoHorario"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoHorario"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GmTipoHorario"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GmTipoHorarios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GmTipoHorario"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GmTipoHorarios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LgCategoriaFichaTecnicaDetalles": {
       "get": {
         "tags": [
@@ -1578,6 +3885,302 @@
         }
       }
     },
+    "/api/LgClientes": {
+      "get": {
+        "tags": [
+          "LgClientes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgCliente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgCliente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgCliente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgClientes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgCliente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgCliente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgCliente"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgClientes/{id}": {
+      "get": {
+        "tags": [
+          "LgClientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgCliente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgCliente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgCliente"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgClientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgCliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgClientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LgClientes/existsdocumento": {
+      "get": {
+        "tags": [
+          "LgClientes"
+        ],
+        "parameters": [
+          {
+            "name": "clienteId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "documentoIdentidadId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "numeroDocumento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgClientes/search/{datosBuscar}": {
+      "get": {
+        "tags": [
+          "LgClientes"
+        ],
+        "parameters": [
+          {
+            "name": "datosBuscar",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgCliente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgCliente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgCliente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/LgConversionUnidads": {
       "get": {
         "tags": [
@@ -2013,6 +4616,198 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/LgDocumentoIdentidads": {
+      "get": {
+        "tags": [
+          "LgDocumentoIdentidads"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgDocumentoIdentidads"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgDocumentoIdentidads/{id}": {
+      "get": {
+        "tags": [
+          "LgDocumentoIdentidads"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgDocumentoIdentidad"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgDocumentoIdentidads"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgDocumentoIdentidad"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgDocumentoIdentidads"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -4285,6 +7080,54 @@
         }
       }
     },
+    "/api/LgProductoFichaTecnicas/multiple": {
+      "post": {
+        "tags": [
+          "LgProductoFichaTecnicas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoFichaTecnicaDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoFichaTecnicaDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoFichaTecnicaDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoFichaTecnicaDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LgProductoPresentacions": {
       "get": {
         "tags": [
@@ -4480,6 +7323,100 @@
         }
       }
     },
+    "/api/LgProductoPresentacions/multiple": {
+      "post": {
+        "tags": [
+          "LgProductoPresentacions"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgProductoPresentacions"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoPresentacionDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/LgProductoServicios": {
       "get": {
         "tags": [
@@ -4656,6 +7593,639 @@
       "delete": {
         "tags": [
           "LgProductoServicios"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LgProductoVariantes": {
+      "get": {
+        "tags": [
+          "LgProductoVariantes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgProductoVariante"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgProductoVariante"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgProductoVariante"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgProductoVariantes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoVariante"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoVariante"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoVariante"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgProductoVariantes/{id}": {
+      "get": {
+        "tags": [
+          "LgProductoVariantes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoVariante"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoVariante"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgProductoVariante"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgProductoVariantes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgProductoVariante"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgProductoVariantes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LgProductoVariantes/multiple": {
+      "post": {
+        "tags": [
+          "LgProductoVariantes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoVarianteDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoVarianteDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoVarianteDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LgProductoVarianteDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LgSucursals": {
+      "get": {
+        "tags": [
+          "LgSucursals"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgSucursal"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgSucursal"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgSucursal"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgSucursals"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgSucursal"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgSucursal"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgSucursal"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgSucursals/{id}": {
+      "get": {
+        "tags": [
+          "LgSucursals"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgSucursal"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgSucursal"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgSucursal"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgSucursals"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgSucursal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgSucursals"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LgTipoClientes": {
+      "get": {
+        "tags": [
+          "LgTipoClientes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgTipoCliente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgTipoCliente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LgTipoCliente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LgTipoClientes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoCliente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoCliente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoCliente"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/LgTipoClientes/{id}": {
+      "get": {
+        "tags": [
+          "LgTipoClientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoCliente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoCliente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LgTipoCliente"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LgTipoClientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LgTipoCliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LgTipoClientes"
         ],
         "parameters": [
           {
@@ -5834,6 +9404,639 @@
         },
         "additionalProperties": false
       },
+      "GmCitaMedica": {
+        "type": "object",
+        "properties": {
+          "citaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "medicoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estadoCitaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaCita": {
+            "type": "string",
+            "format": "date"
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "motivoConsulta": {
+            "type": "string",
+            "nullable": true
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "duracionMinutos": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuarioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuarioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "estadoCita": {
+            "$ref": "#/components/schemas/GmEstadoCitum"
+          },
+          "gmHistoriaClinicaEventos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+            },
+            "nullable": true
+          },
+          "medico": {
+            "$ref": "#/components/schemas/GmMedico"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmEspecialidad": {
+        "type": "object",
+        "properties": {
+          "especialidadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "gmMedicos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmMedico"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmEstadoCitum": {
+        "type": "object",
+        "properties": {
+          "estadoCitaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "gmCitaMedicas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmCitaMedica"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmHistoriaClinica": {
+        "type": "object",
+        "properties": {
+          "historiaClinicaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pacienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaApertura": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "gmHistoriaClinicaEventos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmHistoriaClinicaEvento": {
+        "type": "object",
+        "properties": {
+          "eventoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "historiaClinicaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoEventoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "citaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "medicoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaEvento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "motivoConsulta": {
+            "type": "string",
+            "nullable": true
+          },
+          "diagnostico": {
+            "type": "string",
+            "nullable": true
+          },
+          "tratamiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "recomendaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "resumen": {
+            "type": "string",
+            "nullable": true
+          },
+          "detalle": {
+            "type": "string",
+            "nullable": true
+          },
+          "cita": {
+            "$ref": "#/components/schemas/GmCitaMedica"
+          },
+          "historiaClinica": {
+            "$ref": "#/components/schemas/GmHistoriaClinica"
+          },
+          "medico": {
+            "$ref": "#/components/schemas/GmMedico"
+          },
+          "tipoEvento": {
+            "$ref": "#/components/schemas/GmTipoEventoClinico"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmHorarioApertura": {
+        "type": "object",
+        "properties": {
+          "horarioAperturaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoHorarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "time"
+          },
+          "sucursalId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "usuarioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuarioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "gmHorarioMedicos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmHorarioMedico"
+            },
+            "nullable": true
+          },
+          "tipoHorario": {
+            "$ref": "#/components/schemas/GmTipoHorario"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmHorarioMedico": {
+        "type": "object",
+        "properties": {
+          "horarioMedicoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "medicoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "horarioAperturaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "time"
+          },
+          "especialidadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "salaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "usuarioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuarioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "horarioApertura": {
+            "$ref": "#/components/schemas/GmHorarioApertura"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmMedico": {
+        "required": [
+          "apellidoPaterno",
+          "especialidadId",
+          "nombre",
+          "numeroDocumento"
+        ],
+        "type": "object",
+        "properties": {
+          "medicoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "apellidoPaterno": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "apellidoMaterno": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "documentoIdentidadId": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "numeroDocumento": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "sexo": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "especialidadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "colegiaturaCodigo": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "colegiaturaEntidad": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "colegiaturaFecha": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "telefono": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "especialidad": {
+            "$ref": "#/components/schemas/GmEspecialidad"
+          },
+          "gmCitaMedicas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmCitaMedica"
+            },
+            "nullable": true
+          },
+          "gmHistoriaClinicaEventos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmSala": {
+        "type": "object",
+        "properties": {
+          "salaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sucursalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ubicacion": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "capacidad": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuarioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuarioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmTipoEventoClinico": {
+        "type": "object",
+        "properties": {
+          "tipoEventoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "gmHistoriaClinicaEventos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmHistoriaClinicaEvento"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GmTipoHorario": {
+        "type": "object",
+        "properties": {
+          "tipoHorarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "gmHorarioAperturas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GmHorarioApertura"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "LgAlmacen": {
         "type": "object",
         "properties": {
@@ -6122,25 +10325,39 @@
             "type": "integer",
             "format": "int32"
           },
+          "tipoClienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "documentoIdentidadId": {
             "maxLength": 3,
             "minLength": 0,
             "type": "string",
             "nullable": true
           },
-          "nombre": {
+          "numeroDocumento": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "razonSocial": {
             "maxLength": 255,
             "minLength": 0,
             "type": "string",
             "nullable": true
           },
-          "geoLatitudLlegada": {
-            "type": "number",
-            "format": "double"
+          "nombres": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
           },
-          "geoLongitudLlegada": {
-            "type": "number",
-            "format": "double"
+          "apellidos": {
+            "maxLength": 150,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
           },
           "direccion": {
             "maxLength": 255,
@@ -6148,8 +10365,20 @@
             "type": "string",
             "nullable": true
           },
+          "ubigeoId": {
+            "maxLength": 6,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
           "telefono": {
-            "maxLength": 50,
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "celular": {
+            "maxLength": 20,
             "minLength": 0,
             "type": "string",
             "nullable": true
@@ -6160,19 +10389,31 @@
             "type": "string",
             "nullable": true
           },
-          "pageWeb": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "saldoCuenta": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
           "activo": {
-            "type": "boolean",
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuarioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuarioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "documentoIdentidad": {
@@ -6439,6 +10680,9 @@
           },
           "productoVariante": {
             "$ref": "#/components/schemas/LgProductoVariante"
+          },
+          "venta": {
+            "$ref": "#/components/schemas/LgVentum"
           }
         },
         "additionalProperties": false
@@ -6478,17 +10722,17 @@
             "type": "boolean",
             "nullable": true
           },
-          "lgClientes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LgCliente"
-            },
-            "nullable": true
-          },
-          "lgProveedors": {
+          "proveedores": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LgProveedor"
+            },
+            "nullable": true
+          },
+          "clientes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LgCliente"
             },
             "nullable": true
           }
@@ -7337,10 +11581,6 @@
         "additionalProperties": false
       },
       "LgProductoFichaTecnica": {
-        "required": [
-          "activo",
-          "valor"
-        ],
         "type": "object",
         "properties": {
           "productoFichaTecnicaId": {
@@ -7351,27 +11591,14 @@
             "type": "integer",
             "format": "int32"
           },
-          "producto": {
-            "$ref": "#/components/schemas/LgProducto"
-          },
-          "productoVarianteId": {
+          "fichaTecnicaId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
-          "productoVariante": {
-            "$ref": "#/components/schemas/LgProductoVariante"
-          },
-          "fichaTecnicaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fichaTecnica": {
-            "$ref": "#/components/schemas/LgFichaTecnica"
-          },
           "valor": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "descripcion": {
             "type": "string",
@@ -7382,25 +11609,104 @@
           },
           "categoriaFichaTecnicaDetalleId": {
             "type": "integer",
-            "format": "int32"
-          },
-          "categoriaFichaTecnicaDetalle": {
-            "$ref": "#/components/schemas/LgCategoriaFichaTecnicaDetalle"
+            "format": "int32",
+            "nullable": true
           },
           "categoriaFichaTecnicaDetalleValorId": {
             "type": "integer",
-            "format": "int32"
-          },
-          "categoriaFichaTecnicaDetalleValor": {
-            "$ref": "#/components/schemas/LgCategoriaFichaTecnicaDetalleValor"
+            "format": "int32",
+            "nullable": true
           },
           "categoriaFichaTecnicaId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
+          "nombre": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "listaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detalleListaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "producto": {
+            "$ref": "#/components/schemas/LgProducto"
+          },
+          "fichaTecnica": {
+            "$ref": "#/components/schemas/LgFichaTecnica"
+          },
+          "categoriaFichaTecnicaDetalle": {
+            "$ref": "#/components/schemas/LgCategoriaFichaTecnicaDetalle"
+          },
+          "categoriaFichaTecnicaDetalleValor": {
+            "$ref": "#/components/schemas/LgCategoriaFichaTecnicaDetalleValor"
+          },
           "categoriaFichaTecnica": {
             "$ref": "#/components/schemas/LgCategoriaFichaTecnica"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LgProductoFichaTecnicaDto": {
+        "type": "object",
+        "properties": {
+          "productoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "valor": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "categoriaFichaTecnicaDetalleId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "categoriaFichaTecnicaDetalleValorId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "categoriaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "listaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detalleListaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -7524,9 +11830,124 @@
         },
         "additionalProperties": false
       },
+      "LgProductoPresentacionDto": {
+        "type": "object",
+        "properties": {
+          "productoPresentacionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "presentacionSku": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "codigoBarras": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoQr": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "codigoInterno": {
+            "type": "string",
+            "nullable": true
+          },
+          "empaqueId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "largo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ancho": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "altura": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unidadMedidaLongitudId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "peso": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unidadMedidaPesoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "categoriaFichaTecnicaDetalleId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "incluyePresentacion": {
+            "type": "boolean"
+          },
+          "productoPresentacionIdIncluye": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unidadMedidaContenidoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "contenido": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "cantidadIncluyePresentacion": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "orden": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "LgProductoServicio": {
         "type": "object",
         "properties": {
+          "productoServicioId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "productoId": {
             "type": "integer",
             "format": "int32"
@@ -7632,6 +12053,20 @@
             "format": "int32",
             "nullable": true
           },
+          "variante": {
+            "type": "string",
+            "nullable": true
+          },
+          "listaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detalleListaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "lgInventarios": {
             "type": "array",
             "items": {
@@ -7672,6 +12107,87 @@
             "items": {
               "$ref": "#/components/schemas/LgDetalleVentum"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LgProductoVarianteDto": {
+        "type": "object",
+        "properties": {
+          "productoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "varianteSku": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcon": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoInterno": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoBarras": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoQr": {
+            "type": "string",
+            "nullable": true
+          },
+          "gestionarPrecio": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "fichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "categoriaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "categoriaFichaTecnicaDetalleId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "categoriaFichaTecnicaDetalleValorId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "productoPresentacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "variante": {
+            "type": "string",
+            "nullable": true
+          },
+          "listaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detalleListaFichaTecnicaId": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },
@@ -7878,6 +12394,30 @@
             "items": {
               "$ref": "#/components/schemas/LgVentum"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LgTipoCliente": {
+        "type": "object",
+        "properties": {
+          "tipoClienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoCliente": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
             "nullable": true
           }
         },

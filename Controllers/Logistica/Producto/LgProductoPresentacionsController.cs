@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using api_intiSoft.Models.Logistica.Producto;
 using intiSoft;
+using AutoMapper;
+using api_intiSoft.Dto.Logistica.Producto;
 
 namespace api_intiSoft.Controllers.Logistica.Producto
 {
@@ -15,10 +17,12 @@ namespace api_intiSoft.Controllers.Logistica.Producto
     public class LgProductoPresentacionsController : ControllerBase
     {
         private readonly ConecDinamicaContext _context;
+        private readonly IMapper _mapper;
 
-        public LgProductoPresentacionsController(ConecDinamicaContext context)
+        public LgProductoPresentacionsController(ConecDinamicaContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // GET: api/LgProductoPresentacions
@@ -83,6 +87,93 @@ namespace api_intiSoft.Controllers.Logistica.Producto
 
             return CreatedAtAction("GetLgProductoPresentacion", new { id = lgProductoPresentacion.ProductoPresentacionId }, lgProductoPresentacion);
         }
+
+        //POST miultiple con list
+        [HttpPost("multiple")]
+        public async Task<IActionResult> PostLgProductoPresentacionMultiple([FromBody] List<LgProductoPresentacionDto> dtos)
+        {
+            if (dtos == null || !dtos.Any())
+                return BadRequest("Debe proporcionar al menos una presentación de producto.");
+
+            try
+            {
+                var entidades = _mapper.Map<List<LgProductoPresentacion>>(dtos);
+
+                await using var transaction = await _context.Database.BeginTransactionAsync();
+
+                await _context.LgProductoPresentacion.AddRangeAsync(entidades);
+                await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+
+                return Ok(new
+                {
+                    mensaje = "Presentaciones creadas correctamente.",
+                    ids = entidades.Select(e => e.ProductoPresentacionId)
+                });
+            }
+            catch (DbUpdateException dbEx)
+            {
+                // _logger.LogError(dbEx, "Error al guardar presentaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    mensaje = "Error de base de datos al insertar presentaciones.",
+                    detalle = dbEx.InnerException?.Message ?? dbEx.Message
+                });
+            }
+            catch (Exception ex)
+            {
+                // _logger.LogError(ex, "Error inesperado al guardar presentaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    mensaje = "Error interno al procesar la solicitud.",
+                    detalle = ex.InnerException?.Message ?? ex.Message
+                });
+            }
+        }
+
+        //Put multiple
+        [HttpPut("multiple")]
+        public async Task<IActionResult> PutLgProductoPresentacionMultiple([FromBody] List<LgProductoPresentacionDto> dtos)
+        {
+            if (dtos == null || !dtos.Any())
+                return BadRequest("Debe proporcionar al menos una presentación de producto.");
+            try
+            {
+                var entidades = _mapper.Map<List<LgProductoPresentacion>>(dtos);
+                await using var transaction = await _context.Database.BeginTransactionAsync();
+                foreach (var entidad in entidades)
+                {
+                    _context.Entry(entidad).State = EntityState.Modified;
+                }
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
+                return Ok(new
+                {
+                    mensaje = "Presentaciones actualizadas correctamente.",
+                    ids = entidades.Select(e => e.ProductoPresentacionId)
+                });
+            }
+            catch (DbUpdateException dbEx)
+            {
+                // _logger.LogError(dbEx, "Error al guardar presentaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    mensaje = "Error de base de datos al insertar presentaciones.",
+                    detalle = dbEx.InnerException?.Message ?? dbEx.Message
+                });
+            }
+            catch (Exception ex)
+            {
+                // _logger.LogError(ex, "Error inesperado al guardar presentaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    mensaje = "Error interno al procesar la solicitud.",
+                    detalle = ex.InnerException?.Message ?? ex.Message
+                });
+            }
+        }
+
 
         // DELETE: api/LgProductoPresentacions/5
         [HttpDelete("{id}")]

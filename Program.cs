@@ -37,6 +37,11 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
+
 builder.Services.AddAuthorization();
 
 
@@ -133,6 +138,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API intiSoft v1"));
 }
+
+app.UseDeveloperExceptionPage(); // durante desarrollo
 
 app.UseCors("CorsPageWeb");
 app.UseHttpsRedirection();

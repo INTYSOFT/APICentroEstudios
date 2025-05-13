@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.Logistica.Producto;
 
-[PrimaryKey("ProductoId", "VarianteProductoId", "PromocionId")]
+[PrimaryKey("ProductoId", "ProductoVarianteId", "PromocionId")]
 [Table("lg_promocion_producto")]
 public partial class LgPromocionProducto
 {

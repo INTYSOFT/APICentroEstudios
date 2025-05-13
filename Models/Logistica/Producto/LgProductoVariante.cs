@@ -63,6 +63,20 @@ public partial class LgProductoVariante
     [Column("producto_presentacion_id")]
     public int? ProductoPresentacionId { get; set; }
 
+    //variante string
+    [Column("variante")]
+    public string? Variante { get; set; }
+
+    //COLUMN lista_ficha_tecnica_id
+    [Column("lista_ficha_tecnica_id")]
+    public int? ListaFichaTecnicaId { get; set; }
+
+    //COLUMN detalle_lista_ficha_tecnica_id
+    [Column("detalle_lista_ficha_tecnica_id")]
+    public int? DetalleListaFichaTecnicaId { get; set; }
+
+
+
     //LgInventario
     [InverseProperty("ProductoVariante")]
     public virtual ICollection<LgInventario> LgInventarios { get; set; } = new HashSet<LgInventario>();
@@ -82,7 +96,6 @@ public partial class LgProductoVariante
     [InverseProperty("ProductoVariante")]
     public virtual ICollection<LgPromocionProducto> LgPromocionProductos { get; set; } = new HashSet<LgPromocionProducto>();
 
-    //lg_detalle_venta
     [InverseProperty("ProductoVariante")]
     public virtual ICollection<LgDetalleVentum> LgDetalleVentas { get; set; } = new HashSet<LgDetalleVentum>();
 

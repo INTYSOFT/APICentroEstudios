@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
 namespace api_intiSoft.Models.Logistica.Producto;
+
+/// <summary>
+/// Representa los datos técnicos asociados a un producto.
 
 [Table("lg_producto_ficha_tecnica")]
 public partial class LgProductoFichaTecnica
@@ -11,44 +16,56 @@ public partial class LgProductoFichaTecnica
     [Column("producto_ficha_tecnica_id")]
     public int ProductoFichaTecnicaId { get; set; }
 
-    [ForeignKey("Producto")]
     [Column("producto_id")]
     public int ProductoId { get; set; }
-    public virtual LgProducto Producto { get; set; }
 
-    [ForeignKey("ProductoVariante")]
-    [Column("producto_variante_id")]
-    public int? ProductoVarianteId { get; set; }
-    public virtual LgProductoVariante ProductoVariante { get; set; }
-
-    [ForeignKey("FichaTecnica")]
     [Column("ficha_tecnica_id")]
-    public int FichaTecnicaId { get; set; }
-    public virtual LgFichaTecnica FichaTecnica { get; set; }
+    public int? FichaTecnicaId { get; set; }
 
-    [Required]
     [Column("valor")]
-    public string Valor { get; set; }
+    public string Valor { get; set; } = null!;
 
     [Column("descripcion")]
-    public string Descripcion { get; set; }
+    public string? Descripcion { get; set; }
 
-    [Required]
     [Column("activo")]
-    public bool Activo { get; set; } = true;
+    public bool Activo { get; set; }
 
-    [ForeignKey("CategoriaFichaTecnicaDetalle")]
+
     [Column("categoria_ficha_tecnica_detalle_id")]
-    public int CategoriaFichaTecnicaDetalleId { get; set; }
-    public virtual LgCategoriaFichaTecnicaDetalle CategoriaFichaTecnicaDetalle { get; set; }
+    public int? CategoriaFichaTecnicaDetalleId { get; set; }
 
-    [ForeignKey("CategoriaFichaTecnicaDetalleValor")]
     [Column("categoria_ficha_tecnica_detalle_valor_id")]
-    public int CategoriaFichaTecnicaDetalleValorId { get; set; }
-    public virtual LgCategoriaFichaTecnicaDetalleValor CategoriaFichaTecnicaDetalleValor { get; set; }
+    public int? CategoriaFichaTecnicaDetalleValorId { get; set; }
 
-    [ForeignKey("CategoriaFichaTecnica")]
     [Column("categoria_ficha_tecnica_id")]
     public int? CategoriaFichaTecnicaId { get; set; }
-    public virtual LgCategoriaFichaTecnica CategoriaFichaTecnica { get; set; }
+
+    [Column("nombre")]
+    [StringLength(128)]
+    public string Nombre { get; set; }
+
+    [Column("lista_ficha_tecnica_id")]
+    public int? ListaFichaTecnicaId { get; set; }
+
+    [Column("detalle_lista_ficha_tecnica_id")]
+    public int? DetalleListaFichaTecnicaId { get; set; }
+
+    [ForeignKey("ProductoId")]
+    [InverseProperty("LgProductoFichaTecnicas")]
+    public virtual LgProducto Producto { get; set; } = null!;
+
+
+    [ForeignKey("FichaTecnicaId")]
+    [InverseProperty("LgProductoFichaTecnicas")]
+    public virtual LgFichaTecnica FichaTecnica { get; set; } = null!;
+
+    [ForeignKey("CategoriaFichaTecnicaDetalleId")]
+    public virtual LgCategoriaFichaTecnicaDetalle CategoriaFichaTecnicaDetalle { get; set; } = null!;
+
+    [ForeignKey("CategoriaFichaTecnicaDetalleValorId")]
+    public virtual LgCategoriaFichaTecnicaDetalleValor CategoriaFichaTecnicaDetalleValor { get; set; } = null!;
+
+    [ForeignKey("CategoriaFichaTecnicaId")]
+    public virtual LgCategoriaFichaTecnica? CategoriaFichaTecnica { get; set; }
 }

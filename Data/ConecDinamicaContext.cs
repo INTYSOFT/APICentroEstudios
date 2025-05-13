@@ -11,6 +11,8 @@ using api_intiSoft.Models.Logistica.Producto;
 using api_intiSoft.Models.Contabilidad;
 using Finbuckle.MultiTenant.Abstractions;
 using api_intiSoft.Models.Configuracion;
+using api_intiSoft.Models.Clinica;
+using api_intiSoft.Models.Logistica;
 
 //using api_intiSoft.Models.Logistica.Producto;
 
@@ -97,6 +99,22 @@ namespace intiSoft
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgTipoProducto> LgTipoProducto { get; set; } = default!;
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgModelo> LgModelo { get; set; } = default!;
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgProductoServicio> LgProductoServicio { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Logistica.Producto.LgProductoVariante> LgProductoVariante { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmCitaMedica> GmCitaMedica { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmEspecialidad> GmEspecialidad { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmEstadoCitum> GmEstadoCitum { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmHistoriaClinica> GmHistoriaClinica { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmMedico> GmMedico { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmTipoEventoClinico> GmTipoEventoClinico { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmHistoriaClinicaEvento> GmHistoriaClinicaEvento { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Logistica.LgDocumentoIdentidad> LgDocumentoIdentidad { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Logistica.LgTipoCliente> LgTipoCliente { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Logistica.Producto.LgCliente> LgCliente { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmHorarioMedico> GmHorarioMedico { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmTipoHorario> GmTipoHorario { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Logistica.LgSucursal> LgSucursal { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmHorarioApertura> GmHorarioApertura { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.Clinica.GmSala> GmSala { get; set; } = default!;
         
         
         

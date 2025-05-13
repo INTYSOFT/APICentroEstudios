@@ -234,6 +234,1293 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmCitaMedicasController",
+    "Method": "GetGmCitaMedica",
+    "RelativePath": "api/GmCitaMedicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmCitaMedica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmCitaMedicasController",
+    "Method": "PostGmCitaMedica",
+    "RelativePath": "api/GmCitaMedicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmCitaMedica",
+        "Type": "api_intiSoft.Models.Clinica.GmCitaMedica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmCitaMedica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmCitaMedicasController",
+    "Method": "GetGmCitaMedica",
+    "RelativePath": "api/GmCitaMedicas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmCitaMedica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmCitaMedicasController",
+    "Method": "PutGmCitaMedica",
+    "RelativePath": "api/GmCitaMedicas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmCitaMedica",
+        "Type": "api_intiSoft.Models.Clinica.GmCitaMedica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmCitaMedicasController",
+    "Method": "DeleteGmCitaMedica",
+    "RelativePath": "api/GmCitaMedicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEspecialidadsController",
+    "Method": "GetGmEspecialidad",
+    "RelativePath": "api/GmEspecialidads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmEspecialidad, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEspecialidadsController",
+    "Method": "PostGmEspecialidad",
+    "RelativePath": "api/GmEspecialidads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmEspecialidad",
+        "Type": "api_intiSoft.Models.Clinica.GmEspecialidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmEspecialidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEspecialidadsController",
+    "Method": "GetGmEspecialidad",
+    "RelativePath": "api/GmEspecialidads/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmEspecialidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEspecialidadsController",
+    "Method": "PutGmEspecialidad",
+    "RelativePath": "api/GmEspecialidads/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmEspecialidad",
+        "Type": "api_intiSoft.Models.Clinica.GmEspecialidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEspecialidadsController",
+    "Method": "DeleteGmEspecialidad",
+    "RelativePath": "api/GmEspecialidads/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEstadoCitumsController",
+    "Method": "GetGmEstadoCitum",
+    "RelativePath": "api/GmEstadoCitums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmEstadoCitum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEstadoCitumsController",
+    "Method": "PostGmEstadoCitum",
+    "RelativePath": "api/GmEstadoCitums",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmEstadoCitum",
+        "Type": "api_intiSoft.Models.Clinica.GmEstadoCitum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmEstadoCitum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEstadoCitumsController",
+    "Method": "GetGmEstadoCitum",
+    "RelativePath": "api/GmEstadoCitums/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmEstadoCitum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEstadoCitumsController",
+    "Method": "PutGmEstadoCitum",
+    "RelativePath": "api/GmEstadoCitums/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmEstadoCitum",
+        "Type": "api_intiSoft.Models.Clinica.GmEstadoCitum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmEstadoCitumsController",
+    "Method": "DeleteGmEstadoCitum",
+    "RelativePath": "api/GmEstadoCitums/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicaEventoesController",
+    "Method": "GetGmHistoriaClinicaEvento",
+    "RelativePath": "api/GmHistoriaClinicaEventoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmHistoriaClinicaEvento, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicaEventoesController",
+    "Method": "PostGmHistoriaClinicaEvento",
+    "RelativePath": "api/GmHistoriaClinicaEventoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmHistoriaClinicaEvento",
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinicaEvento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinicaEvento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicaEventoesController",
+    "Method": "GetGmHistoriaClinicaEvento",
+    "RelativePath": "api/GmHistoriaClinicaEventoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinicaEvento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicaEventoesController",
+    "Method": "PutGmHistoriaClinicaEvento",
+    "RelativePath": "api/GmHistoriaClinicaEventoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmHistoriaClinicaEvento",
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinicaEvento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicaEventoesController",
+    "Method": "DeleteGmHistoriaClinicaEvento",
+    "RelativePath": "api/GmHistoriaClinicaEventoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicasController",
+    "Method": "GetGmHistoriaClinica",
+    "RelativePath": "api/GmHistoriaClinicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmHistoriaClinica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicasController",
+    "Method": "PostGmHistoriaClinica",
+    "RelativePath": "api/GmHistoriaClinicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmHistoriaClinica",
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicasController",
+    "Method": "GetGmHistoriaClinica",
+    "RelativePath": "api/GmHistoriaClinicas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicasController",
+    "Method": "PutGmHistoriaClinica",
+    "RelativePath": "api/GmHistoriaClinicas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmHistoriaClinica",
+        "Type": "api_intiSoft.Models.Clinica.GmHistoriaClinica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmHistoriaClinicasController",
+    "Method": "DeleteGmHistoriaClinica",
+    "RelativePath": "api/GmHistoriaClinicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioAperturasController",
+    "Method": "GetGmHorarioApertura",
+    "RelativePath": "api/GmHorarioAperturas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmHorarioApertura, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioAperturasController",
+    "Method": "PostGmHorarioApertura",
+    "RelativePath": "api/GmHorarioAperturas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmHorarioApertura",
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioApertura",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioApertura",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioAperturasController",
+    "Method": "GetGmHorarioApertura",
+    "RelativePath": "api/GmHorarioAperturas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioApertura",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioAperturasController",
+    "Method": "PutGmHorarioApertura",
+    "RelativePath": "api/GmHorarioAperturas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmHorarioApertura",
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioApertura",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioAperturasController",
+    "Method": "DeleteGmHorarioApertura",
+    "RelativePath": "api/GmHorarioAperturas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioAperturasController",
+    "Method": "GetHorarios",
+    "RelativePath": "api/GmHorarioAperturas/gethorarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sucursalId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "mes",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmHorarioApertura, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioMedicoesController",
+    "Method": "GetGmHorarioMedico",
+    "RelativePath": "api/GmHorarioMedicoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmHorarioMedico, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioMedicoesController",
+    "Method": "PostGmHorarioMedico",
+    "RelativePath": "api/GmHorarioMedicoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmHorarioMedico",
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioMedico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioMedico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioMedicoesController",
+    "Method": "GetGmHorarioMedico",
+    "RelativePath": "api/GmHorarioMedicoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioMedico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioMedicoesController",
+    "Method": "PutGmHorarioMedico",
+    "RelativePath": "api/GmHorarioMedicoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmHorarioMedico",
+        "Type": "api_intiSoft.Models.Clinica.GmHorarioMedico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioMedicoesController",
+    "Method": "DeleteGmHorarioMedico",
+    "RelativePath": "api/GmHorarioMedicoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmHorarioMedicoesController",
+    "Method": "GetHorariosPorFecha",
+    "RelativePath": "api/GmHorarioMedicoes/gethorarios/{fecha}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha",
+        "Type": "System.DateOnly",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmHorarioMedico, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmMedicoesController",
+    "Method": "GetGmMedico",
+    "RelativePath": "api/GmMedicoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmMedico, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmMedicoesController",
+    "Method": "PostGmMedico",
+    "RelativePath": "api/GmMedicoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmMedico",
+        "Type": "api_intiSoft.Models.Clinica.GmMedico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmMedico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmMedicoesController",
+    "Method": "GetGmMedico",
+    "RelativePath": "api/GmMedicoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmMedico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmMedicoesController",
+    "Method": "PutGmMedico",
+    "RelativePath": "api/GmMedicoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmMedico",
+        "Type": "api_intiSoft.Models.Clinica.GmMedico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmMedicoesController",
+    "Method": "DeleteGmMedico",
+    "RelativePath": "api/GmMedicoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmMedicoesController",
+    "Method": "GetMedicosPorEspecialidad",
+    "RelativePath": "api/GmMedicoes/getmedicoses/{especialidadId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "especialidadId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmMedico, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmSalasController",
+    "Method": "GetGmSala",
+    "RelativePath": "api/GmSalas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmSala, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmSalasController",
+    "Method": "PostGmSala",
+    "RelativePath": "api/GmSalas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmSala",
+        "Type": "api_intiSoft.Models.Clinica.GmSala",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmSala",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmSalasController",
+    "Method": "GetGmSala",
+    "RelativePath": "api/GmSalas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmSala",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmSalasController",
+    "Method": "PutGmSala",
+    "RelativePath": "api/GmSalas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmSala",
+        "Type": "api_intiSoft.Models.Clinica.GmSala",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmSalasController",
+    "Method": "DeleteGmSala",
+    "RelativePath": "api/GmSalas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmTipoEventoClinicoesController",
+    "Method": "GetGmTipoEventoClinico",
+    "RelativePath": "api/GmTipoEventoClinicoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmTipoEventoClinico, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmTipoEventoClinicoesController",
+    "Method": "PostGmTipoEventoClinico",
+    "RelativePath": "api/GmTipoEventoClinicoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmTipoEventoClinico",
+        "Type": "api_intiSoft.Models.Clinica.GmTipoEventoClinico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmTipoEventoClinico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmTipoEventoClinicoesController",
+    "Method": "GetGmTipoEventoClinico",
+    "RelativePath": "api/GmTipoEventoClinicoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmTipoEventoClinico",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmTipoEventoClinicoesController",
+    "Method": "PutGmTipoEventoClinico",
+    "RelativePath": "api/GmTipoEventoClinicoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmTipoEventoClinico",
+        "Type": "api_intiSoft.Models.Clinica.GmTipoEventoClinico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Citas.GmTipoEventoClinicoesController",
+    "Method": "DeleteGmTipoEventoClinico",
+    "RelativePath": "api/GmTipoEventoClinicoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmTipoHorariosController",
+    "Method": "GetGmTipoHorario",
+    "RelativePath": "api/GmTipoHorarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Clinica.GmTipoHorario, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmTipoHorariosController",
+    "Method": "PostGmTipoHorario",
+    "RelativePath": "api/GmTipoHorarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gmTipoHorario",
+        "Type": "api_intiSoft.Models.Clinica.GmTipoHorario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmTipoHorario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmTipoHorariosController",
+    "Method": "GetGmTipoHorario",
+    "RelativePath": "api/GmTipoHorarios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Clinica.GmTipoHorario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmTipoHorariosController",
+    "Method": "PutGmTipoHorario",
+    "RelativePath": "api/GmTipoHorarios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      },
+      {
+        "Name": "gmTipoHorario",
+        "Type": "api_intiSoft.Models.Clinica.GmTipoHorario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Clinica.GmTipoHorariosController",
+    "Method": "DeleteGmTipoHorario",
+    "RelativePath": "api/GmTipoHorarios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
     "Method": "GetLgCategoriaFichaTecnicaDetalle",
     "RelativePath": "api/LgCategoriaFichaTecnicaDetalles",
@@ -852,6 +2139,177 @@
     ]
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgClientesController",
+    "Method": "GetLgCliente",
+    "RelativePath": "api/LgClientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCliente, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgClientesController",
+    "Method": "PostLgCliente",
+    "RelativePath": "api/LgClientes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgCliente",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCliente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgClientesController",
+    "Method": "GetLgCliente",
+    "RelativePath": "api/LgClientes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCliente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgClientesController",
+    "Method": "PutLgCliente",
+    "RelativePath": "api/LgClientes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgCliente",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgClientesController",
+    "Method": "DeleteLgCliente",
+    "RelativePath": "api/LgClientes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgClientesController",
+    "Method": "VerificarExistenciaCliente",
+    "RelativePath": "api/LgClientes/existsdocumento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "documentoIdentidadId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numeroDocumento",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgClientesController",
+    "Method": "SearchFullText",
+    "RelativePath": "api/LgClientes/search/{datosBuscar}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "datosBuscar",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCliente, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgConversionUnidadsController",
     "Method": "GetLgConversionUnidad",
     "RelativePath": "api/LgConversionUnidads",
@@ -1094,6 +2552,115 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgDocumentoIdentidadsController",
+    "Method": "GetLgDocumentoIdentidad",
+    "RelativePath": "api/LgDocumentoIdentidads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.LgDocumentoIdentidad, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgDocumentoIdentidadsController",
+    "Method": "PostLgDocumentoIdentidad",
+    "RelativePath": "api/LgDocumentoIdentidads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgDocumentoIdentidad",
+        "Type": "api_intiSoft.Models.Logistica.LgDocumentoIdentidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.LgDocumentoIdentidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgDocumentoIdentidadsController",
+    "Method": "GetLgDocumentoIdentidad",
+    "RelativePath": "api/LgDocumentoIdentidads/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.LgDocumentoIdentidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgDocumentoIdentidadsController",
+    "Method": "PutLgDocumentoIdentidad",
+    "RelativePath": "api/LgDocumentoIdentidads/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgDocumentoIdentidad",
+        "Type": "api_intiSoft.Models.Logistica.LgDocumentoIdentidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgDocumentoIdentidadsController",
+    "Method": "DeleteLgDocumentoIdentidad",
+    "RelativePath": "api/LgDocumentoIdentidads/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaqueProductoesController",
@@ -2367,6 +3934,22 @@
     ]
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoFichaTecnicasController",
+    "Method": "PostLgProductoFichaTecnicaMultiple",
+    "RelativePath": "api/LgProductoFichaTecnicas/multiple",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtos",
+        "Type": "System.Collections.Generic.List\u00601[[api_intiSoft.Dto.Logistica.Producto.LgProductoFichaTecnicaDto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoPresentacionsController",
     "Method": "GetLgProductoPresentacion",
     "RelativePath": "api/LgProductoPresentacions",
@@ -2476,6 +4059,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoPresentacionsController",
+    "Method": "PostLgProductoPresentacionMultiple",
+    "RelativePath": "api/LgProductoPresentacions/multiple",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtos",
+        "Type": "System.Collections.Generic.List\u00601[[api_intiSoft.Dto.Logistica.Producto.LgProductoPresentacionDto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoPresentacionsController",
+    "Method": "PutLgProductoPresentacionMultiple",
+    "RelativePath": "api/LgProductoPresentacions/multiple",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtos",
+        "Type": "System.Collections.Generic.List\u00601[[api_intiSoft.Dto.Logistica.Producto.LgProductoPresentacionDto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoServiciosController",
     "Method": "GetLgProductoServicio",
     "RelativePath": "api/LgProductoServicios",
@@ -2579,6 +4194,349 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoVariantesController",
+    "Method": "GetLgProductoVariante",
+    "RelativePath": "api/LgProductoVariantes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgProductoVariante, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoVariantesController",
+    "Method": "PostLgProductoVariante",
+    "RelativePath": "api/LgProductoVariantes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgProductoVariante",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoVariante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoVariante",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoVariantesController",
+    "Method": "GetLgProductoVariante",
+    "RelativePath": "api/LgProductoVariantes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoVariante",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoVariantesController",
+    "Method": "PutLgProductoVariante",
+    "RelativePath": "api/LgProductoVariantes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgProductoVariante",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoVariante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoVariantesController",
+    "Method": "DeleteLgProductoVariante",
+    "RelativePath": "api/LgProductoVariantes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoVariantesController",
+    "Method": "PostLgProductoVarianteMultiple",
+    "RelativePath": "api/LgProductoVariantes/multiple",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "variantesDto",
+        "Type": "System.Collections.Generic.List\u00601[[api_intiSoft.Dto.Logistica.Producto.LgProductoVarianteDto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgSucursalsController",
+    "Method": "GetLgSucursal",
+    "RelativePath": "api/LgSucursals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.LgSucursal, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgSucursalsController",
+    "Method": "PostLgSucursal",
+    "RelativePath": "api/LgSucursals",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgSucursal",
+        "Type": "api_intiSoft.Models.Logistica.LgSucursal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.LgSucursal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgSucursalsController",
+    "Method": "GetLgSucursal",
+    "RelativePath": "api/LgSucursals/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.LgSucursal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgSucursalsController",
+    "Method": "PutLgSucursal",
+    "RelativePath": "api/LgSucursals/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgSucursal",
+        "Type": "api_intiSoft.Models.Logistica.LgSucursal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgSucursalsController",
+    "Method": "DeleteLgSucursal",
+    "RelativePath": "api/LgSucursals/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgTipoClientesController",
+    "Method": "GetLgTipoCliente",
+    "RelativePath": "api/LgTipoClientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.LgTipoCliente, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgTipoClientesController",
+    "Method": "PostLgTipoCliente",
+    "RelativePath": "api/LgTipoClientes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgTipoCliente",
+        "Type": "api_intiSoft.Models.Logistica.LgTipoCliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.LgTipoCliente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgTipoClientesController",
+    "Method": "GetLgTipoCliente",
+    "RelativePath": "api/LgTipoClientes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.LgTipoCliente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgTipoClientesController",
+    "Method": "PutLgTipoCliente",
+    "RelativePath": "api/LgTipoClientes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgTipoCliente",
+        "Type": "api_intiSoft.Models.Logistica.LgTipoCliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.LgTipoClientesController",
+    "Method": "DeleteLgTipoCliente",
+    "RelativePath": "api/LgTipoClientes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
         "IsRequired": true
       }
     ],

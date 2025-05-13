@@ -13,48 +13,69 @@ public partial class LgCliente
     [Column("cliente_id")]
     public int ClienteId { get; set; }
 
+    [Column("tipo_cliente_id")]
+    public short TipoClienteId { get; set; }
+
     [Column("documento_identidad_id")]
     [StringLength(3)]
     public string DocumentoIdentidadId { get; set; } = null!;
 
-    [Column("nombre")]
+    [Column("numero_documento")]
+    [StringLength(20)]
+    public string NumeroDocumento { get; set; } = null!;
+
+    [Column("razon_social")]
     [StringLength(255)]
-    public string Nombre { get; set; } = null!;
+    public string? RazonSocial { get; set; }
 
-    [Column("geo_latitud_llegada")]
-    [Precision(10, 6)]
-    public decimal GeoLatitudLlegada { get; set; }
+    [Column("nombres")]
+    [StringLength(100)]
+    public string? Nombres { get; set; }
 
-    [Column("geo_longitud_llegada")]
-    [Precision(10, 6)]
-    public decimal GeoLongitudLlegada { get; set; }
+    [Column("apellidos")]
+    [StringLength(150)]
+    public string? Apellidos { get; set; }
 
     [Column("direccion")]
     [StringLength(255)]
     public string? Direccion { get; set; }
 
+    [Column("ubigeo_id")]
+    [StringLength(6)]
+    public string? UbigeoId { get; set; }
+
     [Column("telefono")]
-    [StringLength(50)]
+    [StringLength(20)]
     public string? Telefono { get; set; }
+
+    [Column("celular")]
+    [StringLength(20)]
+    public string? Celular { get; set; }
 
     [Column("email")]
     [StringLength(100)]
     public string? Email { get; set; }
 
-    [Column("page_web")]
-    [StringLength(100)]
-    public string? PageWeb { get; set; }
-
-    [Column("saldo_cuenta")]
-    [Precision(10, 2)]
-    public decimal? SaldoCuenta { get; set; }
-
     [Column("activo")]
-    public bool? Activo { get; set; }
+    public bool Activo { get; set; } = true;
+
+    [Column("fecha_registro")]
+    public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
+
+    [Column("fecha_actualizacion")]
+    public DateTime? FechaActualizacion { get; set; }
+    //fecha_nacimiento
+    [Column("fecha_nacimiento")]
+    public DateTime? FechaNacimiento { get; set; }
+
+    [Column("usuario_registro_id")]
+    public int? UsuarioRegistroId { get; set; }
+
+    [Column("usuario_actualizacion_id")]
+    public int? UsuarioActualizacionId { get; set; }
 
     [ForeignKey("DocumentoIdentidadId")]
-    [InverseProperty("LgClientes")]
-    public virtual LgDocumentoIdentidad DocumentoIdentidad { get; set; } = null!;
+    public virtual LgDocumentoIdentidad? DocumentoIdentidad { get; set; }
 
     [InverseProperty("Cliente")]
     public virtual ICollection<LgContactoCliente> LgContactoClientes { get; set; } = new List<LgContactoCliente>();

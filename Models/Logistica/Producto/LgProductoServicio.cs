@@ -10,6 +10,9 @@ namespace api_intiSoft.Models.Logistica.Producto;
 public partial class LgProductoServicio
 {
     [Key]
+    [Column("producto_servicio_id")]
+    public int ProductoServicioId { get; set; }
+
     [Column("producto_id")]
     public int ProductoId { get; set; }
 

@@ -520,3 +520,5 @@ D:\INTI\APIWeb\api_intiSoft GIT\IntiBackEnd\obj\Debug\net9.0\api_intiSoft.pdb
 D:\INTI\APIWeb\api_intiSoft GIT\IntiBackEnd\obj\Debug\net9.0\api_intiSoft.genruntimeconfig.cache
 D:\INTI\APIWeb\api_intiSoft GIT\IntiBackEnd\obj\Debug\net9.0\ref\api_intiSoft.dll
 D:\inti\APIWeb\api_intiSoft\obj\Debug\net9.0\api_intiSoft.sourcelink.json
+D:\inti\APIWeb\api_intiSoft\bin\Debug\net9.0\AutoMapper.dll
+D:\inti\APIWeb\api_intiSoft\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

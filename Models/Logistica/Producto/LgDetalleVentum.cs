@@ -53,7 +53,13 @@ public partial class LgDetalleVentum
 
     // ForeignKey producto_variante
     [ForeignKey("ProductoVarianteId")]
-    [InverseProperty("LgDetalleVenta")]
+    [InverseProperty("LgDetalleVentas")]
     public virtual LgProductoVariante? ProductoVariante { get; set; }
+
+    [ForeignKey("VentaId")]
+    [InverseProperty("LgDetalleVenta")]
+    public virtual LgVentum Venta { get; set; } = null!;
+
+
 
 }

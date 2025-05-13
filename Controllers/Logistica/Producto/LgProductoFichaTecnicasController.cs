@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using api_intiSoft.Models.Logistica.Producto;
 using intiSoft;
+using AutoMapper;
+using api_intiSoft.Dto.Logistica.Producto;
 
 namespace api_intiSoft.Controllers.Logistica.Producto
 {
@@ -15,10 +17,12 @@ namespace api_intiSoft.Controllers.Logistica.Producto
     public class LgProductoFichaTecnicasController : ControllerBase
     {
         private readonly ConecDinamicaContext _context;
+        private readonly IMapper _mapper;
 
-        public LgProductoFichaTecnicasController(ConecDinamicaContext context)
+        public LgProductoFichaTecnicasController(ConecDinamicaContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // producto by categoriaFichaTecnicaId
@@ -90,6 +94,52 @@ namespace api_intiSoft.Controllers.Logistica.Producto
 
             return CreatedAtAction("GetLgProductoFichaTecnica", new { id = lgProductoFichaTecnica.ProductoFichaTecnicaId }, lgProductoFichaTecnica);
         }
+        //post multiple 
+        [HttpPost("multiple")]
+        public async Task<IActionResult> PostLgProductoFichaTecnicaMultiple([FromBody] List<LgProductoFichaTecnicaDto> dtos)
+        {
+            if (dtos == null || !dtos.Any())
+                return BadRequest("Debe proporcionar al menos una ficha técnica.");
+
+            try
+            {
+                var entidades = _mapper.Map<List<LgProductoFichaTecnica>>(dtos);
+
+                await using var transaction = await _context.Database.BeginTransactionAsync();
+
+                await _context.LgProductoFichaTecnica.AddRangeAsync(entidades);
+                await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+
+                return Ok(new
+                {
+                    mensaje = "Fichas técnicas guardadas correctamente",
+                    ids = entidades.Select(e => e.ProductoFichaTecnicaId)
+                });
+            }
+            catch (DbUpdateException dbEx)
+            {
+                //_logger.LogError(dbEx, "Error al guardar fichas técnicas (relación o duplicado).");
+                return StatusCode(500, new
+                {
+                    mensaje = "Error de base de datos al insertar fichas técnicas.",
+                    detalle = dbEx.InnerException?.Message ?? dbEx.Message
+                });
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex, "Error inesperado al guardar fichas técnicas.");
+                return StatusCode(500, new
+                {
+                    mensaje = "Error interno al procesar la solicitud.",
+                    detalle = ex.InnerException?.Message ?? ex.Message
+                });
+            }
+        }
+
+
+
 
         // DELETE: api/LgProductoFichaTecnicas/5
         [HttpDelete("{id}")]

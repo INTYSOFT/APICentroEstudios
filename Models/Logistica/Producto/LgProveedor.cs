@@ -45,8 +45,9 @@ public partial class LgProveedor
     public bool? Activo { get; set; }
 
     [ForeignKey("DocumentoIdentidadId")]
-    [InverseProperty("LgProveedors")]
+    [InverseProperty("Proveedores")]
     public virtual LgDocumentoIdentidad DocumentoIdentidad { get; set; } = null!;
+
 
     [InverseProperty("Proveedor")]
     public virtual ICollection<LgOrdenCompra> LgOrdenCompras { get; set; } = new List<LgOrdenCompra>();
