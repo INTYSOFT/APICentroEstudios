@@ -5,25 +5,16 @@ using System.ComponentModel.DataAnnotations;
 namespace api_intiSoft.Dto.Logistica.Producto
 {
     public class LgProductoPresentacionDto
-    {
-        
+    {        
         public int ProductoPresentacionId { get; set; }
 
-        public int ProductoId { get; set; }
-
-        public string? PresentacionSku { get; set; }
+        public int ProductoId { get; set; }        
 
         public string? Nombre { get; set; }
 
         public string? Descripcion { get; set; }
 
-        public bool? Activo { get; set; }
-
-        public string? CodigoBarras { get; set; }
-
-        public byte[]? CodigoQr { get; set; }
-
-        public string? CodigoInterno { get; set; }
+        public bool? Activo { get; set; }        
 
         public int? EmpaqueId { get; set; }
 
@@ -52,6 +43,15 @@ namespace api_intiSoft.Dto.Logistica.Producto
         public decimal? CantidadIncluyePresentacion { get; set; }
 
         public short? Orden { get; set; }
+       
+        public string? NombreCompuestoCompleto { get; set; }
+        public string? NombreCompuestoCorto { get; set; }
+        public int? NumeracionGrupo { get; set; }
+        public string? NombreGrupo { get; set; }
+        //TipoUsoProductoId
+        public int? TipoUsoProductoId { get; set; }
+        //CantUnidad
+        public decimal? CantUnidad { get; set; }
 
     }
 }

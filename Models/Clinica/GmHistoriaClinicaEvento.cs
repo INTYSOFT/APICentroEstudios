@@ -50,7 +50,7 @@ public partial class GmHistoriaClinicaEvento
 
     [ForeignKey("CitaId")]
     [InverseProperty("GmHistoriaClinicaEventos")]
-    public virtual GmCitaMedica? Cita { get; set; }
+    public virtual LgCliente? Cita { get; set; }
 
     [ForeignKey("HistoriaClinicaId")]
     [InverseProperty("GmHistoriaClinicaEventos")]

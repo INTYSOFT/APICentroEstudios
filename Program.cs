@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Finbuckle.MultiTenant;
 using api_intiSoft.Data;
@@ -9,8 +8,19 @@ using intiSoft;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using api_intiSoft.AutoMapper;
+using api_intiSoft.Models.Common;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//builder.Services.AddAutoMapper(typeof(LogisticaProfile));
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<LogisticaProfile>();
+});
+
+
 
 // Configuración de JWT
 var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -20,6 +30,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
+
 .AddJwtBearer(options =>
 {
     options.RequireHttpsMetadata = false;
@@ -37,20 +48,17 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-
+//builder.Services.AddAutoMapper(typeof(Program));
+//builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddAuthorization();
-
 
 
 // Configuración de la base de datos para el almacenamiento de tenants
 builder.Services.AddNpgsql<TenantsDbContext>(builder.Configuration.GetConnectionString("Tenants"));
 
 // Contexto de conexión dinámica sin cadena de conexión explícita
-builder.Services.AddDbContext<ConecDinamicaContext>();
+//builder.Services.AddDbContext<ConecDinamicaContext>();
 
 // Inyección de dependencias para los servicios
 builder.Services.AddScoped<IFichaTecnicaService, FichaTecnicaService>();
@@ -122,29 +130,39 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+var configuration = builder.Configuration;
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<AuditSaveChangesInterceptor>();
+
+builder.Services.AddDbContext<ConecDinamicaContext>((serviceProvider, options) =>
+{
+    var interceptor = serviceProvider.GetRequiredService<AuditSaveChangesInterceptor>();
+    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
+           .AddInterceptors(interceptor);
+});
+
 
 var app = builder.Build();
 
-// Habilitar autenticación y autorización en la API
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseDeveloperExceptionPage(); // durante desarrollo
 
-// Middleware de MultiTenant
-app.UseMultiTenant();
-
-// Configuración del pipeline HTTP
-if (app.Environment.IsDevelopment())
+//  Swagger en producción (por ejemplo, en un entorno interno),
+if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API intiSoft v1"));
 }
 
-app.UseDeveloperExceptionPage(); // durante desarrollo
 
-app.UseCors("CorsPageWeb");
+
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseCors("CorsPageWeb");
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseMultiTenant();
 app.MapControllers();
 
 app.Run();

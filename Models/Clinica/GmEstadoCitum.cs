@@ -24,5 +24,5 @@ public partial class GmEstadoCitum
     public bool? Activo { get; set; }
 
     [InverseProperty("EstadoCita")]
-    public virtual ICollection<GmCitaMedica> GmCitaMedicas { get; set; } = new List<GmCitaMedica>();
+    public virtual ICollection<LgCliente> GmCitaMedicas { get; set; } = new List<LgCliente>();
 }

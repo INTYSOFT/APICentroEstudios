@@ -10,12 +10,12 @@ namespace api_intiSoft.Dto.Logistica.Producto
         public int? FichaTecnicaId { get; set; }
         public bool? Activo { get; set; }        
         
-        public LgFichaTecnica? FichaTecnica { get; set; }
-        public LgCategoria? Categoria { get; set; }
+        public FichaTecnica? FichaTecnica { get; set; }
+        public Categorias? Categoria { get; set; }
         
         //lista public LgCategoriaFichaTecnicaDetalle? CategoriaFichaTecnicaDetalle { get; set; }
 
-        public List<LgCategoriaFichaTecnicaDetalle?> CategoriaFichaTecnicaDetalle { get; set; }
+        public List<CategoriaFichaTecnicaDetalle?> CategoriaFichaTecnicaDetalle { get; set; }
 
     }
 

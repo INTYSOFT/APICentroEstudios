@@ -11,7 +11,9 @@ namespace api_intiSoft.Data
     {
         //public TenantsDbContext(DbContextOptions<TenantsDbContext> options) : base(options)
 
-        public TenantsDbContext(DbContextOptions options) : base(options)
+        //public TenantsDbContext(DbContextOptions options) : base(options)
+        public TenantsDbContext(DbContextOptions<TenantsDbContext> options) : base(options)
+
         {
         }
 

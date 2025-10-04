@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace api_intiSoft.Models.Clinica;
 
 [Table("gm_cita_medica")]
-public partial class GmCitaMedica
+public partial class LgCliente
 {
     [Key]
     [Column("cita_id")]
@@ -65,7 +65,4 @@ public partial class GmCitaMedica
     [ForeignKey("MedicoId")]
     [InverseProperty("GmCitaMedicas")]
     public virtual GmMedico Medico { get; set; } = null!;
-
-
-
 }

@@ -87,7 +87,7 @@ public partial class GmMedico
     public virtual GmEspecialidad? Especialidad { get; set; }
 
     [InverseProperty("Medico")]
-    public virtual ICollection<GmCitaMedica> GmCitaMedicas { get; set; } = new List<GmCitaMedica>();
+    public virtual ICollection<LgCliente> GmCitaMedicas { get; set; } = new List<LgCliente>();
 
     [InverseProperty("Medico")]
     public virtual ICollection<GmHistoriaClinicaEvento> GmHistoriaClinicaEventos { get; set; } = new List<GmHistoriaClinicaEvento>();

@@ -23,14 +23,14 @@ namespace api_intiSoft.Controllers.Citas
 
         // GET: api/GmCitaMedicas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GmCitaMedica>>> GetGmCitaMedica()
+        public async Task<ActionResult<IEnumerable<LgCliente>>> GetGmCitaMedica()
         {
             return await _context.GmCitaMedica.ToListAsync();
         }
 
         // GET: api/GmCitaMedicas/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<GmCitaMedica>> GetGmCitaMedica(int id)
+        public async Task<ActionResult<LgCliente>> GetGmCitaMedica(int id)
         {
             var gmCitaMedica = await _context.GmCitaMedica.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace api_intiSoft.Controllers.Citas
         // PUT: api/GmCitaMedicas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGmCitaMedica(int id, GmCitaMedica gmCitaMedica)
+        public async Task<IActionResult> PutGmCitaMedica(int id, LgCliente gmCitaMedica)
         {
             if (id != gmCitaMedica.CitaId)
             {
@@ -76,7 +76,7 @@ namespace api_intiSoft.Controllers.Citas
         // POST: api/GmCitaMedicas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<GmCitaMedica>> PostGmCitaMedica(GmCitaMedica gmCitaMedica)
+        public async Task<ActionResult<LgCliente>> PostGmCitaMedica(LgCliente gmCitaMedica)
         {
             _context.GmCitaMedica.Add(gmCitaMedica);
             await _context.SaveChangesAsync();

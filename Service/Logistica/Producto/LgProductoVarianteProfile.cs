@@ -8,8 +8,8 @@ namespace api_intiSoft.Service.Logistica.Producto
     {
         public LgProductoVarianteProfile()
         {
-            CreateMap<LgProductoVarianteDto, LgProductoVariante>();
-            CreateMap<LgProductoVariante, LgProductoVarianteDto>();
+            CreateMap<LgProductoVarianteDto, ProductoVariante>();
+            CreateMap<ProductoVariante, LgProductoVarianteDto>();
         }
     }
 }

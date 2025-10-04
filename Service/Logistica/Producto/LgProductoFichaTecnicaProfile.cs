@@ -8,8 +8,8 @@ namespace api_intiSoft.Service.Logistica.Producto
     {
         public LgProductoFichaTecnicaProfile()
         {
-            CreateMap<LgProductoFichaTecnicaDto, LgProductoFichaTecnica>();
-            CreateMap<LgProductoFichaTecnica, LgProductoFichaTecnicaDto>();
+            CreateMap<LgProductoFichaTecnicaDto, ProductoFichaTecnica>();
+            CreateMap<ProductoFichaTecnica, LgProductoFichaTecnicaDto>();
         }
     }
 }

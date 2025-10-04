@@ -9,8 +9,8 @@ namespace api_intiSoft.Service.Logistica.Producto
     {
         public LgProductoPresentacionProfile()
         {
-            CreateMap<LgProductoPresentacionDto, LgProductoPresentacion>();
-            CreateMap<LgProductoPresentacion, LgProductoPresentacionDto>();
+            CreateMap<LgProductoPresentacionDto, ProductoPresentacion>();
+            CreateMap<ProductoPresentacion, LgProductoPresentacionDto>();
         }
     }
 }
