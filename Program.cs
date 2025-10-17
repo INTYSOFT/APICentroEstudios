@@ -2,23 +2,17 @@
 using Microsoft.OpenApi.Models;
 using Finbuckle.MultiTenant;
 using api_intiSoft.Data;
-using api_intiSoft.Service;
 using api_intiSoft.Models.Data;
 using intiSoft;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using api_intiSoft.AutoMapper;
 using api_intiSoft.Models.Common;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddAutoMapper(typeof(LogisticaProfile));
-builder.Services.AddAutoMapper(cfg =>
-{
-    cfg.AddProfile<LogisticaProfile>();
-});
 
 
 
@@ -61,7 +55,7 @@ builder.Services.AddNpgsql<TenantsDbContext>(builder.Configuration.GetConnection
 //builder.Services.AddDbContext<ConecDinamicaContext>();
 
 // Inyección de dependencias para los servicios
-builder.Services.AddScoped<IFichaTecnicaService, FichaTecnicaService>();
+//builder.Services.AddScoped<IFichaTecnicaService, FichaTecnicaService>();
 
 // Configuración de Finbuckle.MultiTenant
 builder.Services

@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\Clientes\**" />
+    <Compile Remove="Models\Clientes\**" />
+    <Content Remove="Controllers\Clientes\**" />
+    <Content Remove="Models\Clientes\**" />
+    <EmbeddedResource Remove="Controllers\Clientes\**" />
+    <EmbeddedResource Remove="Models\Clientes\**" />
+    <None Remove="Controllers\Clientes\**" />
+    <None Remove="Models\Clientes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="15.0.1" />
     <PackageReference Include="Finbuckle.MultiTenant" Version="9.0.0" />
     <PackageReference Include="Finbuckle.MultiTenant.AspNetCore" Version="9.0.0" />
@@ -28,11 +39,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Clientes\" />
-    <Folder Include="Models\Clientes\" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="Controllers\Common\" />
     <Folder Include="Models\Configuracion\" />
-    <Folder Include="Models\Contabilidad\" />
-    <Folder Include="Models\Clinica\" />
+    <Folder Include="Service\" />
   </ItemGroup>
 
 </Project>

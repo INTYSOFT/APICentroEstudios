@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VK6MKFGPpmI=",
+  "dgSpecHash": "covuy3hvSNM=",
   "success": true,
-  "projectFilePath": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+  "projectFilePath": "D:\\inti\\INTYSoft\\api_intiSoft\\api_intiSoft.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\omara\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
     "C:\\Users\\omara\\.nuget\\packages\\finbuckle.multitenant\\9.0.0\\finbuckle.multitenant.9.0.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj": {}
+    "D:\\inti\\INTYSoft\\api_intiSoft\\api_intiSoft.csproj": {}
   },
   "projects": {
-    "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj": {
+    "D:\\inti\\INTYSoft\\api_intiSoft\\api_intiSoft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+        "projectUniqueName": "D:\\inti\\INTYSoft\\api_intiSoft\\api_intiSoft.csproj",
         "projectName": "api_intiSoft",
-        "projectPath": "D:\\inti\\APIWeb\\api_intiSoft\\api_intiSoft.csproj",
+        "projectPath": "D:\\inti\\INTYSoft\\api_intiSoft\\api_intiSoft.csproj",
         "packagesPath": "C:\\Users\\omara\\.nuget\\packages\\",
-        "outputPath": "D:\\inti\\APIWeb\\api_intiSoft\\obj\\",
+        "outputPath": "D:\\inti\\INTYSoft\\api_intiSoft\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
