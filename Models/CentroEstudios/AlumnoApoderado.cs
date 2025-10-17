@@ -38,11 +38,15 @@ public partial class AlumnoApoderado
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("AlumnoId")]
-    [InverseProperty("AlumnoApoderados")]
-    public virtual Alumno? Alumno { get; set; } = null!;
+    [ForeignKey(nameof(AlumnoId))]
+    [InverseProperty(nameof(Alumno.AlumnoApoderados))]
+    public virtual Alumno Alumno { get; set; } = null!;
 
-    [ForeignKey("ApoderadoId")]
-    [InverseProperty("AlumnoApoderados")]
-    public virtual Apoderado? Apoderado { get; set; } = null!;
+    [ForeignKey(nameof(ApoderadoId))]
+    [InverseProperty(nameof(Apoderado.AlumnoApoderados))]
+    public virtual Apoderado Apoderado { get; set; } = null!;
+
+    [ForeignKey(nameof(ParentescoId))]
+    [InverseProperty(nameof(Parentesco.AlumnoApoderados))]
+    public virtual Parentesco? Parentesco { get; set; }
 }

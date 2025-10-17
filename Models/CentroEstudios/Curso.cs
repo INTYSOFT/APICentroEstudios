@@ -35,8 +35,6 @@ public partial class Curso
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("Curso")]
-    public virtual ICollection<Asistencium>? Asistencia { get; set; }     
-
-
+    [InverseProperty(nameof(Asistencium.Curso))]
+    public virtual ICollection<Asistencium> Asistencia { get; set; } = new List<Asistencium>();
 }

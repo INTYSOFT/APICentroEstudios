@@ -45,12 +45,11 @@ public partial class MatriculaItem
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("MatriculaId")]
-    [InverseProperty("MatriculaItems")]
-    public virtual Matricula? Matricula { get; set; } = null!;
+    [ForeignKey(nameof(ConceptoId))]
+    [InverseProperty(nameof(Concepto.MatriculaItems))]
+    public virtual Concepto Concepto { get; set; } = null!;
 
-    //Concepto
-    [ForeignKey("ConceptoId")]
-    [InverseProperty("MatriculaItems")]
-    public virtual Concepto? Concepto { get; set; } = null!;
+    [ForeignKey(nameof(MatriculaId))]
+    [InverseProperty(nameof(Matricula.MatriculaItems))]
+    public virtual Matricula Matricula { get; set; } = null!;
 }

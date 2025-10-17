@@ -39,4 +39,15 @@ public partial class AperturaCiclo
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
+
+    [InverseProperty(nameof(AperturaSeccion.AperturaCiclo))]
+    public virtual ICollection<AperturaSeccion> AperturaSeccions { get; set; } = new List<AperturaSeccion>();
+
+    [ForeignKey(nameof(CicloId))]
+    [InverseProperty(nameof(Ciclo.AperturaCiclos))]
+    public virtual Ciclo Ciclo { get; set; } = null!;
+
+    [ForeignKey(nameof(SedeId))]
+    [InverseProperty(nameof(Sede.AperturaCiclos))]
+    public virtual Sede Sede { get; set; } = null!;
 }

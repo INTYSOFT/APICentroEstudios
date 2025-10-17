@@ -33,4 +33,7 @@ public partial class ConceptoTipo
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
+
+    [InverseProperty(nameof(Concepto.ConceptoTipo))]
+    public virtual ICollection<Concepto> Conceptos { get; set; } = new List<Concepto>();
 }

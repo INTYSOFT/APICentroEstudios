@@ -35,12 +35,21 @@ public partial class Seccion
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("Seccion")]
+    [InverseProperty(nameof(AperturaSeccion.Seccion))]
+    public virtual ICollection<AperturaSeccion> AperturaSeccions { get; set; } = new List<AperturaSeccion>();
+
+    [InverseProperty(nameof(Asistencium.Seccion))]
     public virtual ICollection<Asistencium> Asistencia { get; set; } = new List<Asistencium>();
- 
 
-    [InverseProperty("SeccionSnapshot")]
-    public virtual ICollection<Evaluacion>? Evaluacions { get; set; }
-    
+    [InverseProperty(nameof(Evaluacion.SeccionSnapshot))]
+    public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
 
+    [InverseProperty(nameof(Matricula.Seccion))]
+    public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
+
+    [InverseProperty(nameof(EvaluacionProgramadum.Seccion))]
+    public virtual ICollection<EvaluacionProgramadum> Programaciones { get; set; } = new List<EvaluacionProgramadum>();
+
+    [InverseProperty(nameof(SeccionCiclo.Seccion))]
+    public virtual ICollection<SeccionCiclo> SeccionCiclos { get; set; } = new List<SeccionCiclo>();
 }

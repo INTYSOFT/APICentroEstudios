@@ -53,4 +53,16 @@ public partial class AperturaSeccion
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
+
+    [ForeignKey(nameof(AperturaCicloId))]
+    [InverseProperty(nameof(AperturaCiclo.AperturaSeccions))]
+    public virtual AperturaCiclo AperturaCiclo { get; set; } = null!;
+
+    [ForeignKey(nameof(NivelId))]
+    [InverseProperty(nameof(Nivel.AperturaSeccions))]
+    public virtual Nivel? Nivel { get; set; }
+
+    [ForeignKey(nameof(SeccionId))]
+    [InverseProperty(nameof(Seccion.AperturaSeccions))]
+    public virtual Seccion Seccion { get; set; } = null!;
 }

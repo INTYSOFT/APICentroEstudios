@@ -38,16 +38,16 @@ public partial class EvaluacionForma
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("EvaluacionForma")]
+    [InverseProperty(nameof(EvaluacionClave.EvaluacionForma))]
     public virtual ICollection<EvaluacionClave> EvaluacionClaves { get; set; } = new List<EvaluacionClave>();
 
-    [InverseProperty("EvaluacionForma")]
+    [InverseProperty(nameof(EvaluacionPreguntum.EvaluacionForma))]
     public virtual ICollection<EvaluacionPreguntum> EvaluacionPregunta { get; set; } = new List<EvaluacionPreguntum>();
 
-    [ForeignKey("EvaluacionProgramadaId")]
-    [InverseProperty("EvaluacionFormas")]
+    [ForeignKey(nameof(EvaluacionProgramadaId))]
+    [InverseProperty(nameof(EvaluacionProgramadum.EvaluacionFormas))]
     public virtual EvaluacionProgramadum EvaluacionProgramada { get; set; } = null!;
 
-    [InverseProperty("EvaluacionForma")]
+    [InverseProperty(nameof(Evaluacion.EvaluacionForma))]
     public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
 }

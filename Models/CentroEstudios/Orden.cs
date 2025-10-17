@@ -48,17 +48,17 @@ public partial class Orden
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("MatriculaId")]
-    [InverseProperty("Ordens")]
+    [ForeignKey(nameof(MatriculaId))]
+    [InverseProperty(nameof(Matricula.Ordens))]
     public virtual Matricula Matricula { get; set; } = null!;
 
-    [InverseProperty("Orden")]
+    [InverseProperty(nameof(OrdenItem.Orden))]
     public virtual ICollection<OrdenItem> OrdenItems { get; set; } = new List<OrdenItem>();
 
-    [InverseProperty("Orden")]
+    [InverseProperty(nameof(Pago.Orden))]
     public virtual ICollection<Pago> Pagos { get; set; } = new List<Pago>();
 
-    [ForeignKey("SedeId")]
-    [InverseProperty("Ordens")]
+    [ForeignKey(nameof(SedeId))]
+    [InverseProperty(nameof(Sede.Ordens))]
     public virtual Sede Sede { get; set; } = null!;
 }

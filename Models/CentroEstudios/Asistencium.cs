@@ -47,19 +47,19 @@ public partial class Asistencium
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("AlumnoId")]
-    [InverseProperty("Asistencia")]
+    [ForeignKey(nameof(AlumnoId))]
+    [InverseProperty(nameof(Alumno.Asistencia))]
     public virtual Alumno Alumno { get; set; } = null!;
 
-    [ForeignKey("CursoId")]
-    [InverseProperty("Asistencia")]
+    [ForeignKey(nameof(CursoId))]
+    [InverseProperty(nameof(Curso.Asistencia))]
     public virtual Curso Curso { get; set; } = null!;
 
-    [ForeignKey("SeccionId")]
-    [InverseProperty("Asistencia")]
+    [ForeignKey(nameof(SeccionId))]
+    [InverseProperty(nameof(Seccion.Asistencia))]
     public virtual Seccion Seccion { get; set; } = null!;
 
-    [ForeignKey("TomadoPor")]
-    [InverseProperty("Asistencia")]
+    [ForeignKey(nameof(TomadoPor))]
+    [InverseProperty(nameof(Usuario.Asistencia))]
     public virtual Usuario? TomadoPorNavigation { get; set; }
 }

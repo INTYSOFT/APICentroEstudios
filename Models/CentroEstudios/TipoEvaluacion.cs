@@ -34,6 +34,6 @@ public partial class TipoEvaluacion
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("TipoEvaluacion")]
+    [InverseProperty(nameof(EvaluacionProgramadum.TipoEvaluacion))]
     public virtual ICollection<EvaluacionProgramadum> EvaluacionProgramada { get; set; } = new List<EvaluacionProgramadum>();
 }

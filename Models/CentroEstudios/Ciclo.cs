@@ -50,7 +50,16 @@ public partial class Ciclo
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
-    
-    
-    
+
+    [InverseProperty(nameof(AperturaCiclo.Ciclo))]
+    public virtual ICollection<AperturaCiclo> AperturaCiclos { get; set; } = new List<AperturaCiclo>();
+
+    [InverseProperty(nameof(EvaluacionProgramadum.Ciclo))]
+    public virtual ICollection<EvaluacionProgramadum> EvaluacionProgramada { get; set; } = new List<EvaluacionProgramadum>();
+
+    [InverseProperty(nameof(Matricula.Ciclo))]
+    public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
+
+    [InverseProperty(nameof(SeccionCiclo.Ciclo))]
+    public virtual ICollection<SeccionCiclo> SeccionCiclos { get; set; } = new List<SeccionCiclo>();
 }

@@ -57,30 +57,36 @@ public partial class Matricula
     [Column("carrera_id")]
     public int? CarreraId { get; set; }
 
-    [InverseProperty("Matricula")]
-    public virtual ICollection<MatriculaItem>? MatriculaItems { get; set; } = new List<MatriculaItem>();
+    [InverseProperty(nameof(BecaAlumno.Matricula))]
+    public virtual ICollection<BecaAlumno> BecaAlumnos { get; set; } = new List<BecaAlumno>();
 
-    [ForeignKey("SeccionCicloId")]
-    [InverseProperty("Matriculas")]
-    public virtual SeccionCiclo? SeccionCiclo { get; set; } = null!;
+    [InverseProperty(nameof(MatriculaItem.Matricula))]
+    public virtual ICollection<MatriculaItem> MatriculaItems { get; set; } = new List<MatriculaItem>();
 
+    [InverseProperty(nameof(Orden.Matricula))]
+    public virtual ICollection<Orden> Ordens { get; set; } = new List<Orden>();
 
-    //alumno
-    [ForeignKey("AlumnoId")]
-    [InverseProperty("Matriculas")]
-    public virtual Alumno? Alumno { get; set; } = null!;
+    [ForeignKey(nameof(AlumnoId))]
+    [InverseProperty(nameof(Alumno.Matriculas))]
+    public virtual Alumno Alumno { get; set; } = null!;
 
-    //Carrera
-    [ForeignKey("CarreraId")]
-    [InverseProperty("Matriculas")]
-    public virtual Carrera? Carrera    {get; set; } = null!;
+    [ForeignKey(nameof(CarreraId))]
+    [InverseProperty(nameof(Carrera.Matriculas))]
+    public virtual Carrera? Carrera { get; set; }
 
-    //BecaAlumnos
-    [InverseProperty("Matricula")]
-    public virtual ICollection<BecaAlumno>? BecaAlumnos { get; set; } = new List<BecaAlumno>();
+    [ForeignKey(nameof(CicloId))]
+    [InverseProperty(nameof(Ciclo.Matriculas))]
+    public virtual Ciclo? Ciclo { get; set; }
 
-    //Ordens
-    [InverseProperty("Matricula")]
-    public virtual ICollection<Orden>? Ordens { get; set; } = new List<Orden>();
+    [ForeignKey(nameof(SeccionId))]
+    [InverseProperty(nameof(Seccion.Matriculas))]
+    public virtual Seccion? Seccion { get; set; }
 
+    [ForeignKey(nameof(SeccionCicloId))]
+    [InverseProperty(nameof(SeccionCiclo.Matriculas))]
+    public virtual SeccionCiclo SeccionCiclo { get; set; } = null!;
+
+    [ForeignKey(nameof(SedeId))]
+    [InverseProperty(nameof(Sede.Matriculas))]
+    public virtual Sede? Sede { get; set; }
 }

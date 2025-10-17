@@ -68,27 +68,31 @@ public partial class Alumno
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("Alumno")]
-    //public virtual ICollection<AlumnoApoderado> AlumnoApoderados { get; set; } = new List<AlumnoApoderado>();
-    public virtual ICollection<AlumnoApoderado>? AlumnoApoderados { get; set; }
+    [ForeignKey(nameof(ColegioId))]
+    [InverseProperty(nameof(Colegio.Alumnos))]
+    public virtual Colegio? Colegio { get; set; }
 
+    [InverseProperty(nameof(AlumnoApoderado.Alumno))]
+    public virtual ICollection<AlumnoApoderado> AlumnoApoderados { get; set; } = new List<AlumnoApoderado>();
 
-    [InverseProperty("Alumno")]
+    [InverseProperty(nameof(AlumnoUsuario.Alumno))]
     public virtual AlumnoUsuario? AlumnoUsuario { get; set; }
 
-    [InverseProperty("Alumno")]
-    public virtual ICollection<Asistencium>? Asistencia { get; set; }
+    [InverseProperty(nameof(Asistencium.Alumno))]
+    public virtual ICollection<Asistencium> Asistencia { get; set; } = new List<Asistencium>();
 
-    [InverseProperty("Alumno")]
-    public virtual ICollection<BecaAlumno>? BecaAlumnos { get; set; }
-    
+    [InverseProperty(nameof(BecaAlumno.Alumno))]
+    public virtual ICollection<BecaAlumno> BecaAlumnos { get; set; } = new List<BecaAlumno>();
 
-    [InverseProperty("Alumno")]
-    public virtual ICollection<Evaluacion>? Evaluacions { get; set; } 
+    [InverseProperty(nameof(Evaluacion.Alumno))]
+    public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
 
-    [InverseProperty("Alumno")]
-    public virtual ICollection<Matricula>? Matriculas { get; set; } 
+    [InverseProperty(nameof(EvaluacionNotum.Alumno))]
+    public virtual ICollection<EvaluacionNotum> EvaluacionNota { get; set; } = new List<EvaluacionNotum>();
 
-    [InverseProperty("Alumno")]
-    public virtual ICollection<Notum>? Nota { get; set; } 
+    [InverseProperty(nameof(Matricula.Alumno))]
+    public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
+
+    [InverseProperty(nameof(Notum.Alumno))]
+    public virtual ICollection<Notum> Nota { get; set; } = new List<Notum>();
 }

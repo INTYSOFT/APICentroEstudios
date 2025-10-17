@@ -51,6 +51,10 @@ public partial class Docente
     public int? UsuaraioActualizacionId { get; set; }
 
     
-    [InverseProperty("Docente")]
+    [ForeignKey(nameof(EspecialidadId))]
+    [InverseProperty(nameof(Especialidad.Docentes))]
+    public virtual Especialidad? Especialidad { get; set; }
+
+    [InverseProperty(nameof(DocenteUsuario.Docente))]
     public virtual DocenteUsuario? DocenteUsuario { get; set; }
 }
