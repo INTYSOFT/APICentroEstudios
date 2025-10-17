@@ -1,0 +1,21 @@
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Centro de Estudios</div>
+    <nav>
+      <ng-container *ngFor="let section of menuSections">
+        <div class="section-title">{{ section.title }}</div>
+        <a
+          *ngFor="let item of section.items"
+          routerLinkActive="active"
+          [routerLink]="item.routerLink"
+          class="nav-item"
+        >
+          {{ item.label }}
+        </a>
+      </ng-container>
+    </nav>
+  </aside>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
