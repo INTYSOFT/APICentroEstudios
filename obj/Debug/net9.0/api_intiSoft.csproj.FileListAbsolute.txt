@@ -783,3 +783,13 @@ D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0\refint\api_intiSoft.dll
 D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0\api_intiSoft.pdb
 D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0\api_intiSoft.genruntimeconfig.cache
 D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0\ref\api_intiSoft.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\x86\leptonica-1.82.0.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\x86\tesseract50.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\x64\leptonica-1.82.0.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\x64\tesseract50.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\OpenCvSharp.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\Tesseract.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\runtimes\win-x64\native\OpenCvSharpExtern.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\runtimes\win-x64\native\opencv_videoio_ffmpeg4110_64.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\runtimes\win-x86\native\OpenCvSharpExtern.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0\runtimes\win-x86\native\opencv_videoio_ffmpeg4110.dll
