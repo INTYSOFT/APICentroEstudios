@@ -88,7 +88,5 @@ public partial class Alumno
 
     [InverseProperty("Alumno")]
     public virtual ICollection<Matricula>? Matriculas { get; set; } 
-
-    [InverseProperty("Alumno")]
-    public virtual ICollection<Notum>? Nota { get; set; } 
+    
 }

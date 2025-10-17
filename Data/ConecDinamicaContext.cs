@@ -94,6 +94,7 @@ namespace intiSoft
         public DbSet<api_intiSoft.Models.CentroEstudios.Concepto> Concepto { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.Matricula> Matricula { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.MatriculaItem> MatriculaItem { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.TipoEvaluacion> TipoEvaluacion { get; set; } = default!;
         
         
         //public DbSet<LgCategorium> LgCategorium { get; set; } = default!;

@@ -38,9 +38,7 @@ public partial class Carrera
     [InverseProperty("CarreraSnapshot")]
     public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
 
-    [InverseProperty("Carrera")]
-    public virtual ICollection<Simulacro> Simulacros { get; set; } = new List<Simulacro>();
-
+    
     //matriculas
     [InverseProperty("Carrera")]
     public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();

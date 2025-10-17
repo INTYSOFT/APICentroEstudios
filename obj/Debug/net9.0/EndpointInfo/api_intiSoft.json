@@ -5872,13 +5872,6 @@
               "$ref": "#/components/schemas/Matricula"
             },
             "nullable": true
-          },
-          "nota": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Notum"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -6516,13 +6509,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Evaluacion"
-            },
-            "nullable": true
-          },
-          "simulacros": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Simulacro"
             },
             "nullable": true
           },
@@ -7836,101 +7822,6 @@
         },
         "additionalProperties": false
       },
-      "Notum": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "evaluacionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "alumnoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "simulacroId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "buenas": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "malas": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "blancas": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "puntajeBruto": {
-            "type": "number",
-            "format": "double"
-          },
-          "puntajeEscalado": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "percentil": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "rankingSeccion": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "rankingCiclo": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "publicadoEn": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean"
-          },
-          "fechaRegistro": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "fechaActualizacion": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "usuaraioRegistroId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "usuaraioActualizacionId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "alumno": {
-            "$ref": "#/components/schemas/Alumno"
-          },
-          "evaluacion": {
-            "$ref": "#/components/schemas/Evaluacion"
-          },
-          "simulacro": {
-            "$ref": "#/components/schemas/Simulacro"
-          }
-        },
-        "additionalProperties": false
-      },
       "Operation": {
         "type": "object",
         "properties": {
@@ -8380,13 +8271,6 @@
               "$ref": "#/components/schemas/Orden"
             },
             "nullable": true
-          },
-          "simulacros": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Simulacro"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -8480,113 +8364,6 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Simulacro": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "sedeId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "rangoInicio": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rangoFin": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "tipo": {
-            "type": "string",
-            "nullable": true
-          },
-          "valorBuena": {
-            "type": "number",
-            "format": "double"
-          },
-          "valorMala": {
-            "type": "number",
-            "format": "double"
-          },
-          "valorBlanca": {
-            "type": "number",
-            "format": "double"
-          },
-          "fechaInicio": {
-            "type": "string",
-            "format": "date"
-          },
-          "horaInicio": {
-            "type": "string",
-            "format": "time"
-          },
-          "horaFin": {
-            "type": "string",
-            "format": "time"
-          },
-          "nivelId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "carreraId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean"
-          },
-          "fechaRegistro": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "fechaActualizacion": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "usuaraioRegistroId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "usuaraioActualizacionId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "carrera": {
-            "$ref": "#/components/schemas/Carrera"
-          },
-          "evaluacions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Evaluacion"
-            },
-            "nullable": true
-          },
-          "nota": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Notum"
-            },
-            "nullable": true
-          },
-          "sede": {
-            "$ref": "#/components/schemas/Sede"
           }
         },
         "additionalProperties": false
