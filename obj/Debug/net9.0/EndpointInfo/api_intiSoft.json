@@ -7003,7 +7003,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "simulacroId": {
+          "evaluacionProgramadaId": {
             "type": "integer",
             "format": "int32"
           },
@@ -7011,9 +7011,15 @@
             "type": "integer",
             "format": "int32"
           },
+          "evaluacionFormaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "seccionSnapshotId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "carreraSnapshotId": {
             "type": "integer",
@@ -7043,20 +7049,552 @@
             "format": "int32",
             "nullable": true
           },
+          "evaluacionForma": {
+            "$ref": "#/components/schemas/EvaluacionForma"
+          },
+          "evaluacionNotum": {
+            "$ref": "#/components/schemas/EvaluacionNotum"
+          },
+          "evaluacionProgramada": {
+            "$ref": "#/components/schemas/EvaluacionProgramadum"
+          },
+          "evaluacionRespuesta": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvaluacionRespuestum"
+            },
+            "nullable": true
+          },
           "alumno": {
             "$ref": "#/components/schemas/Alumno"
           },
           "carreraSnapshot": {
             "$ref": "#/components/schemas/Carrera"
           },
-          "notum": {
-            "$ref": "#/components/schemas/Notum"
-          },
           "seccionSnapshot": {
             "$ref": "#/components/schemas/Seccion"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionClave": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
           },
-          "simulacro": {
-            "$ref": "#/components/schemas/Simulacro"
+          "evaluacionFormaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "preguntaOrden": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "respuesta": {
+            "type": "string",
+            "nullable": true
+          },
+          "ponderacion": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacionForma": {
+            "$ref": "#/components/schemas/EvaluacionForma"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionDetalle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evaluacionProgramadaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rangoInicio": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rangoFin": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valorBuena": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorMala": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorBlanca": {
+            "type": "number",
+            "format": "double"
+          },
+          "observacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacionProgramada": {
+            "$ref": "#/components/schemas/EvaluacionProgramadum"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionForma": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evaluacionProgramadaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacionClaves": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvaluacionClave"
+            },
+            "nullable": true
+          },
+          "evaluacionPregunta": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvaluacionPreguntum"
+            },
+            "nullable": true
+          },
+          "evaluacionProgramada": {
+            "$ref": "#/components/schemas/EvaluacionProgramadum"
+          },
+          "evaluacions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evaluacion"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionNotum": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evaluacionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evaluacionProgramadaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "alumnoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "buenas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "malas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "blancas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "puntajeBruto": {
+            "type": "number",
+            "format": "double"
+          },
+          "puntajeEscalado": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "percentil": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "rankingSeccion": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "rankingCiclo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "publicadoEn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacion": {
+            "$ref": "#/components/schemas/Evaluacion"
+          },
+          "evaluacionProgramada": {
+            "$ref": "#/components/schemas/EvaluacionProgramadum"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionPreguntum": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evaluacionFormaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "preguntaOrden": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "puntajeBuena": {
+            "type": "number",
+            "format": "double"
+          },
+          "penalizacionMala": {
+            "type": "number",
+            "format": "double"
+          },
+          "permiteBlanca": {
+            "type": "boolean"
+          },
+          "meta": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacionForma": {
+            "$ref": "#/components/schemas/EvaluacionForma"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionProgramadum": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sedeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cicloId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "tipoEvaluacionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date"
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "time"
+          },
+          "nivelId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "carreraId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "seccionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "seccionCicloId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacionDetalles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvaluacionDetalle"
+            },
+            "nullable": true
+          },
+          "evaluacionFormas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvaluacionForma"
+            },
+            "nullable": true
+          },
+          "evaluacionNota": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvaluacionNotum"
+            },
+            "nullable": true
+          },
+          "evaluacions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evaluacion"
+            },
+            "nullable": true
+          },
+          "tipoEvaluacion": {
+            "$ref": "#/components/schemas/TipoEvaluacion"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionRespuestum": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evaluacionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "preguntaOrden": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "respuesta": {
+            "type": "string",
+            "nullable": true
+          },
+          "fuente": {
+            "type": "string",
+            "nullable": true
+          },
+          "confianza": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "tiempoMarcaMs": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacion": {
+            "$ref": "#/components/schemas/Evaluacion"
           }
         },
         "additionalProperties": false
@@ -8049,6 +8587,54 @@
           },
           "sede": {
             "$ref": "#/components/schemas/Sede"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoEvaluacion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usuaraioRegistroId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "usuaraioActualizacionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacionProgramada": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvaluacionProgramadum"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
