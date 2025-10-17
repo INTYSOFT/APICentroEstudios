@@ -43,11 +43,16 @@ public partial class Concepto
     [Column("concepto_tipo_id")]
     public int? ConceptoTipoId { get; set; }
 
-    //MatriculaItem
-    [InverseProperty("Concepto")]
+    [InverseProperty(nameof(ComboItem.Concepto))]
+    public virtual ICollection<ComboItem> ComboItems { get; set; } = new List<ComboItem>();
+
+    [InverseProperty(nameof(MatriculaItem.Concepto))]
     public virtual ICollection<MatriculaItem> MatriculaItems { get; set; } = new List<MatriculaItem>();
 
-    //Orden item
-    [InverseProperty("Concepto")]
+    [InverseProperty(nameof(OrdenItem.Concepto))]
     public virtual ICollection<OrdenItem> OrdenItems { get; set; } = new List<OrdenItem>();
+
+    [ForeignKey(nameof(ConceptoTipoId))]
+    [InverseProperty(nameof(ConceptoTipo.Conceptos))]
+    public virtual ConceptoTipo? ConceptoTipo { get; set; }
 }

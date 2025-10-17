@@ -37,6 +37,6 @@ public partial class Combo
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("Combo")]
+    [InverseProperty(nameof(ComboItem.Combo))]
     public virtual ICollection<ComboItem> ComboItems { get; set; } = new List<ComboItem>();
 }

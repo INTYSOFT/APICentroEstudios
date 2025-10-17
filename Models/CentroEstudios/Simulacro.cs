@@ -70,18 +70,18 @@ public partial class Simulacro
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("CarreraId")]
-    [InverseProperty("Simulacros")]
+    [ForeignKey(nameof(CarreraId))]
+    [InverseProperty(nameof(Carrera.Simulacros))]
     public virtual Carrera? Carrera { get; set; }
 
-    [InverseProperty("Simulacro")]
-    public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
+    [ForeignKey(nameof(NivelId))]
+    [InverseProperty(nameof(Nivel.Simulacros))]
+    public virtual Nivel? Nivel { get; set; }
 
-
-    [InverseProperty("Simulacro")]
+    [InverseProperty(nameof(Notum.Simulacro))]
     public virtual ICollection<Notum> Nota { get; set; } = new List<Notum>();
 
-    [ForeignKey("SedeId")]
-    [InverseProperty("Simulacros")]
+    [ForeignKey(nameof(SedeId))]
+    [InverseProperty(nameof(Sede.Simulacros))]
     public virtual Sede Sede { get; set; } = null!;
 }

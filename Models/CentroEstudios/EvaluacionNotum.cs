@@ -72,11 +72,15 @@ public partial class EvaluacionNotum
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("EvaluacionId")]
-    [InverseProperty("EvaluacionNotum")]
+    [ForeignKey(nameof(AlumnoId))]
+    [InverseProperty(nameof(Alumno.EvaluacionNota))]
+    public virtual Alumno? Alumno { get; set; }
+
+    [ForeignKey(nameof(EvaluacionId))]
+    [InverseProperty(nameof(Evaluacion.EvaluacionNotum))]
     public virtual Evaluacion Evaluacion { get; set; } = null!;
 
-    [ForeignKey("EvaluacionProgramadaId")]
-    [InverseProperty("EvaluacionNota")]
+    [ForeignKey(nameof(EvaluacionProgramadaId))]
+    [InverseProperty(nameof(EvaluacionProgramadum.EvaluacionNota))]
     public virtual EvaluacionProgramadum? EvaluacionProgramada { get; set; }
 }

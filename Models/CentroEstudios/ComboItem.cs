@@ -38,11 +38,11 @@ public partial class ComboItem
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("ComboId")]
-    [InverseProperty("ComboItems")]
+    [ForeignKey(nameof(ComboId))]
+    [InverseProperty(nameof(Combo.ComboItems))]
     public virtual Combo Combo { get; set; } = null!;
 
-    [ForeignKey("ConceptoId")]
-    [InverseProperty("ComboItems")]
+    [ForeignKey(nameof(ConceptoId))]
+    [InverseProperty(nameof(Concepto.ComboItems))]
     public virtual Concepto Concepto { get; set; } = null!;
 }

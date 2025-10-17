@@ -68,15 +68,15 @@ public partial class Notum
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("AlumnoId")]
-    [InverseProperty("Nota")]
+    [ForeignKey(nameof(AlumnoId))]
+    [InverseProperty(nameof(Alumno.Nota))]
     public virtual Alumno Alumno { get; set; } = null!;
 
-    [ForeignKey("EvaluacionId")]
-    [InverseProperty("Notum")]
+    [ForeignKey(nameof(EvaluacionId))]
+    [InverseProperty(nameof(Evaluacion.Notum))]
     public virtual Evaluacion Evaluacion { get; set; } = null!;
 
-    [ForeignKey("SimulacroId")]
-    [InverseProperty("Nota")]
+    [ForeignKey(nameof(SimulacroId))]
+    [InverseProperty(nameof(Simulacro.Nota))]
     public virtual Simulacro Simulacro { get; set; } = null!;
 }

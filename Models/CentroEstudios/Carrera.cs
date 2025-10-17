@@ -35,13 +35,15 @@ public partial class Carrera
     public int? UsuaraioActualizacionId { get; set; }
 
     
-    [InverseProperty("CarreraSnapshot")]
+    [InverseProperty(nameof(Evaluacion.CarreraSnapshot))]
     public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
 
-    [InverseProperty("Carrera")]
-    public virtual ICollection<Simulacro> Simulacros { get; set; } = new List<Simulacro>();
+    [InverseProperty(nameof(EvaluacionProgramadum.Carrera))]
+    public virtual ICollection<EvaluacionProgramadum> EvaluacionProgramada { get; set; } = new List<EvaluacionProgramadum>();
 
-    //matriculas
-    [InverseProperty("Carrera")]
+    [InverseProperty(nameof(Matricula.Carrera))]
     public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
+
+    [InverseProperty(nameof(Simulacro.Carrera))]
+    public virtual ICollection<Simulacro> Simulacros { get; set; } = new List<Simulacro>();
 }

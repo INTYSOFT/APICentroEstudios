@@ -44,10 +44,10 @@ public partial class Pago
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("Pago")]
+    [InverseProperty(nameof(Devolucion.Pago))]
     public virtual ICollection<Devolucion> Devolucions { get; set; } = new List<Devolucion>();
 
-    [ForeignKey("OrdenId")]
-    [InverseProperty("Pagos")]
+    [ForeignKey(nameof(OrdenId))]
+    [InverseProperty(nameof(Orden.Pagos))]
     public virtual Orden Orden { get; set; } = null!;
 }

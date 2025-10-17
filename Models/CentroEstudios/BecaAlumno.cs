@@ -43,19 +43,19 @@ public partial class BecaAlumno
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("AlumnoId")]
-    [InverseProperty("BecaAlumnos")]
+    [ForeignKey(nameof(AlumnoId))]
+    [InverseProperty(nameof(Alumno.BecaAlumnos))]
     public virtual Alumno Alumno { get; set; } = null!;
 
-    [ForeignKey("AsignadoPor")]
-    [InverseProperty("BecaAlumnos")]
+    [ForeignKey(nameof(AsignadoPor))]
+    [InverseProperty(nameof(Usuario.BecaAlumnos))]
     public virtual Usuario? AsignadoPorNavigation { get; set; }
 
-    [ForeignKey("BecaId")]
-    [InverseProperty("BecaAlumnos")]
+    [ForeignKey(nameof(BecaId))]
+    [InverseProperty(nameof(Beca.BecaAlumnos))]
     public virtual Beca Beca { get; set; } = null!;
 
-    [ForeignKey("MatriculaId")]
-    [InverseProperty("BecaAlumnos")]
+    [ForeignKey(nameof(MatriculaId))]
+    [InverseProperty(nameof(Matricula.BecaAlumnos))]
     public virtual Matricula? Matricula { get; set; }
 }

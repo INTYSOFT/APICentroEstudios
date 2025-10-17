@@ -54,7 +54,7 @@ public partial class EvaluacionDetalle
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("EvaluacionProgramadaId")]
-    [InverseProperty("EvaluacionDetalles")]
+    [ForeignKey(nameof(EvaluacionProgramadaId))]
+    [InverseProperty(nameof(EvaluacionProgramadum.EvaluacionDetalles))]
     public virtual EvaluacionProgramadum EvaluacionProgramada { get; set; } = null!;
 }

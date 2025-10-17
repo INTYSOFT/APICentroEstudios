@@ -34,4 +34,7 @@ public partial class Parentesco
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
+
+    [InverseProperty(nameof(AlumnoApoderado.Parentesco))]
+    public virtual ICollection<AlumnoApoderado> AlumnoApoderados { get; set; } = new List<AlumnoApoderado>();
 }

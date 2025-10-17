@@ -68,19 +68,43 @@ public partial class EvaluacionProgramadum
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("EvaluacionProgramada")]
+    [InverseProperty(nameof(EvaluacionDetalle.EvaluacionProgramada))]
     public virtual ICollection<EvaluacionDetalle> EvaluacionDetalles { get; set; } = new List<EvaluacionDetalle>();
 
-    [InverseProperty("EvaluacionProgramada")]
+    [InverseProperty(nameof(EvaluacionForma.EvaluacionProgramada))]
     public virtual ICollection<EvaluacionForma> EvaluacionFormas { get; set; } = new List<EvaluacionForma>();
 
-    [InverseProperty("EvaluacionProgramada")]
+    [InverseProperty(nameof(EvaluacionNotum.EvaluacionProgramada))]
     public virtual ICollection<EvaluacionNotum> EvaluacionNota { get; set; } = new List<EvaluacionNotum>();
 
-    [InverseProperty("EvaluacionProgramada")]
+    [InverseProperty(nameof(Evaluacion.EvaluacionProgramada))]
     public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
 
-    [ForeignKey("TipoEvaluacionId")]
-    [InverseProperty("EvaluacionProgramada")]
+    [ForeignKey(nameof(TipoEvaluacionId))]
+    [InverseProperty(nameof(TipoEvaluacion.EvaluacionProgramada))]
     public virtual TipoEvaluacion TipoEvaluacion { get; set; } = null!;
+
+    [ForeignKey(nameof(CarreraId))]
+    [InverseProperty(nameof(Carrera.EvaluacionProgramada))]
+    public virtual Carrera? Carrera { get; set; }
+
+    [ForeignKey(nameof(CicloId))]
+    [InverseProperty(nameof(Ciclo.EvaluacionProgramada))]
+    public virtual Ciclo? Ciclo { get; set; }
+
+    [ForeignKey(nameof(NivelId))]
+    [InverseProperty(nameof(Nivel.EvaluacionProgramada))]
+    public virtual Nivel? Nivel { get; set; }
+
+    [ForeignKey(nameof(SeccionId))]
+    [InverseProperty(nameof(Seccion.Programaciones))]
+    public virtual Seccion? Seccion { get; set; }
+
+    [ForeignKey(nameof(SeccionCicloId))]
+    [InverseProperty(nameof(SeccionCiclo.EvaluacionProgramada))]
+    public virtual SeccionCiclo? SeccionCiclo { get; set; }
+
+    [ForeignKey(nameof(SedeId))]
+    [InverseProperty(nameof(Sede.EvaluacionProgramada))]
+    public virtual Sede Sede { get; set; } = null!;
 }

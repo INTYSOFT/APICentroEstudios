@@ -38,7 +38,7 @@ public partial class Devolucion
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("PagoId")]
-    [InverseProperty("Devolucions")]
+    [ForeignKey(nameof(PagoId))]
+    [InverseProperty(nameof(Pago.Devolucions))]
     public virtual Pago Pago { get; set; } = null!;
 }

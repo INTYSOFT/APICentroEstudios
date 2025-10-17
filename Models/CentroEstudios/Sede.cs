@@ -39,9 +39,24 @@ public partial class Sede
     public int? UsuaraioActualizacionId { get; set; }
     
 
-    [InverseProperty("Sede")]
+    [InverseProperty(nameof(AperturaCiclo.Sede))]
+    public virtual ICollection<AperturaCiclo> AperturaCiclos { get; set; } = new List<AperturaCiclo>();
+
+    [InverseProperty(nameof(EvaluacionProgramadum.Sede))]
+    public virtual ICollection<EvaluacionProgramadum> EvaluacionProgramada { get; set; } = new List<EvaluacionProgramadum>();
+
+    [InverseProperty(nameof(Matricula.Sede))]
+    public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
+
+    [InverseProperty(nameof(Orden.Sede))]
     public virtual ICollection<Orden> Ordens { get; set; } = new List<Orden>();
 
-    [InverseProperty("Sede")]
+    [InverseProperty(nameof(SeccionCiclo.Sede))]
+    public virtual ICollection<SeccionCiclo> SeccionCiclos { get; set; } = new List<SeccionCiclo>();
+
+    [InverseProperty(nameof(Simulacro.Sede))]
     public virtual ICollection<Simulacro> Simulacros { get; set; } = new List<Simulacro>();
+
+    [InverseProperty(nameof(Usuario.Sede))]
+    public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
 }

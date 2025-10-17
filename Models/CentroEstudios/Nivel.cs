@@ -34,4 +34,16 @@ public partial class Nivel
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
+
+    [InverseProperty(nameof(AperturaSeccion.Nivel))]
+    public virtual ICollection<AperturaSeccion> AperturaSeccions { get; set; } = new List<AperturaSeccion>();
+
+    [InverseProperty(nameof(EvaluacionProgramadum.Nivel))]
+    public virtual ICollection<EvaluacionProgramadum> EvaluacionProgramada { get; set; } = new List<EvaluacionProgramadum>();
+
+    [InverseProperty(nameof(SeccionCiclo.Nivel))]
+    public virtual ICollection<SeccionCiclo> SeccionCiclos { get; set; } = new List<SeccionCiclo>();
+
+    [InverseProperty(nameof(Simulacro.Nivel))]
+    public virtual ICollection<Simulacro> Simulacros { get; set; } = new List<Simulacro>();
 }

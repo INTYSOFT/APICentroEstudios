@@ -36,11 +36,11 @@ public partial class DocenteUsuario
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("DocenteId")]
-    [InverseProperty("DocenteUsuario")]
+    [ForeignKey(nameof(DocenteId))]
+    [InverseProperty(nameof(Docente.DocenteUsuario))]
     public virtual Docente Docente { get; set; } = null!;
 
-    [ForeignKey("UsuarioId")]
-    [InverseProperty("DocenteUsuario")]
+    [ForeignKey(nameof(UsuarioId))]
+    [InverseProperty(nameof(Usuario.DocenteUsuario))]
     public virtual Usuario Usuario { get; set; } = null!;
 }

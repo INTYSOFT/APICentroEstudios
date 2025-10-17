@@ -44,34 +44,32 @@ public partial class Evaluacion
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("EvaluacionFormaId")]
-    [InverseProperty("Evaluacions")]
-    public virtual EvaluacionForma? EvaluacionForma { get; set; }
-
-    [InverseProperty("Evaluacion")]
-    public virtual EvaluacionNotum? EvaluacionNotum { get; set; }
-
-    [ForeignKey("EvaluacionProgramadaId")]
-    [InverseProperty("Evaluacions")]
-    public virtual EvaluacionProgramadum EvaluacionProgramada { get; set; } = null!;
-
-    [InverseProperty("Evaluacion")]
-    public virtual ICollection<EvaluacionRespuestum> EvaluacionRespuesta { get; set; } = new List<EvaluacionRespuestum>();
-
-    //alumno
-    [ForeignKey("AlumnoId")]
-    [InverseProperty("Evaluacions")]
+    [ForeignKey(nameof(AlumnoId))]
+    [InverseProperty(nameof(Alumno.Evaluacions))]
     public virtual Alumno Alumno { get; set; } = null!;
 
-    //carrera
-    [ForeignKey("CarreraSnapshotId")]
-    [InverseProperty("Evaluacions")]
+    [ForeignKey(nameof(CarreraSnapshotId))]
+    [InverseProperty(nameof(Carrera.Evaluacions))]
     public virtual Carrera? CarreraSnapshot { get; set; }
 
-    //seccion
-    [ForeignKey("SeccionSnapshotId")]
-    [InverseProperty("Evaluacions")]
+    [ForeignKey(nameof(EvaluacionFormaId))]
+    [InverseProperty(nameof(EvaluacionForma.Evaluacions))]
+    public virtual EvaluacionForma? EvaluacionForma { get; set; }
+
+    [InverseProperty(nameof(EvaluacionNotum.Evaluacion))]
+    public virtual EvaluacionNotum? EvaluacionNotum { get; set; }
+
+    [ForeignKey(nameof(EvaluacionProgramadaId))]
+    [InverseProperty(nameof(EvaluacionProgramadum.Evaluacions))]
+    public virtual EvaluacionProgramadum EvaluacionProgramada { get; set; } = null!;
+
+    [InverseProperty(nameof(EvaluacionRespuestum.Evaluacion))]
+    public virtual ICollection<EvaluacionRespuestum> EvaluacionRespuesta { get; set; } = new List<EvaluacionRespuestum>();
+
+    [ForeignKey(nameof(SeccionSnapshotId))]
+    [InverseProperty(nameof(Seccion.Evaluacions))]
     public virtual Seccion? SeccionSnapshot { get; set; }
 
-    
+    [InverseProperty(nameof(Notum.Evaluacion))]
+    public virtual ICollection<Notum> Notum { get; set; } = new List<Notum>();
 }

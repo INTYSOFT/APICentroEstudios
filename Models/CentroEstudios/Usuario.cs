@@ -44,18 +44,22 @@ public partial class Usuario
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("Usuario")]
+    [ForeignKey(nameof(SedeId))]
+    [InverseProperty(nameof(Sede.Usuarios))]
+    public virtual Sede? Sede { get; set; }
+
+    [InverseProperty(nameof(AlumnoUsuario.Usuario))]
     public virtual AlumnoUsuario? AlumnoUsuario { get; set; }
 
-    [InverseProperty("TomadoPorNavigation")]
+    [InverseProperty(nameof(Asistencium.TomadoPorNavigation))]
     public virtual ICollection<Asistencium> Asistencia { get; set; } = new List<Asistencium>();
 
-    [InverseProperty("Usuario")]
+    [InverseProperty(nameof(AuditLog.Usuario))]
     public virtual ICollection<AuditLog> AuditLogs { get; set; } = new List<AuditLog>();
 
-    [InverseProperty("AsignadoPorNavigation")]
+    [InverseProperty(nameof(BecaAlumno.AsignadoPorNavigation))]
     public virtual ICollection<BecaAlumno> BecaAlumnos { get; set; } = new List<BecaAlumno>();
 
-    [InverseProperty("Usuario")]
+    [InverseProperty(nameof(DocenteUsuario.Usuario))]
     public virtual DocenteUsuario? DocenteUsuario { get; set; }
 }

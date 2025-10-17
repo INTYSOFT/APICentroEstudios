@@ -53,6 +53,23 @@ public partial class SeccionCiclo
 
     [InverseProperty("SeccionCiclo")]
     public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
-    
-    
+
+    [InverseProperty(nameof(EvaluacionProgramadum.SeccionCiclo))]
+    public virtual ICollection<EvaluacionProgramadum> EvaluacionProgramada { get; set; } = new List<EvaluacionProgramadum>();
+
+    [ForeignKey(nameof(CicloId))]
+    [InverseProperty(nameof(Ciclo.SeccionCiclos))]
+    public virtual Ciclo Ciclo { get; set; } = null!;
+
+    [ForeignKey(nameof(NivelId))]
+    [InverseProperty(nameof(Nivel.SeccionCiclos))]
+    public virtual Nivel Nivel { get; set; } = null!;
+
+    [ForeignKey(nameof(SeccionId))]
+    [InverseProperty(nameof(Seccion.SeccionCiclos))]
+    public virtual Seccion Seccion { get; set; } = null!;
+
+    [ForeignKey(nameof(SedeId))]
+    [InverseProperty(nameof(Sede.SeccionCiclos))]
+    public virtual Sede Sede { get; set; } = null!;
 }

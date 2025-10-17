@@ -37,4 +37,7 @@ public partial class Colegio
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
+
+    [InverseProperty(nameof(Alumno.Colegio))]
+    public virtual ICollection<Alumno> Alumnos { get; set; } = new List<Alumno>();
 }
