@@ -44,9 +44,6 @@ project.fragment.lock.json
 *.snupkg
 packages/
 .nuget/
-node_modules/
-frontend/centro-estudios-web/node_modules/
-frontend/centro-estudios-web/dist/
 
 # Certificados de desarrollo (si aplica)
 *.pfx
