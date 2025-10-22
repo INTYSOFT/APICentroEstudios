@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using api_intiSoft.Models.Common;
 using Microsoft.Extensions.DependencyInjection;
+using api_intiSoft.Services.AnswerSheets;
+
+System.AppContext.SetSwitch("System.Drawing.EnableUnixSupport", true);
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -136,6 +139,8 @@ builder.Services.AddDbContext<ConecDinamicaContext>((serviceProvider, options) =
     options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
            .AddInterceptors(interceptor);
 });
+
+builder.Services.AddScoped<IAnswerSheetProcessor, AnswerSheetProcessor>();
 
 
 var app = builder.Build();
