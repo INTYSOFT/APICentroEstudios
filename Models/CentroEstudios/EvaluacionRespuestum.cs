@@ -57,15 +57,34 @@ public partial class EvaluacionRespuestum
     [Column("evaluacion_programada_id")]
     public int? EvaluacionProgramadaId { get; set; }
 
+    //seccion_id
+    [Column("seccion_id")]
+    public int? SeccionId { get; set; }
+
+    //alumno_id
+    [Column("alumno_id")]
+    public int? AlumnoId { get; set; }
+
+    //dni_alumno
+    [Column("dni_alumno")]
+    public string? DniAlumno { get; set; }
+
 
     [ForeignKey("EvaluacionId")]
     [InverseProperty("EvaluacionRespuesta")]
-    public virtual Evaluacion Evaluacion { get; set; } = null!;
+    public virtual Evaluacion? Evaluacion { get; set; } = null!;
 
     //EvaluacionProgramadaId
     [ForeignKey("EvaluacionProgramadaId")]
     [InverseProperty(nameof(EvaluacionProgramadum.EvaluacionRespuesta))] // ← ✅ nombre exacto del otro lado
     public virtual EvaluacionProgramadum? EvaluacionProgramada { get; set; }
+
+    //seccionId
+    [ForeignKey("SeccionId")]
+    [InverseProperty("EvaluacionRespuesta")]
+    public virtual Seccion? Seccion { get; set; }
+
+
 
 
 }

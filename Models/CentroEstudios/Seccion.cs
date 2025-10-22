@@ -50,6 +50,9 @@ public partial class Seccion
     [InverseProperty("Seccion")]
     public virtual ICollection<Evaluacion>? Evaluacions { get; set; } = new List<Evaluacion>();
 
+    //EvaluacionRespuesta
+    [InverseProperty("Seccion")]
+    public virtual ICollection<EvaluacionRespuestum>? EvaluacionRespuesta { get; set; } = new List<EvaluacionRespuestum>();
 
 
 
