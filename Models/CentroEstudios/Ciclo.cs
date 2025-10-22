@@ -50,7 +50,11 @@ public partial class Ciclo
 
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
-    
-    
-    
+
+    //evaluacion
+    [InverseProperty("Ciclo")]
+    public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
+
+
+
 }

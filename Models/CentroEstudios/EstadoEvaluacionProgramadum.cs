@@ -6,19 +6,22 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
-[Table("evaluacion_forma", Schema = "academia")]
-[Index("EvaluacionProgramadaId", Name = "ix_ef_ep")]
-public partial class EvaluacionForma
+[Table("estado_evaluacion_programada", Schema = "academia")]
+[Index("Orden", Name = "ux_estado_ep_orden", IsUnique = true)]
+public partial class EstadoEvaluacionProgramadum
 {
     [Key]
     [Column("id")]
     public int Id { get; set; }
 
-    [Column("evaluacion_programada_id")]
-    public int EvaluacionProgramadaId { get; set; }
+    [Column("nombre")]
+    public string Nombre { get; set; } = null!;
 
     [Column("codigo")]
     public string Codigo { get; set; } = null!;
+
+    [Column("orden")]
+    public short Orden { get; set; }
 
     [Column("descripcion")]
     public string? Descripcion { get; set; }
@@ -38,16 +41,7 @@ public partial class EvaluacionForma
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [InverseProperty("EvaluacionForma")]
-    public virtual ICollection<EvaluacionClave> EvaluacionClaves { get; set; } = new List<EvaluacionClave>();
-
-    [InverseProperty("EvaluacionForma")]
-    public virtual ICollection<EvaluacionPreguntum> EvaluacionPregunta { get; set; } = new List<EvaluacionPreguntum>();
-
-    [ForeignKey("EvaluacionProgramadaId")]
-    [InverseProperty("EvaluacionFormas")]
-    public virtual EvaluacionProgramadum EvaluacionProgramada { get; set; } = null!;
-
-    [InverseProperty("EvaluacionForma")]
-    public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
+    //EvaluacionProgramadas
+    [InverseProperty("Estado")]
+    public virtual ICollection<EvaluacionProgramadum>? EvaluacionProgramadas { get; set; } = new List<EvaluacionProgramadum>();
 }

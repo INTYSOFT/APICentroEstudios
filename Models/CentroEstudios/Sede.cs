@@ -42,5 +42,9 @@ public partial class Sede
     [InverseProperty("Sede")]
     public virtual ICollection<Orden> Ordens { get; set; } = new List<Orden>();
 
-    
+    //evaluacion
+    [InverseProperty("Sede")]
+    public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
+
+
 }

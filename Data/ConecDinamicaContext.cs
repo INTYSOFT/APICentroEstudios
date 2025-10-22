@@ -95,6 +95,13 @@ namespace intiSoft
         public DbSet<api_intiSoft.Models.CentroEstudios.Matricula> Matricula { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.MatriculaItem> MatriculaItem { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.TipoEvaluacion> TipoEvaluacion { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum> EvaluacionProgramadum { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion> EvaluacionProgramadaSeccion { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionDetalle> EvaluacionDetalle { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionTipoPreguntum> EvaluacionTipoPreguntum { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionClave> EvaluacionClave { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.Evaluacion> Evaluacion { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionRespuestum> EvaluacionRespuestum { get; set; } = default!;
         
         
         //public DbSet<LgCategorium> LgCategorium { get; set; } = default!;

@@ -6,18 +6,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
-[Table("carrera", Schema = "academia")]
-[Index("Nombre", Name = "ux_carrera_univ_nombre", IsUnique = true)]
-public partial class Carrera
+[Table("evaluacion_tipo_pregunta", Schema = "academia")]
+public partial class EvaluacionTipoPreguntum
 {
     [Key]
     [Column("id")]
     public int Id { get; set; }
 
-    
-
     [Column("nombre")]
     public string Nombre { get; set; } = null!;
+
+    [Column("codigo")]
+    public string Codigo { get; set; } = null!;
+
+    [Column("descripcion")]
+    public string? Descripcion { get; set; }
 
     [Column("activo")]
     public bool Activo { get; set; }
@@ -32,10 +35,13 @@ public partial class Carrera
     public int? UsuaraioRegistroId { get; set; }
 
     [Column("usuaraio_actualizacion_id")]
-    public int? UsuaraioActualizacionId { get; set; }   
-    
-    
-    //matriculas
-    [InverseProperty("Carrera")]
-    public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
+    public int? UsuaraioActualizacionId { get; set; }
+
+
+    //EvaluacionDetalle
+    [InverseProperty("EvaluacionTipoPregunta")]
+    public virtual ICollection<EvaluacionDetalle> EvaluacionDetalles { get; set; } = new List<EvaluacionDetalle>();
+
+
+
 }

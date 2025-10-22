@@ -36,11 +36,21 @@ public partial class Seccion
     public int? UsuaraioActualizacionId { get; set; }
 
     [InverseProperty("Seccion")]
-    public virtual ICollection<Asistencium> Asistencia { get; set; } = new List<Asistencium>();
+    public virtual ICollection<Asistencium>? Asistencia { get; set; } = new List<Asistencium>();
  
+    //EvaluacionProgramadaSeccions
+    [InverseProperty("Seccion")]
+    public virtual ICollection<EvaluacionProgramadaSeccion>? EvaluacionProgramadaSeccions { get; set; } = new List<EvaluacionProgramadaSeccion>();
 
-    [InverseProperty("SeccionSnapshot")]
-    public virtual ICollection<Evaluacion>? Evaluacions { get; set; }
-    
+    //EvaluacionDetalles
+    [InverseProperty("Seccion")]
+    public virtual ICollection<EvaluacionDetalle>? EvaluacionDetalles { get; set; } = new List<EvaluacionDetalle>();
+
+    //evaliuaciones
+    [InverseProperty("Seccion")]
+    public virtual ICollection<Evaluacion>? Evaluacions { get; set; } = new List<Evaluacion>();
+
+
+
 
 }

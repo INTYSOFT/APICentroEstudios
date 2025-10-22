@@ -18,6 +18,16 @@ public partial class EvaluacionDetalle
     [Column("evaluacion_programada_id")]
     public int EvaluacionProgramadaId { get; set; }
 
+    //seccion_id
+    [Column("seccion_id")]
+    public int? SeccionId { get; set; }
+
+    //evaluacion_tipo_pregunta_id
+    [Column("evaluacion_tipo_pregunta_id")]
+    public int? EvaluacionTipoPreguntaId { get; set; }
+
+
+
     [Column("rango_inicio")]
     public int RangoInicio { get; set; }
 
@@ -56,5 +66,18 @@ public partial class EvaluacionDetalle
 
     [ForeignKey("EvaluacionProgramadaId")]
     [InverseProperty("EvaluacionDetalles")]
-    public virtual EvaluacionProgramadum EvaluacionProgramada { get; set; } = null!;
+    public virtual EvaluacionProgramadum? EvaluacionProgramada { get; set; } = null!;
+
+    //SeccionId
+    [ForeignKey("SeccionId")]
+    [InverseProperty("EvaluacionDetalles")]
+    public virtual Seccion? Seccion { get; set; }
+
+    //evaluacion_tipo_pregunta_id
+    [ForeignKey("EvaluacionTipoPreguntaId")]
+    [InverseProperty("EvaluacionDetalles")]
+    public virtual EvaluacionTipoPreguntum? EvaluacionTipoPregunta { get; set; }
+
+
+
 }

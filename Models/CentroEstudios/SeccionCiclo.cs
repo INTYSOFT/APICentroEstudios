@@ -52,7 +52,11 @@ public partial class SeccionCiclo
     public decimal? Precio { get; set; }
 
     [InverseProperty("SeccionCiclo")]
-    public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
-    
-    
+    public virtual ICollection<Matricula>? Matriculas { get; set; } = new List<Matricula>();
+
+    //EvaluacionProgramadaSeccions
+    [InverseProperty("SeccionCiclo")]
+    public virtual ICollection<EvaluacionProgramadaSeccion>? EvaluacionProgramadaSeccions { get; set; } = new List<EvaluacionProgramadaSeccion>();
+
+
 }

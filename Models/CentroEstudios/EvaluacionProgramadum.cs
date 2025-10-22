@@ -9,9 +9,6 @@ namespace api_intiSoft.Models.CentroEstudios;
 [Table("evaluacion_programada", Schema = "academia")]
 [Index("CarreraId", Name = "ix_ep_carrera")]
 [Index("CicloId", Name = "ix_ep_ciclo")]
-[Index("NivelId", Name = "ix_ep_nivel")]
-[Index("SeccionId", Name = "ix_ep_seccion")]
-[Index("SeccionCicloId", Name = "ix_ep_seccion_c")]
 [Index("SedeId", Name = "ix_ep_sede")]
 [Index("TipoEvaluacionId", Name = "ix_ep_tipo")]
 public partial class EvaluacionProgramadum
@@ -29,8 +26,12 @@ public partial class EvaluacionProgramadum
     [Column("tipo_evaluacion_id")]
     public int TipoEvaluacionId { get; set; }
 
+    //estado_id
+    [Column("estado_id")]
+    public int? EstadoId { get; set; }
+
     [Column("nombre")]
-    public string Nombre { get; set; } = null!;
+    public string Nombre { get; set; } = null!;  
 
     [Column("fecha_inicio")]
     public DateOnly FechaInicio { get; set; }
@@ -40,18 +41,11 @@ public partial class EvaluacionProgramadum
 
     [Column("hora_fin")]
     public TimeOnly HoraFin { get; set; }
-
-    [Column("nivel_id")]
-    public int? NivelId { get; set; }
+    
 
     [Column("carrera_id")]
     public int? CarreraId { get; set; }
-
-    [Column("seccion_id")]
-    public int? SeccionId { get; set; }
-
-    [Column("seccion_ciclo_id")]
-    public int? SeccionCicloId { get; set; }
+  
 
     [Column("activo")]
     public bool Activo { get; set; }
@@ -69,18 +63,29 @@ public partial class EvaluacionProgramadum
     public int? UsuaraioActualizacionId { get; set; }
 
     [InverseProperty("EvaluacionProgramada")]
-    public virtual ICollection<EvaluacionDetalle> EvaluacionDetalles { get; set; } = new List<EvaluacionDetalle>();
+    public virtual ICollection<EvaluacionDetalle>? EvaluacionDetalles { get; set; } = new List<EvaluacionDetalle>();
+
+   
+    [InverseProperty("EvaluacionProgramada")]
+    public virtual ICollection<EvaluacionNotum>? EvaluacionNota { get; set; } = new List<EvaluacionNotum>();
 
     [InverseProperty("EvaluacionProgramada")]
-    public virtual ICollection<EvaluacionForma> EvaluacionFormas { get; set; } = new List<EvaluacionForma>();
-
-    [InverseProperty("EvaluacionProgramada")]
-    public virtual ICollection<EvaluacionNotum> EvaluacionNota { get; set; } = new List<EvaluacionNotum>();
-
-    [InverseProperty("EvaluacionProgramada")]
-    public virtual ICollection<Evaluacion> Evaluacions { get; set; } = new List<Evaluacion>();
+    public virtual ICollection<Evaluacion>? Evaluacions { get; set; } = new List<Evaluacion>();
 
     [ForeignKey("TipoEvaluacionId")]
     [InverseProperty("EvaluacionProgramada")]
-    public virtual TipoEvaluacion TipoEvaluacion { get; set; } = null!;
+    public virtual TipoEvaluacion? TipoEvaluacion { get; set; } = null!;
+
+    //EvaluacionProgramadaSeccions
+    [InverseProperty("EvaluacionProgramada")]
+    public virtual ICollection<EvaluacionProgramadaSeccion>? EvaluacionProgramadaSeccions { get; set; } = new List<EvaluacionProgramadaSeccion>();
+
+    //EstadoId
+    [ForeignKey("EstadoId")]
+    [InverseProperty("EvaluacionProgramadas")]
+    public virtual EstadoEvaluacionProgramadum? Estado { get; set; } = null!;
+
+    //evaluacion_respuesta
+    [InverseProperty("EvaluacionProgramada")]
+    public virtual ICollection<EvaluacionRespuestum>? EvaluacionRespuesta { get; set; } = new List<EvaluacionRespuestum>();
 }

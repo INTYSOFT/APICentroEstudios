@@ -53,7 +53,19 @@ public partial class EvaluacionRespuestum
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
+    //evaluacion_programada_id
+    [Column("evaluacion_programada_id")]
+    public int? EvaluacionProgramadaId { get; set; }
+
+
     [ForeignKey("EvaluacionId")]
     [InverseProperty("EvaluacionRespuesta")]
     public virtual Evaluacion Evaluacion { get; set; } = null!;
+
+    //EvaluacionProgramadaId
+    [ForeignKey("EvaluacionProgramadaId")]
+    [InverseProperty(nameof(EvaluacionProgramadum.EvaluacionRespuesta))] // ← ✅ nombre exacto del otro lado
+    public virtual EvaluacionProgramadum? EvaluacionProgramada { get; set; }
+
+
 }

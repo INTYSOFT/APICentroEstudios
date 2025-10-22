@@ -20,14 +20,22 @@ public partial class Evaluacion
     [Column("alumno_id")]
     public int AlumnoId { get; set; }
 
-    [Column("evaluacion_forma_id")]
-    public int? EvaluacionFormaId { get; set; }
+    //sede_id
+    [Column("sede_id")]
+    public int? SedeId { get; set; }
 
-    [Column("seccion_snapshot_id")]
-    public int? SeccionSnapshotId { get; set; }
 
-    [Column("carrera_snapshot_id")]
-    public int? CarreraSnapshotId { get; set; }
+
+    //ciclo_id
+    [Column("ciclo_id")]
+    public int? CicloId { get; set; }
+
+
+    //seccion_id
+    [Column("seccion_id")]
+    public int? SeccionId { get; set; }
+
+
 
     [Column("activo")]
     public bool Activo { get; set; }
@@ -44,34 +52,44 @@ public partial class Evaluacion
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    [ForeignKey("EvaluacionFormaId")]
-    [InverseProperty("Evaluacions")]
-    public virtual EvaluacionForma? EvaluacionForma { get; set; }
+    
 
     [InverseProperty("Evaluacion")]
     public virtual EvaluacionNotum? EvaluacionNotum { get; set; }
 
     [ForeignKey("EvaluacionProgramadaId")]
     [InverseProperty("Evaluacions")]
-    public virtual EvaluacionProgramadum EvaluacionProgramada { get; set; } = null!;
+    public virtual EvaluacionProgramadum? EvaluacionProgramada { get; set; } = null!;
 
     [InverseProperty("Evaluacion")]
-    public virtual ICollection<EvaluacionRespuestum> EvaluacionRespuesta { get; set; } = new List<EvaluacionRespuestum>();
+    public virtual ICollection<EvaluacionRespuestum>? EvaluacionRespuesta { get; set; } = new List<EvaluacionRespuestum>();
 
     //alumno
     [ForeignKey("AlumnoId")]
     [InverseProperty("Evaluacions")]
-    public virtual Alumno Alumno { get; set; } = null!;
+    public virtual Alumno? Alumno { get; set; } = null!;
 
-    //carrera
-    [ForeignKey("CarreraSnapshotId")]
+    //sedeId.
+    [ForeignKey("SedeId")]
     [InverseProperty("Evaluacions")]
-    public virtual Carrera? CarreraSnapshot { get; set; }
+    public virtual Sede? Sede { get; set; }
 
-    //seccion
-    [ForeignKey("SeccionSnapshotId")]
+    //cicloId
+    [ForeignKey("CicloId")]
     [InverseProperty("Evaluacions")]
-    public virtual Seccion? SeccionSnapshot { get; set; }
+    public virtual Ciclo? Ciclo { get; set; }
 
-    
+    //seccionId
+    [ForeignKey("SeccionId")]
+    [InverseProperty("Evaluacions")]
+    public virtual Seccion? Seccion { get; set; }
+
+
+
+
+
+
+
+
+
 }
