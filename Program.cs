@@ -59,8 +59,7 @@ builder.Services
 builder.Services.AddDbContext<ConecDinamicaContext>((sp, options) =>
 {
     var interceptor = sp.GetRequiredService<AuditSaveChangesInterceptor>();
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
-           .AddInterceptors(interceptor);
+    options.AddInterceptors(interceptor);
 });
 
 // ================= Servicios propios =================

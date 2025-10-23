@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System;
 using Microsoft.EntityFrameworkCore;
 using api_intiSoft.Models.Universal;
 
@@ -49,23 +50,41 @@ namespace intiSoft
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string? connectionString;
-
-            if (_tenant is null && _env.IsDevelopment())
+            if (optionsBuilder.IsConfigured)
             {
-                // Init/Dev connection string --Development --Tenants
-                connectionString = _config.GetConnectionString("Development");
-            }
-            else
-            {
-                // Tenant connection string
-                connectionString = _config.GetConnectionString(_tenant!.Identifier);
+                base.OnConfiguring(optionsBuilder);
+                return;
             }
 
-            // UseSqlServer
+            var connectionString = ResolveConnectionString();
+
             optionsBuilder.UseNpgsql(connectionString);
 
             base.OnConfiguring(optionsBuilder);
+        }
+
+        private string ResolveConnectionString()
+        {
+            if (_tenant is not null)
+            {
+                var tenantConnection = _config.GetConnectionString(_tenant.Identifier);
+                if (!string.IsNullOrWhiteSpace(tenantConnection))
+                {
+                    return tenantConnection;
+                }
+            }
+
+            var fallbackKey = _env.IsDevelopment() ? "Development" : "DefaultConnection";
+            var fallbackConnection = _config.GetConnectionString(fallbackKey);
+
+            if (!string.IsNullOrWhiteSpace(fallbackConnection))
+            {
+                return fallbackConnection;
+            }
+
+            throw new InvalidOperationException(
+                "No se pudo determinar la cadena de conexión para el inquilino actual. " +
+                "Configure una conexión predeterminada o incluya el encabezado de inquilino correspondiente.");
         }
         
         public DbSet<api_intiSoft.Models.Universal.UnTipoDato> UnTipoDato { get; set; } = default!;
