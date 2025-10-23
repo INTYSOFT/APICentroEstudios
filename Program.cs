@@ -135,6 +135,8 @@ builder.Services.AddSwaggerGen(c =>
     c.MapType<System.Drawing.Image>(() => new OpenApiSchema { Type = "string", Format = "binary" });
     c.MapType<System.Drawing.Bitmap>(() => new OpenApiSchema { Type = "string", Format = "binary" });
     c.MapType<Mat>(() => new OpenApiSchema { Type = "string", Format = "binary" });
+    c.MapType<DateOnly>(() => new OpenApiSchema { Type = "string", Format = "date" });
+    c.MapType<TimeOnly>(() => new OpenApiSchema { Type = "string", Format = "time" });
 
     // (Opcional) XML comments si activas el archivo XML en propiedades del proyecto
     // var xml = Path.Combine(AppContext.BaseDirectory, "api_intiSoft.xml");
