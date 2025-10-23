@@ -1,167 +1,201 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Text;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Finbuckle.MultiTenant;
-using api_intiSoft.Data;
-using api_intiSoft.Models.Data;
-using intiSoft;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using api_intiSoft.Models.Common;
+using api_intiSoft.Data;                 // TenantsDbContext
+using api_intiSoft.Models.Data;          // ConecDinamicaContext, CustomTenantInfo
+using api_intiSoft.Models.Common;        // AuditSaveChangesInterceptor
+using api_intiSoft.Services.AnswerSheets;// IAnswerSheetProcessor, AnswerSheetProcessor
 using Microsoft.Extensions.DependencyInjection;
-using api_intiSoft.Services.AnswerSheets;
+using OpenCvSharp;                       // Para MapType<Mat> en Swagger (opcional, pero seguro si ya lo usas)
+// Para AddSwaggerGenNewtonsoftSupport
+using Swashbuckle.AspNetCore.Newtonsoft;
+using intiSoft;
 
 System.AppContext.SetSwitch("System.Drawing.EnableUnixSupport", true);
 
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddAutoMapper(typeof(LogisticaProfile));
-
-
-
-// Configuración de JWT
+// ================= JWT =================
 var jwtSettings = builder.Configuration.GetSection("Jwt");
-var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+var key = Encoding.UTF8.GetBytes(jwtSettings["Key"] ?? throw new InvalidOperationException("Jwt:Key no configurado"));
 
-.AddJwtBearer(options =>
-{
-    options.RequireHttpsMetadata = false;
-    options.SaveToken = true;
-    options.TokenValidationParameters = new TokenValidationParameters
+builder.Services
+    .AddAuthentication(options =>
     {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(key),
-        ValidateIssuer = true,
-        ValidIssuer = jwtSettings["Issuer"],
-        ValidateAudience = true,
-        ValidAudience = jwtSettings["Audience"],
-        ValidateLifetime = true,
-        ClockSkew = TimeSpan.Zero
-    };
-});
-
-//builder.Services.AddAutoMapper(typeof(Program));
-//builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme    = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey         = new SymmetricSecurityKey(key),
+            ValidateIssuer           = true,
+            ValidIssuer              = jwtSettings["Issuer"],
+            ValidateAudience         = true,
+            ValidAudience            = jwtSettings["Audience"],
+            ValidateLifetime         = true,
+            ClockSkew                = TimeSpan.Zero
+        };
+    });
 
 builder.Services.AddAuthorization();
 
-
-// Configuración de la base de datos para el almacenamiento de tenants
+// ================= DB / MultiTenant =================
 builder.Services.AddNpgsql<TenantsDbContext>(builder.Configuration.GetConnectionString("Tenants"));
 
-// Contexto de conexión dinámica sin cadena de conexión explícita
-//builder.Services.AddDbContext<ConecDinamicaContext>();
-
-// Inyección de dependencias para los servicios
-//builder.Services.AddScoped<IFichaTecnicaService, FichaTecnicaService>();
-
-// Configuración de Finbuckle.MultiTenant
 builder.Services
     .AddMultiTenant<CustomTenantInfo>()
     .WithHeaderStrategy("X-Tenant-INTISoft")
     .WithEFCoreStore<TenantsDbContext, CustomTenantInfo>();
 
-// Configuración de controladores y JSON
+builder.Services.AddDbContext<ConecDinamicaContext>((sp, options) =>
+{
+    var interceptor = sp.GetRequiredService<AuditSaveChangesInterceptor>();
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+           .AddInterceptors(interceptor);
+});
+
+// ================= Servicios propios =================
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<AuditSaveChangesInterceptor>();
+builder.Services.AddScoped<IAnswerSheetProcessor, AnswerSheetProcessor>();
+
+// ================= Controllers & JSON =================
+// Usas Newtonsoft en el proyecto, mantenemos compatibilidad y evitamos ciclos EF
 builder.Services.AddControllers()
-    .AddNewtonsoftJson(options =>
+    .AddNewtonsoftJson(o =>
     {
-        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+        o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+        // Si prefieres System.Text.Json, puedes alternar:
+        // o.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
     });
 
-// Configuración de CORS
+// ================= CORS =================
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CorsPageWeb", policyBuilder =>
+    options.AddPolicy("CorsPageWeb", p =>
     {
-        policyBuilder.AllowAnyOrigin()
-                     .AllowAnyHeader()
-                     .AllowAnyMethod();
+        p.AllowAnyOrigin()
+         .AllowAnyHeader()
+         .AllowAnyMethod();
     });
 });
 
-// Configuración de Swagger
+// ================= Swagger =================
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "API intiSoft",
-        Version = "v1",
+        Title       = "API intiSoft",
+        Version     = "v1",
         Description = "API con autenticación JWT"
     });
 
-    // Esquema de seguridad JWT para Swagger
+    // Seguridad JWT en Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "Ingrese el token JWT en este formato: Bearer {token}",
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.Http,
-        Scheme = "Bearer",
-        BearerFormat = "JWT"
+        Description = "Ingrese el token en el formato: Bearer {token}",
+        Name        = "Authorization",
+        In          = ParameterLocation.Header,
+        Type        = SecuritySchemeType.Http,
+        Scheme      = "Bearer",
+        BearerFormat= "JWT"
     });
-
-    // Requerimiento global
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
             new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                },
-                Scheme = "Bearer",
-                Name = "Bearer",
-                In = ParameterLocation.Header,
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" },
+                Scheme   = "Bearer",
+                Name     = "Bearer",
+                In       = ParameterLocation.Header
             },
             new List<string>()
         }
     });
+
+    // Anti-500: evita colisiones y tipos no soportados
+    c.CustomSchemaIds(t => t.FullName?.Replace("+", "."));
+    c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+    c.SupportNonNullableReferenceTypes();
+    c.IgnoreObsoleteActions();
+    c.IgnoreObsoleteProperties();
+
+    // Si por error se expone alguno de estos tipos en firmas públicas, mapéalos a binario
+    c.MapType<System.Drawing.Image>(() => new OpenApiSchema { Type = "string", Format = "binary" });
+    c.MapType<System.Drawing.Bitmap>(() => new OpenApiSchema { Type = "string", Format = "binary" });
+    c.MapType<Mat>(() => new OpenApiSchema { Type = "string", Format = "binary" });
+
+    // (Opcional) XML comments si activas el archivo XML en propiedades del proyecto
+    // var xml = Path.Combine(AppContext.BaseDirectory, "api_intiSoft.xml");
+    // if (File.Exists(xml)) c.IncludeXmlComments(xml);
+
+
 });
 
-var configuration = builder.Configuration;
-
-builder.Services.AddHttpContextAccessor();
-
-builder.Services.AddScoped<AuditSaveChangesInterceptor>();
-
-builder.Services.AddDbContext<ConecDinamicaContext>((serviceProvider, options) =>
-{
-    var interceptor = serviceProvider.GetRequiredService<AuditSaveChangesInterceptor>();
-    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
-           .AddInterceptors(interceptor);
-});
-
-builder.Services.AddScoped<IAnswerSheetProcessor, AnswerSheetProcessor>();
-
+// Soporte para Newtonsoft en Swagger (imprescindible si usas AddNewtonsoftJson)
+builder.Services.AddSwaggerGenNewtonsoftSupport();
 
 var app = builder.Build();
 
-app.UseDeveloperExceptionPage(); // durante desarrollo
-
-//  Swagger en producción (por ejemplo, en un entorno interno),
 if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API intiSoft v1"));
+    // Rama dedicada a Swagger antes de MultiTenant/Auth
+    app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/swagger"), swaggerApp =>
+    {
+        swaggerApp.UseSwagger();
+        swaggerApp.UseSwaggerUI(c =>
+        {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "API intiSoft v1");
+            c.RoutePrefix = ""; // UI en /swagger
+        });
+    });
 }
 
 
 
+// ================= Pipeline =================
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
+// MultiTenant temprano en el pipeline (recomendación Finbuckle)
+app.UseMultiTenant();
+
+// Swagger habilitado en Dev/Staging
+if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API intiSoft v1");
+        c.RoutePrefix = "swagger"; // UI en /swagger
+    });
+}
+
 app.UseHttpsRedirection();
+
 app.UseRouting();
+
 app.UseCors("CorsPageWeb");
+
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseMultiTenant();
+
 app.MapControllers();
+
+// Endpoint de salud para diagnosticar hosting vs swagger
+app.MapGet("/healthz", () => Results.Ok(new { ok = true, ts = DateTime.UtcNow }));
 
 app.Run();

@@ -101,8 +101,10 @@ public sealed class AnswerSheetProcessor : IAnswerSheetProcessor
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            using var bitmap = document.Render(pageIndex, RenderDpi, RenderDpi, PdfRenderFlags.Annotations);
+            using var image = document.Render(pageIndex, RenderDpi, RenderDpi, PdfRenderFlags.Annotations);
+            using var bitmap = new System.Drawing.Bitmap(image); // 👈 conversión explícita
             using var pageMatAlpha = BitmapConverter.ToMat(bitmap);
+
             using var pageMat = PreparePage(pageMatAlpha);
             using var binary = Binarize(pageMat);
 
@@ -326,8 +328,10 @@ public sealed class AnswerSheetProcessor : IAnswerSheetProcessor
     {
         var normalized = NormalizeRect(approxRect, pageSize);
         using var roi = new Mat(binary, normalized);
-        var points = Cv2.FindNonZero(roi);
-        if (points == null || points.Length == 0)
+        using var points = new Mat(); // Create an output Mat to store the points
+        Cv2.FindNonZero(roi, points); // Use the correct overload of FindNonZero
+
+        if (points.Empty())
         {
             return normalized;
         }
@@ -392,7 +396,9 @@ public sealed class AnswerSheetProcessor : IAnswerSheetProcessor
         }
 
         using var roi = new Mat(binary, normalized);
-        using var mask = Mat.Zeros(roi.Rows, roi.Cols, MatType.CV_8UC1);
+        //using var mask = Mat.Zeros(roi.Rows, roi.Cols, MatType.CV_8UC1);
+        using var mask = Mat.Zeros(roi.Rows, roi.Cols, MatType.CV_8UC1).ToMat();
+
         var radius = Math.Max(2, (int)(Math.Min(mask.Rows, mask.Cols) * 0.45));
         Cv2.Circle(mask, new Point(mask.Cols / 2, mask.Rows / 2), radius, Scalar.All(255), -1);
 

@@ -103,13 +103,29 @@
               "target": "Package",
               "version": "[4.11.0.20250507, )"
             },
+            "OpenCvSharp4.Extensions": {
+              "target": "Package",
+              "version": "[4.11.0.20250507, )"
+            },
             "OpenCvSharp4.runtime.win": {
               "target": "Package",
               "version": "[4.11.0.20250507, )"
             },
+            "PdfiumViewer": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[7.1.0, )"
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore.Newtonsoft": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Tesseract": {
               "target": "Package",
