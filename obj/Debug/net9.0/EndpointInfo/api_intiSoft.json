@@ -10077,6 +10077,15 @@
             "format": "int32",
             "nullable": true
           },
+          "alumnoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dniAlumno": {
+            "type": "string",
+            "nullable": true
+          },
           "evaluacion": {
             "$ref": "#/components/schemas/Evaluacion"
           },

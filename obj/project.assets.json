@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {
+    "net9.0-windows10.0.19041": {
       "AutoMapper/15.0.1": {
         "type": "package",
         "dependencies": {
@@ -17,6 +17,77 @@
         "runtime": {
           "lib/net9.0/AutoMapper.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Docnet.Core/2.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Docnet.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Docnet.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/LICENSE": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm/native/pdfium.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/LICENSE": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-arm64/native/pdfium.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux/native/LICENSE": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/linux/native/pdfium.so": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/osx-arm64/native/LICENSE": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-arm64/native/pdfium.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/LICENSE": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/pdfium.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/LICENSE": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/pdfium.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/LICENSE": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/pdfium.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
           }
         }
       },
@@ -2281,6 +2352,28 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/9.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Mono.TextTemplating/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -2505,6 +2598,23 @@
           "runtimes/win-x86/native/opencv_videoio_ffmpeg4110.dll": {
             "assetType": "native",
             "rid": "win-x86"
+          }
+        }
+      },
+      "PdfiumViewer.Core/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/PdfiumViewer.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/PdfiumViewer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ],
+        "resource": {
+          "lib/netcoreapp3.1/nl/PdfiumViewer.resources.dll": {
+            "locale": "nl"
           }
         }
       },
@@ -2769,6 +2879,31 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "System.Drawing.Common/9.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.10"
+        },
+        "compile": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "System.Formats.Asn1/9.0.0-rc.2.24473.5": {
@@ -3045,6 +3180,35 @@
         "lib/net9.0/AutoMapper.xml",
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "Docnet.Core/2.6.0": {
+      "sha512": "in7fpB16Zbdz7D7Qv+4QrapTKKOU1ub2XOvmVGVDEyEwnEZjlbGIiwmpfO03q/GDDEkDM/gIAumxK0U988qSsQ==",
+      "type": "package",
+      "path": "docnet.core/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net45/Docnet.Core.targets",
+        "docnet.core.2.6.0.nupkg.sha512",
+        "docnet.core.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Docnet.Core.dll",
+        "lib/netstandard2.0/Docnet.Core.xml",
+        "runtimes/linux-arm/native/LICENSE",
+        "runtimes/linux-arm/native/pdfium.so",
+        "runtimes/linux-arm64/native/LICENSE",
+        "runtimes/linux-arm64/native/pdfium.so",
+        "runtimes/linux/native/LICENSE",
+        "runtimes/linux/native/pdfium.so",
+        "runtimes/osx-arm64/native/LICENSE",
+        "runtimes/osx-arm64/native/pdfium.dylib",
+        "runtimes/osx-x64/native/LICENSE",
+        "runtimes/osx-x64/native/pdfium.dylib",
+        "runtimes/win-x64/native/LICENSE",
+        "runtimes/win-x64/native/pdfium.dll",
+        "runtimes/win-x86/native/LICENSE",
+        "runtimes/win-x86/native/pdfium.dll"
       ]
     },
     "Finbuckle.MultiTenant/9.0.0": {
@@ -6899,6 +7063,38 @@
         "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
+    "Microsoft.Win32.SystemEvents/9.0.10": {
+      "sha512": "P1CEtsxar/RhfoH3r1vc9ra28LLVYphpcFBxyRIEMM/jP3qh4j9TU4sWH2RUhMZX+GbFxZ+zz1oSP2n9MwjshA==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/9.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.9.0.10.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Mono.TextTemplating/3.0.0": {
       "sha512": "YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "type": "package",
@@ -7174,6 +7370,24 @@
         "runtimes/win-x64/native/opencv_videoio_ffmpeg4110_64.dll",
         "runtimes/win-x86/native/OpenCvSharpExtern.dll",
         "runtimes/win-x86/native/opencv_videoio_ffmpeg4110.dll"
+      ]
+    },
+    "PdfiumViewer.Core/1.0.4": {
+      "sha512": "4SZb57POygmbgVaiSs/itCcrPiFmaAacBK85a5a2CKIJsoDqfOZSNWBPY1Ntp1/xn6OmfI7vvS9Ix/tCV3mCGA==",
+      "type": "package",
+      "path": "pdfiumviewer.core/1.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net20/PdfiumViewer.dll",
+        "lib/net20/nl/PdfiumViewer.resources.dll",
+        "lib/net472/PdfiumViewer.dll",
+        "lib/net472/nl/PdfiumViewer.resources.dll",
+        "lib/netcoreapp3.1/PdfiumViewer.dll",
+        "lib/netcoreapp3.1/nl/PdfiumViewer.resources.dll",
+        "pdfiumviewer.core.1.0.4.nupkg.sha512",
+        "pdfiumviewer.core.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/7.1.0": {
@@ -7556,6 +7770,48 @@
         "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.xml",
         "system.diagnostics.eventlog.8.0.0.nupkg.sha512",
         "system.diagnostics.eventlog.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Drawing.Common/9.0.10": {
+      "sha512": "FDakPhIcxHnhslLiz4ZQ+ALpHRpCU3zOep9Mcq+4hL23XwQrzmgJNYvf1tH4kJ/V36wO/ZhRr8nOfiz26P3wKg==",
+      "type": "package",
+      "path": "system.drawing.common/9.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Private.Windows.Core.dll",
+        "lib/net8.0/System.Private.Windows.Core.xml",
+        "lib/net9.0/System.Drawing.Common.dll",
+        "lib/net9.0/System.Drawing.Common.pdb",
+        "lib/net9.0/System.Drawing.Common.xml",
+        "lib/net9.0/System.Private.Windows.Core.dll",
+        "lib/net9.0/System.Private.Windows.Core.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.9.0.10.nupkg.sha512",
+        "system.drawing.common.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -8078,8 +8334,9 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net9.0": [
+    "net9.0-windows10.0.19041": [
       "AutoMapper >= 15.0.1",
+      "Docnet.Core >= 2.6.0",
       "Finbuckle.MultiTenant >= 9.0.0",
       "Finbuckle.MultiTenant.AspNetCore >= 9.0.0",
       "Finbuckle.MultiTenant.EntityFrameworkCore >= 9.0.0",
@@ -8092,7 +8349,9 @@
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.1",
       "OpenCvSharp4 >= 4.11.0.20250507",
       "OpenCvSharp4.runtime.win >= 4.11.0.20250507",
+      "PdfiumViewer.Core >= 1.0.4",
       "Swashbuckle.AspNetCore >= 7.1.0",
+      "System.Drawing.Common >= 9.0.10",
       "Tesseract >= 5.2.0"
     ]
   },
@@ -8118,7 +8377,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net9.0"
+        "net9.0-windows10.0.19041.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -8126,8 +8385,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net9.0-windows10.0.19041": {
+          "targetAlias": "net9.0-windows10.0.19041.0",
           "projectReferences": {}
         }
       },
@@ -8144,12 +8403,16 @@
       "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
-      "net9.0": {
-        "targetAlias": "net9.0",
+      "net9.0-windows10.0.19041": {
+        "targetAlias": "net9.0-windows10.0.19041.0",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
             "version": "[15.0.1, )"
+          },
+          "Docnet.Core": {
+            "target": "Package",
+            "version": "[2.6.0, )"
           },
           "Finbuckle.MultiTenant": {
             "target": "Package",
@@ -8203,9 +8466,17 @@
             "target": "Package",
             "version": "[4.11.0.20250507, )"
           },
+          "PdfiumViewer.Core": {
+            "target": "Package",
+            "version": "[1.0.4, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[7.1.0, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[9.0.10, )"
           },
           "Tesseract": {
             "target": "Package",
@@ -8223,11 +8494,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Windows.SDK.NET.Ref",
+            "version": "[10.0.19041.57, 10.0.19041.57]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
           },
           "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.Windows.SDK.NET.Ref.Windows": {
             "privateAssets": "all"
           }
         },
