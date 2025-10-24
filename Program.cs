@@ -132,7 +132,14 @@ builder.Services.AddScoped<AuditSaveChangesInterceptor>();
 builder.Services.AddDbContext<ConecDinamicaContext>((serviceProvider, options) =>
 {
     var interceptor = serviceProvider.GetRequiredService<AuditSaveChangesInterceptor>();
-    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
+    var connectionString = configuration.GetConnectionString("Development");
+
+    if (string.IsNullOrWhiteSpace(connectionString))
+    {
+        throw new InvalidOperationException("No se encontró la cadena de conexión 'Development'.");
+    }
+
+    options.UseNpgsql(connectionString)
            .AddInterceptors(interceptor);
 });
 

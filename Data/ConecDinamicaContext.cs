@@ -37,20 +37,28 @@ namespace intiSoft
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string? connectionString;
+            string? connectionString = null;
 
-            if (_tenant is null && _env.IsDevelopment())
+            if (_tenant is not null)
             {
-                // Init/Dev connection string --Development --Tenants
+                connectionString = _config.GetConnectionString(_tenant.Identifier);
+
+                if (string.IsNullOrWhiteSpace(connectionString))
+                {
+                    throw new InvalidOperationException($"No se encontró la cadena de conexión para el tenant '{_tenant.Identifier}'.");
+                }
+            }
+
+            if (string.IsNullOrWhiteSpace(connectionString))
+            {
                 connectionString = _config.GetConnectionString("Development");
             }
-            else
+
+            if (string.IsNullOrWhiteSpace(connectionString))
             {
-                // Tenant connection string
-                connectionString = _config.GetConnectionString(_tenant!.Identifier);
+                throw new InvalidOperationException("No se pudo resolver una cadena de conexión. Configure 'Development' o proporcione un tenant válido mediante el encabezado 'X-Tenant-INTISoft'.");
             }
 
-            // UseSqlServer
             optionsBuilder.UseNpgsql(connectionString);
 
             base.OnConfiguring(optionsBuilder);
