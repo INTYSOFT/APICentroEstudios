@@ -140,7 +140,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                                 grid,
                                 cfg.DniRegion,      // RegionModel
                                 fillThreshold: 0.40,
-                                meanThreshold: 160,
+                                meanThreshold: 250,
                                 deltaMin: 38
                               );
 
