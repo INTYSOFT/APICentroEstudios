@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("api_intiSoft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+531be51cadf9c86a86c825e91befe846c864fa8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddedc88ffe1daefd589bbeb001f8e40490739cb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("api_intiSoft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("api_intiSoft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
