@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using api_intiSoft.Models.CentroEstudios;
+using intiSoft;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using api_intiSoft.Models.CentroEstudios;
-using intiSoft;
 
 namespace api_intiSoft.Controllers.CentroEstudios
 {
@@ -109,7 +104,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
         {
             return _context.AlumnoApoderado.Any(e => e.Id == id);
         }
-        
+
         // GET: api/AlumnoApoderadoes/alumno/5
         [HttpGet("alumnoId/{alumnoId}")]
         public async Task<ActionResult<IEnumerable<AlumnoApoderado>>> GetAlumnoApoderadoByAlumnoId(int alumnoId)

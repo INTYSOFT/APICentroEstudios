@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using api_intiSoft.Models.CentroEstudios;
+using intiSoft;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using api_intiSoft.Models.CentroEstudios;
-using intiSoft;
 
 namespace api_intiSoft.Controllers.CentroEstudios
 {
-    [Route("api/[controller]")] 
+    [Route("api/[controller]")]
     [ApiController]
     public class ParentescoesController : ControllerBase
     {

@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using api_intiSoft.Models.Seguridad;
+using intiSoft;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using api_intiSoft.Models.Seguridad;
-using intiSoft;
 
 namespace api_intiSoft.Controllers.Seguridad
 {
@@ -34,11 +34,11 @@ namespace api_intiSoft.Controllers.Seguridad
                 var token = GenerateJwtToken(usuario.UsuarioId, usuario.NombreUsuario);
                 return Ok(new AuthResponse { Token = token, Expiration = DateTime.UtcNow.AddHours(2) });
             }
-            
+
             return Unauthorized();
         }
 
-        private string GenerateJwtToken(int usuarioId,string username)
+        private string GenerateJwtToken(int usuarioId, string username)
         {
             var jwtSettings = _config.GetSection("Jwt");
             var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);

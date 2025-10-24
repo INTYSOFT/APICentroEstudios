@@ -1,14 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-using Finbuckle.MultiTenant;
-using api_intiSoft.Data;
-using api_intiSoft.Models.Data;
-using intiSoft;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
+﻿using api_intiSoft.Data;
 using api_intiSoft.Models.Common;
-using Microsoft.Extensions.DependencyInjection;
+using api_intiSoft.Models.Data;
+using Finbuckle.MultiTenant;
+using intiSoft;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 

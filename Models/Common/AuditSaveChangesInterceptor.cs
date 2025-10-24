@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Newtonsoft.Json;
-using System.Security.Claims;
-using System.Text;
 using Npgsql;
+using System.Security.Claims;
 
 namespace api_intiSoft.Models.Common;
 

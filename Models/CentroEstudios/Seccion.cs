@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
@@ -37,7 +35,7 @@ public partial class Seccion
 
     [InverseProperty("Seccion")]
     public virtual ICollection<Asistencium>? Asistencia { get; set; } = new List<Asistencium>();
- 
+
     //EvaluacionProgramadaSeccions
     [InverseProperty("Seccion")]
     public virtual ICollection<EvaluacionProgramadaSeccion>? EvaluacionProgramadaSeccions { get; set; } = new List<EvaluacionProgramadaSeccion>();

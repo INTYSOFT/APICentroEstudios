@@ -71,6 +71,14 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Ghostscript.Core.NET": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Ghostscript.NET": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.3, )"
@@ -104,6 +112,10 @@
               "version": "[9.0.1, )"
             },
             "OpenCvSharp4": {
+              "target": "Package",
+              "version": "[4.11.0.20250507, )"
+            },
+            "OpenCvSharp4.Extensions": {
               "target": "Package",
               "version": "[4.11.0.20250507, )"
             },

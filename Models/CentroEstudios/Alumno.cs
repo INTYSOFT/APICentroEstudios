@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
@@ -81,12 +79,12 @@ public partial class Alumno
 
     [InverseProperty("Alumno")]
     public virtual ICollection<BecaAlumno>? BecaAlumnos { get; set; }
-    
+
 
     [InverseProperty("Alumno")]
-    public virtual ICollection<Evaluacion>? Evaluacions { get; set; } 
+    public virtual ICollection<Evaluacion>? Evaluacions { get; set; }
 
     [InverseProperty("Alumno")]
-    public virtual ICollection<Matricula>? Matriculas { get; set; } 
-    
+    public virtual ICollection<Matricula>? Matriculas { get; set; }
+
 }

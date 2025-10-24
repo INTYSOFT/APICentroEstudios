@@ -15,6 +15,7 @@ D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Docnet.Core.d
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Finbuckle.MultiTenant.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Finbuckle.MultiTenant.AspNetCore.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Finbuckle.MultiTenant.EntityFrameworkCore.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Ghostscript.NET.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Humanizer.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
@@ -77,6 +78,7 @@ D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\NuGet.Project
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\NuGet.Protocol.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\NuGet.Versioning.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\OpenCvSharp.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\OpenCvSharp.Extensions.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\PdfiumViewer.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -89,8 +91,12 @@ D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\System.Compos
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\System.Drawing.Common.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\System.Private.Windows.Core.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\System.IdentityModel.Tokens.Jwt.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\System.IO.Abstractions.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\System.Reflection.MetadataLoadContext.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Tesseract.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\TestableIO.System.IO.Abstractions.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\TestableIO.System.IO.Abstractions.Wrappers.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\Testably.Abstractions.FileSystem.Interface.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\af\Humanizer.resources.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\ar\Humanizer.resources.dll
 D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\az\Humanizer.resources.dll

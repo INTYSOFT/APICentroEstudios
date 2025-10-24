@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using api_intiSoft.Dto.CentroEstudios;
 using api_intiSoft.Models.CentroEstudios;
 using intiSoft;
-using api_intiSoft.Dto.CentroEstudios;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Controllers.CentroEstudios
 {

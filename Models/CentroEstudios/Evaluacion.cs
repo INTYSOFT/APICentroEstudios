@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
@@ -52,7 +50,7 @@ public partial class Evaluacion
     [Column("usuaraio_actualizacion_id")]
     public int? UsuaraioActualizacionId { get; set; }
 
-    
+
 
     [InverseProperty("Evaluacion")]
     public virtual EvaluacionNotum? EvaluacionNotum { get; set; }

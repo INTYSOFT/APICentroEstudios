@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Finbuckle.MultiTenant.Abstractions;
 using Microsoft.EntityFrameworkCore;
-using api_intiSoft.Models.Universal;
-
-using Finbuckle.MultiTenant;
-using api_intiSoft.Data;
-using Finbuckle.MultiTenant.Abstractions;
-using api_intiSoft.Models.Configuracion;
-using api_intiSoft.Models.Seguridad;
-using api_intiSoft.Models.Common;
-using api_intiSoft.Models.CentroEstudios;
 
 
 //using api_intiSoft.Models.Logistica.Producto;
@@ -25,7 +13,7 @@ namespace intiSoft
         private readonly ITenantInfo? _tenant;
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _config;
-    
+
 
         public ConecDinamicaContext(
             DbContextOptions<ConecDinamicaContext> options,
@@ -44,7 +32,7 @@ namespace intiSoft
         //public DbSet<api_intiSoft.Models.Producto.LgCategorium> LgCategorium { get; set; } = default!;
         //public DbSet<Product> Products => Set<Product>();
 
-        
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -67,12 +55,12 @@ namespace intiSoft
 
             base.OnConfiguring(optionsBuilder);
         }
-        
+
         public DbSet<api_intiSoft.Models.Universal.UnTipoDato> UnTipoDato { get; set; } = default!;
-        
-        
+
+
         public DbSet<api_intiSoft.Models.Seguridad.SgUsuario> SgUsuario { get; set; } = default!;
-       
+
         public DbSet<api_intiSoft.Models.CentroEstudios.Sede> Sede { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.Alumno> Alumno { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.AlumnoApoderado> AlumnoApoderado { get; set; } = default!;
@@ -95,15 +83,17 @@ namespace intiSoft
         public DbSet<api_intiSoft.Models.CentroEstudios.Matricula> Matricula { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.MatriculaItem> MatriculaItem { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.TipoEvaluacion> TipoEvaluacion { get; set; } = default!;
+
         public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum> EvaluacionProgramadum { get; set; } = default!;
+
         public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion> EvaluacionProgramadaSeccion { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionDetalle> EvaluacionDetalle { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionTipoPreguntum> EvaluacionTipoPreguntum { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionClave> EvaluacionClave { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.Evaluacion> Evaluacion { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionRespuestum> EvaluacionRespuestum { get; set; } = default!;
-        
-        
+
+
         //public DbSet<LgCategorium> LgCategorium { get; set; } = default!;
         //public DbSet<api_intiSoft.Models.Logistica.Producto.LgProducto> LgProducto { get; set; } = default!;
 

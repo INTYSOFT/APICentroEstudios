@@ -1,8 +1,7 @@
 ﻿
+using intiSoft;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using api_intiSoft.Models.CentroEstudios;
-using intiSoft;
 
 namespace api_intiSoft.Controllers.CentroEstudios
 {
@@ -21,8 +20,9 @@ namespace api_intiSoft.Controllers.CentroEstudios
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EvaluacionProgramadum>>> GetEvaluacionProgramadum()
         {
-            return await _context.EvaluacionProgramadum.ToListAsync();
+            return Ok(await _context.EvaluacionProgramadum.ToListAsync());
         }
+
 
         // GET: api/EvaluacionProgramadums/5
         [HttpGet("{id}")]
@@ -35,7 +35,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                 return NotFound();
             }
 
-            return evaluacionProgramadum;
+            return Ok(evaluacionProgramadum);
         }
 
         //GET: por DateOnly FechaInicio.
@@ -49,7 +49,8 @@ namespace api_intiSoft.Controllers.CentroEstudios
             {
                 return new List<EvaluacionProgramadum>();
             }
-            return evaluacionProgramadums;
+            return Ok(evaluacionProgramadums);
+
         }
 
         //GET: por fechaInicio entre dos fechas, ordenar por fecha de incio descentrendente
@@ -64,7 +65,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
             {
                 return new List<EvaluacionProgramadum>();
             }
-            return evaluacionProgramadums;
+            return Ok(evaluacionProgramadums);
         }
 
         //get : por fecha y cicloId
@@ -78,7 +79,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
             {
                 return new List<EvaluacionProgramadum>();
             }
-            return evaluacionProgramadums;
+            return Ok(evaluacionProgramadums);
         }
 
         //GET: Obtener todos en activo=true por año y mes
@@ -92,7 +93,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
             {
                 return new List<EvaluacionProgramadum>();
             }
-            return evaluacionProgramadums;
+            return Ok(evaluacionProgramadums);
         }
 
 
@@ -129,16 +130,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
         }
 
         // POST: api/EvaluacionProgramadums
-        [HttpPost]
-        public async Task<ActionResult<EvaluacionProgramadum>> PostEvaluacionProgramadum(EvaluacionProgramadum evaluacionProgramadum)
-        {
-            //establecer estadoId =1
-            evaluacionProgramadum.EstadoId = 1;
 
-            _context.EvaluacionProgramadum.Add(evaluacionProgramadum);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("GetEvaluacionProgramadum", new { id = evaluacionProgramadum.Id }, evaluacionProgramadum);
-        }
 
 
 

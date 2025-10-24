@@ -2276,33 +2276,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
-    "Method": "PostEvaluacionProgramadum",
-    "RelativePath": "api/EvaluacionProgramadums",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "evaluacionProgramadum",
-        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2328,7 +2302,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "Type": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2353,7 +2327,7 @@
       },
       {
         "Name": "evaluacionProgramadum",
-        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "Type": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum",
         "IsRequired": true
       }
     ],
@@ -2374,7 +2348,7 @@
       },
       {
         "Name": "evaluacionProgramadum",
-        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "Type": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum",
         "IsRequired": true
       }
     ],
@@ -2417,7 +2391,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2443,7 +2417,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2474,7 +2448,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2505,7 +2479,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2518,7 +2492,7 @@
   {
     "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionRespuestumsController",
     "Method": "ProcesarPdf",
-    "RelativePath": "api/EvaluacionRespuestums/upload",
+    "RelativePath": "api/EvaluacionRespuestums/procesar",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

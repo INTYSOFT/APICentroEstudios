@@ -3,11 +3,11 @@
     public sealed class AlumnoCreateDto
     {
         public string Dni { get; set; } = default!;
-        public string? Apellidos { get; set; }        
+        public string? Apellidos { get; set; }
         public string? Nombres { get; set; }
         public string? FechaNacimiento { get; set; } // llega como string/ISO
         public string? Celular { get; set; }
-        public string? Correo{ get; set; }
+        public string? Correo { get; set; }
         //UbigeoCode
         public string? UbigeoCode { get; set; }
         public string? Direccion { get; set; }

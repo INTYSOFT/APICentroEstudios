@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
@@ -73,7 +71,7 @@ public partial class Matricula
     //Carrera
     [ForeignKey("CarreraId")]
     [InverseProperty("Matriculas")]
-    public virtual Carrera? Carrera    {get; set; } = null!;
+    public virtual Carrera? Carrera { get; set; } = null!;
 
     //BecaAlumnos
     [InverseProperty("Matricula")]

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
@@ -31,7 +29,7 @@ public partial class EvaluacionProgramadum
     public int? EstadoId { get; set; }
 
     [Column("nombre")]
-    public string Nombre { get; set; } = null!;  
+    public string Nombre { get; set; } = null!;
 
     [Column("fecha_inicio")]
     public DateOnly FechaInicio { get; set; }
@@ -41,11 +39,11 @@ public partial class EvaluacionProgramadum
 
     [Column("hora_fin")]
     public TimeOnly HoraFin { get; set; }
-    
+
 
     [Column("carrera_id")]
     public int? CarreraId { get; set; }
-  
+
 
     [Column("activo")]
     public bool Activo { get; set; }
@@ -65,7 +63,7 @@ public partial class EvaluacionProgramadum
     [InverseProperty("EvaluacionProgramada")]
     public virtual ICollection<EvaluacionDetalle>? EvaluacionDetalles { get; set; } = new List<EvaluacionDetalle>();
 
-   
+
     [InverseProperty("EvaluacionProgramada")]
     public virtual ICollection<EvaluacionNotum>? EvaluacionNota { get; set; } = new List<EvaluacionNotum>();
 

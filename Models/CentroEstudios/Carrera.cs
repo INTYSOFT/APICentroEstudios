@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace api_intiSoft.Models.CentroEstudios;
 
@@ -14,7 +12,7 @@ public partial class Carrera
     [Column("id")]
     public int Id { get; set; }
 
-    
+
 
     [Column("nombre")]
     public string Nombre { get; set; } = null!;
@@ -32,9 +30,9 @@ public partial class Carrera
     public int? UsuaraioRegistroId { get; set; }
 
     [Column("usuaraio_actualizacion_id")]
-    public int? UsuaraioActualizacionId { get; set; }   
-    
-    
+    public int? UsuaraioActualizacionId { get; set; }
+
+
     //matriculas
     [InverseProperty("Carrera")]
     public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
