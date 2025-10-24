@@ -1,10 +1,19 @@
-﻿using api_intiSoft.Models.CentroEstudios;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using api_intiSoft.Dto;
+using api_intiSoft.Models.CentroEstudios;
+using api_intiSoft.Services;
 using ContrlAcademico;
 using ContrlAcademico.Services;
 using intiSoft;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Drawing;
+using Microsoft.Extensions.Configuration;
 
 namespace api_intiSoft.Controllers.CentroEstudios
 {
@@ -22,151 +31,172 @@ namespace api_intiSoft.Controllers.CentroEstudios
         }
 
         /// <summary>
-        /// Procesa un PDF de hojas de respuesta:
-        /// - Lee DNI (8 dígitos marcados a la izquierda)
-        /// - Lee 100 respuestas (A–E) en 4 bloques de 25
-        /// - Inserta/actualiza en academia.evaluacion_respuesta
+        /// Sube un PDF con hojas de respuesta, calibra la grilla por página,
+        /// lee DNI y 100 respuestas (A–E) y hace upsert en academia.evaluacion_respuesta.
         /// </summary>
-        /// <param name="pdf">Archivo PDF</param>
-        /// <param name="evaluacionProgramadaId">Id de la evaluación programada</param>
-        /// <param name="seccionId">Id de la sección</param>
         [HttpPost("procesar")]
+        [Consumes("multipart/form-data")]
         [DisableRequestSizeLimit]
-        public async Task<ActionResult<object>> ProcesarPdf(
-            IFormFile pdf,
-            [FromQuery] int evaluacionProgramadaId,
-            [FromQuery] int seccionId)
+        public async Task<ActionResult<object>> ProcesarPdf([FromForm] ProcesarPdfRequest request)
         {
-            if (pdf == null || pdf.Length == 0)
-                return BadRequest("Debe adjuntar un PDF no vacío.");
+            if (request.Pdf is null || request.Pdf.Length == 0)
+                return BadRequest("Debe adjuntar un PDF no vacío en el campo 'pdf'.");
 
-            // Cargar config.json (misma que usas en WinForms)
+            // 1) Cargar configuración compartida (dpi, regiones normalizadas, etc.)
             var contentRoot = Directory.GetCurrentDirectory();
             var cfgPath = Path.Combine(contentRoot, "config.json");
             var cfg = ConfigModel.Load(cfgPath);
 
-            // Crear utilidades
-            var gsPath = _config["Ghostscript:DllPath"] ?? @"C:\Program Files\gs\gs10.05.1\bin\gsdll64.dll";
-            //var renderer = new PdfRenderer(gsPath, cfg.Dpi);
-            var renderer = new ContrlAcademico.Services.PdfRenderer(gsPath, cfg.Dpi);
+            // 2) Ghostscript (ruta de DLL)
+            var gsPath = _config["Ghostscript:DllPath"];
+            if (string.IsNullOrWhiteSpace(gsPath) || !System.IO.File.Exists(gsPath))
+                return BadRequest($"Ghostscript DLL no encontrada en 'Ghostscript:DllPath'. Valor: '{gsPath ?? "(vacío)"}'.");
 
+            var renderer = new PdfRenderer(gsPath, cfg.Dpi);
             var corrector = new RotationCorrector();
-            var omr = new OmrProcessor(cfg.AnswersGrid, cfg.DniRegion, fillThreshold: 0.5, meanThreshold: 180, deltaMin: 30);
-            var dniReader = new DniExtractor(cfg); // OMR 8×10 en región normalizada
+            var dniExt = new DniExtractor(cfg);
 
-            // Derivar EvaluacionId y Version desde EvaluacionProgramada (si tu modelo lo expone)
-            int evaluacionId = 0;
-            int version = 1;
+            // 3) Guardar PDF temporalmente con extensión .pdf
+            var tmp = Path.GetTempFileName();
+            var tempPdfPath = Path.ChangeExtension(tmp, ".pdf");
+            System.IO.File.Move(tmp, tempPdfPath);
+
+            await using (var fs = System.IO.File.Create(tempPdfPath))
+                await request.Pdf.CopyToAsync(fs);
+
+            // 4) Renderizar páginas
+            List<Bitmap> pages;
             try
             {
-                var ep = await _context.Set<EvaluacionProgramadum>()
-                                       .AsNoTracking()
-                                       .FirstOrDefaultAsync(x => x.Id == evaluacionProgramadaId);
-                if (ep != null)
-                {
-                    // Ajusta estas propiedades si el nombre difiere en tu modelo real
-                    evaluacionId = ep.EvaluacionId;
-                    version      = ep.Version;
-                }
+                pages = renderer.RenderPages(tempPdfPath);
             }
-            catch
+            catch (Exception ex)
             {
-                // Si no existe la entidad o propiedades, continúa con defaults (o expón como params)
+                TryDelete(tempPdfPath);
+                return Problem($"Ghostscript no pudo abrir el PDF. Detalle: {ex.Message}");
             }
 
-            // Guardar PDF temporalmente
-            var tempPdfPath = Path.GetTempFileName();
-            await using (var fs = System.IO.File.Create(tempPdfPath))
+            if (pages is null || pages.Count == 0)
             {
-                await pdf.CopyToAsync(fs);
+                TryDelete(tempPdfPath);
+                return BadRequest("No se pudo extraer ninguna página del PDF (DLL incorrecta, permisos o PDF dañado/protegido).");
             }
+
+            // 5) Derivar EvaluacionId/Version desde EvaluacionProgramada si tu modelo lo expone
+            int evaluacionId = 0, version = 1;
+            var ep = await _context.Set<EvaluacionProgramadum>()
+                                   .AsNoTracking()
+                                   .FirstOrDefaultAsync(x => x.Id == request.EvaluacionProgramadaId);
+
 
             var resumen = new List<object>();
             using var tx = await _context.Database.BeginTransactionAsync();
 
             try
             {
-                // 1) Renderizar páginas
-                var pages = renderer.RenderPages(tempPdfPath);
-
-                for (int pageIndex = 0; pageIndex < pages.Count; pageIndex++)
+                for (int i = 0; i < pages.Count; i++)
                 {
-                    using Bitmap raw = pages[pageIndex];
+                    using var raw = pages[i];
+                    using var aligned = corrector.Correct(raw); // deskew/rotación leve
 
-                    // 2) Deskew/rotación
-                    //using Bitmap aligned = corrector.Correct(raw);
-                    using Bitmap aligned = corrector.Correct(raw) ?? (Bitmap)raw.Clone();
-
-                    if (aligned == null)                  // por si tu Correct pudiera devolver null
-                        return Problem("No se pudo alinear la página (RotationCorrector.Correct devolvió null).");
+                    // --- DNI ---
+                    var dniRaw = dniExt.Extract(aligned);
+                    var dni = new string(dniRaw.Where(char.IsDigit).ToArray());
 
 
-                    // 3) DNI (8 dígitos; si hay '-', lo dejamos tal cual o lo filtramos)                    
-                    var dniRaw = dniReader.Extract(aligned);
-                    var dni = new string(dniRaw.Where(char.IsDigit).ToArray()); // sólo dígitos
+                    // --- Calibración por página (ya la tienes arriba) ---
+                    var calibrator = new SheetCalibrator();
+                    var gp = calibrator.Calibrate(aligned);
 
-                    // 4) Respuestas (100)
-                    var answers = omr.Process(aligned);   // 'A'..'E' o '-'
+                    // ¡OJO!: tu OmrProcessor espera StartX/StartY en el PRIMER ÓVALO (A, fila 1),
+                    // Dx = paso HORIZONTAL entre opciones A..E
+                    // Dy = paso VERTICAL entre filas 1..25
 
+                    double blockWidth = gp.BlockSpacing;     // ancho de bloque (columna de 25)
+                    double dyRow = gp.DxRow;            // separación VERTICAL entre filas
+                    double dxOpt = gp.DyOption;         // separación HORIZONTAL entre A..E
 
-                    if (answers == null || answers.Length == 0)
-                        throw new InvalidOperationException($"No se pudieron leer respuestas en la página {pageIndex + 1}.");
+                    // Empuja StartX/Y desde el borde del panel hacia el CENTRO del primer óvalo.
+                    // Estos coeficientes están afinados para la hoja que mostraste (Lumbreras).
+                    int startX = gp.Panel.X + (int)Math.Round(blockWidth * 0.19); // 19% hacia adentro del bloque
+                    int startY = gp.Panel.Y + (int)Math.Round(dyRow * 0.16);      // 16% hacia abajo
 
-                    // 5) Upsert por clave única (evaluacion_id, version, pregunta_orden)
-                    int inserted = 0, updated = 0;
-                    for (int i = 0; i < answers.Length; i++)
+                    var grid = new ContrlAcademico.GridModel
                     {
-                        int preguntaOrden = i + 1;
-                        string respuesta = answers[i] == '-' ? "X" : answers[i].ToString();
+                        StartX       = startX,                            // primer óvalo (A, fila 1)
+                        StartY       = startY,
+                        Rows         = gp.RowsPerBlock,                   // 25
+                        Cols         = gp.ColsPerQuestion,                // 5 (A..E)
+                        BlockCount   = gp.BlockCount,                     // 4
+                        Dx           = (int)Math.Round(dxOpt),            // ← HORIZONTAL entre A..E
+                        Dy           = (int)Math.Round(dyRow),            // ← VERTICAL entre filas
+                        BubbleW      = (int)Math.Round(gp.BubbleW),       // diámetro aproximado
+                        BubbleH      = (int)Math.Round(gp.BubbleH),
+                        BlockSpacing = (int)Math.Round(gp.BlockSpacing)   // distancia entre inicios de bloque
+                    };
+
+                    // --- Crear OMR con umbrales recomendados ---
+                    var omr = new OmrProcessor(
+                                grid,
+                                cfg.DniRegion,      // RegionModel
+                                fillThreshold: 0.40,
+                                meanThreshold: 160,
+                                deltaMin: 38
+                              );
+
+                    // --- Respuestas (100): 'A'..'E' o '-' (guardamos "X") ---
+                    var answers = omr.Process(aligned);
+                    if (answers == null || answers.Length == 0)
+                        throw new InvalidOperationException($"No se pudieron leer respuestas en la página {i + 1}.");
+
+                    // --- Upsert por (evaluacion_id, version, pregunta_orden) ---
+                    int inserted = 0, updated = 0;
+                    for (int q = 0; q < answers.Length; q++)
+                    {
+                        int pregunta = q + 1; // orden por columna (1–25, 26–50, 51–75, 76–100)
+                        string resp = answers[q] == '-' ? "X" : answers[q].ToString();
 
                         var existente = await _context.EvaluacionRespuestum
                             .FirstOrDefaultAsync(x =>
-                                x.EvaluacionId   == evaluacionId &&
-                                x.Version        == version &&
-                                x.PreguntaOrden  == preguntaOrden);
+                                x.EvaluacionId  == evaluacionId &&
+                                x.Version       == version &&
+                                x.PreguntaOrden == pregunta);
 
                         if (existente == null)
                         {
-                            var nuevo = new EvaluacionRespuestum
+                            _context.EvaluacionRespuestum.Add(new EvaluacionRespuestum
                             {
                                 EvaluacionId            = evaluacionId,
                                 Version                 = version,
-                                PreguntaOrden           = preguntaOrden,
-                                Respuesta               = respuesta,
+                                PreguntaOrden           = pregunta,
+                                Respuesta               = resp,
                                 Fuente                  = "OMR",
-                                Confianza               = null,
-                                TiempoMarcaMs           = null,
                                 Activo                  = true,
                                 FechaRegistro           = DateTime.UtcNow,
                                 FechaActualizacion      = DateTime.UtcNow,
-                                UsuaraioRegistroId      = null,
-                                UsuaraioActualizacionId = null,
-                                EvaluacionProgramadaId  = evaluacionProgramadaId,
-                                SeccionId               = seccionId,
+                                EvaluacionProgramadaId  = request.EvaluacionProgramadaId,
+                                SeccionId               = request.SeccionId,
                                 AlumnoId                = null,
                                 DniAlumno               = string.IsNullOrWhiteSpace(dni) ? null : dni
-                            };
-
-                            _context.EvaluacionRespuestum.Add(nuevo);
+                            });
                             inserted++;
                         }
                         else
                         {
-                            // Actualizamos campos variables (respuesta, DNI, sellos)
-                            existente.Respuesta          = respuesta;
-                            existente.DniAlumno          = string.IsNullOrWhiteSpace(dni) ? existente.DniAlumno : dni;
-                            existente.EvaluacionProgramadaId = evaluacionProgramadaId;
-                            existente.SeccionId          = seccionId;
-                            existente.Activo             = true;
-                            existente.Fuente             = "OMR";
-                            existente.FechaActualizacion = DateTime.UtcNow;
+                            existente.Respuesta              = resp;
+                            existente.DniAlumno              = string.IsNullOrWhiteSpace(dni) ? existente.DniAlumno : dni;
+                            existente.EvaluacionProgramadaId = request.EvaluacionProgramadaId;
+                            existente.SeccionId              = request.SeccionId;
+                            existente.Fuente                 = "OMR";
+                            existente.Activo                 = true;
+                            existente.FechaActualizacion     = DateTime.UtcNow;
                             updated++;
                         }
                     }
 
                     resumen.Add(new
                     {
-                        pagina = pageIndex + 1,
+                        pagina = i + 1,
                         dni = string.IsNullOrWhiteSpace(dni) ? "(no leído)" : dni,
                         insertados = inserted,
                         actualizados = updated
@@ -175,12 +205,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
 
                 await _context.SaveChangesAsync();
                 await tx.CommitAsync();
-
-                return Ok(new
-                {
-                    paginas = resumen.Count,
-                    detalle = resumen
-                });
+                return Ok(new { paginas = resumen.Count, detalle = resumen });
             }
             catch (Exception ex)
             {
@@ -193,19 +218,26 @@ namespace api_intiSoft.Controllers.CentroEstudios
             }
         }
 
-        private static void TryDelete(string path)
+        // Helper para limpiar temporales con seguridad
+        private static void TryDelete(string? path)
         {
-            try { if (System.IO.File.Exists(path)) System.IO.File.Delete(path); }
-            catch { /* no-op */ }
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(path) && System.IO.File.Exists(path))
+                    System.IO.File.Delete(path);
+            }
+            catch
+            {
+                // no-op
+            }
         }
+
+
+
+
     }
 
-    // Suponemos que existe esta entidad en tu Modelo (como indica tu navegación)
-    // Si ya la tienes definida en tu proyecto, borra esta clase "placeholder".
-    public class EvaluacionProgramadum
-    {
-        public int Id { get; set; }
-        public int EvaluacionId { get; set; }
-        public int Version { get; set; }
-    }
+
+
+
 }

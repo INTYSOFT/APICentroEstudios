@@ -296,3 +296,4 @@ D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0-windows10.0.19041.0\refint\api_in
 D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0-windows10.0.19041.0\api_intiSoft.pdb
 D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0-windows10.0.19041.0\api_intiSoft.genruntimeconfig.cache
 D:\inti\INTYSoft\api_intiSoft\obj\Debug\net9.0-windows10.0.19041.0\ref\api_intiSoft.dll
+D:\inti\INTYSoft\api_intiSoft\bin\Debug\net9.0-windows10.0.19041.0\config.json
