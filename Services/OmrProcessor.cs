@@ -1,4 +1,5 @@
-﻿using OpenCvSharp;
+﻿using System;
+using OpenCvSharp;
 using OpenCvSharp.Extensions;
 using System.Drawing;
 using System.Linq;
@@ -22,6 +23,9 @@ namespace ContrlAcademico.Services
         readonly double _meanThreshold; // umbral sobre media de gris
         readonly double _deltaMin;      // separación mínima entre 1º y 2º
         double _lastThreshold = double.NaN;
+        readonly double[] _columnOffsets;
+        readonly double[] _rowOffsets;
+        readonly double[] _blockOffsets;
 
         public double LastThreshold => _lastThreshold;
 
@@ -77,6 +81,18 @@ namespace ContrlAcademico.Services
             _dniRegion     = dniRegion ?? throw new ArgumentNullException(nameof(dniRegion));
             _fillThreshold = fillThreshold;
 
+            _columnOffsets = (grid.ColumnOffsets?.Length == grid.Cols)
+                ? grid.ColumnOffsets.ToArray()
+                : Array.Empty<double>();
+
+            _rowOffsets = (grid.RowOffsets?.Length == grid.Rows)
+                ? grid.RowOffsets.ToArray()
+                : Array.Empty<double>();
+
+            _blockOffsets = (grid.BlockOffsets?.Length == grid.BlockCount)
+                ? grid.BlockOffsets.ToArray()
+                : Array.Empty<double>();
+
 
             // Creamos la máscara elíptica del tamaño exacto de la burbuja:
             _mask = new Mat(_g.BubbleH, _g.BubbleW, MatType.CV_8UC1, Scalar.All(0));
@@ -116,25 +132,43 @@ namespace ContrlAcademico.Services
             int idx = 0;
 
             // 2) Recorremos cada bloque de preguntas
+            double defaultDx = _g.Dx != 0 ? _g.Dx : Math.Max(1.0, _g.BubbleW * 1.15);
+            double defaultDy = _g.Dy != 0 ? _g.Dy : Math.Max(1.0, _g.BubbleH * 1.4);
+            double defaultBlockSpacing = space != 0
+                ? space
+                : Math.Max(defaultDx * cols * 1.35, _g.BubbleW * (cols + 3));
+
+            double startX = _g.StartX;
+            double startY = _g.StartY;
+
             for (int b = 0; b < blocks; b++)
             {
-                //int baseX = _g.StartX + b * (cols * _g.Dx + space);
+                double blockOffset = b < _blockOffsets.Length
+                    ? _blockOffsets[b]
+                    : b * defaultBlockSpacing;
 
-                int baseX = _g.StartX + b * space;
+                double baseX = startX + blockOffset;
 
                 for (int r = 0; r < rows; r++, idx++)
                 {
-                    int y = _g.StartY + r * _g.Dy;
+                    double rowOffset = r < _rowOffsets.Length
+                        ? _rowOffsets[r]
+                        : r * defaultDy;
+
+                    double centerY = startY + rowOffset;
 
                     // 3) Para cada opción A–E calculamos la media dentro de la elipse
                     var stats = Enumerable.Range(0, cols)
                         .Select(c =>
                         {
+                            double colOffset = c < _columnOffsets.Length
+                                ? _columnOffsets[c]
+                                : c * defaultDx;
+
                             // Los parámetros StartX/StartY representan el CENTRO del óvalo A1
                             // (ver calibración en SheetCalibrator). Convertimos a esquina sup-izq
                             // restando la mitad del tamaño de la burbuja para construir el ROI.
-                            double centerX = baseX + c * _g.Dx;
-                            double centerY = y;
+                            double centerX = baseX + colOffset;
 
                             int x = (int)Math.Round(centerX - _g.BubbleW / 2.0);
                             int yTop = (int)Math.Round(centerY - _g.BubbleH / 2.0);

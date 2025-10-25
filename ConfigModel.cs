@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+using System;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace ContrlAcademico
@@ -92,6 +93,15 @@ namespace ContrlAcademico
 
         [JsonPropertyName("blockSpacing")]
         public int BlockSpacing { get; set; }
+
+        [JsonPropertyName("columnOffsets")]
+        public double[] ColumnOffsets { get; set; } = Array.Empty<double>();
+
+        [JsonPropertyName("rowOffsets")]
+        public double[] RowOffsets { get; set; } = Array.Empty<double>();
+
+        [JsonPropertyName("blockOffsets")]
+        public double[] BlockOffsets { get; set; } = Array.Empty<double>();
     }
 
     public class NormGridModel
