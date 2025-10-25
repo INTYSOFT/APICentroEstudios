@@ -127,6 +127,8 @@ namespace ContrlAcademico.Services
 
             var bestMeans = new double[totalQuestions];
             var secondMeans = new double[totalQuestions];
+            var bestFills = new double[totalQuestions];
+            var secondFills = new double[totalQuestions];
             var bestOpts = new int[totalQuestions];
 
             int idx = 0;
@@ -180,25 +182,41 @@ namespace ContrlAcademico.Services
                             int h2 = Math.Min(_g.BubbleH, gray.Height - y2);
 
                             if (w2 <= 0 || h2 <= 0)
-                                return (opt: c, mean: 255.0);
+                                return (opt: c, mean: 255.0, fill: 0.0);
 
                             // Extraemos ROI y recortamos la máscara al mismo tamaño
                             using var roi = new Mat(gray, new Rect(x2, y2, w2, h2));
                             using var maskROI = new Mat(_mask, new Rect(0, 0, w2, h2));
-                            // Media ponderada
+
                             Scalar m = Cv2.Mean(roi, maskROI);
-                            return (opt: c, mean: m.Val0);
+
+                            double fillRatio = 0.0;
+                            int maskArea = Cv2.CountNonZero(maskROI);
+                            if (maskArea > 0)
+                            {
+                                using var threshROI = new Mat();
+                                Cv2.Threshold(roi, threshROI, 0, 255, ThresholdTypes.BinaryInv | ThresholdTypes.Otsu);
+                                using var filled = new Mat();
+                                Cv2.BitwiseAnd(threshROI, maskROI, filled);
+                                int filledPixels = Cv2.CountNonZero(filled);
+                                fillRatio = filledPixels / (double)maskArea;
+                            }
+
+                            return (opt: c, mean: m.Val0, fill: fillRatio);
                         })
-                        .OrderBy(t => t.mean) // las más oscuras (menor mean) primero
+                        .OrderByDescending(t => t.fill) // las más rellenas primero
+                        .ThenBy(t => t.mean)             // y entre ellas, las más oscuras
                         .ToArray();
 
                     var best = stats[0];
                     var second = stats.Length > 1
                         ? stats[1]
-                        : (opt: -1, mean: double.PositiveInfinity);
+                        : (opt: -1, mean: double.PositiveInfinity, fill: 0.0);
 
                     bestMeans[idx] = best.mean;
                     secondMeans[idx] = second.mean;
+                    bestFills[idx] = best.fill;
+                    secondFills[idx] = second.fill;
                     bestOpts[idx] = best.opt;
                 }
             }
@@ -207,24 +225,37 @@ namespace ContrlAcademico.Services
             double effectiveThreshold = ResolveThreshold(adaptiveThreshold);
             _lastThreshold = effectiveThreshold;
 
-            const double secondaryMarkedMargin = 5.0;   // margen para considerar que otra burbuja también está marcada
-            const double secondaryNearMargin = 3.0;   // tolerancia alrededor del umbral para decidir ambigüedad
+            const double secondaryMarkedMargin = 10.0;   // margen para considerar que otra burbuja también está marcada
+            const double secondaryNearMargin = 5.0;   // tolerancia alrededor del umbral para decidir ambigüedad
+            const double fillDominanceMargin = 0.08;  // diferencia mínima de relleno para considerar dominante
+            const double fillSecondaryMargin = 0.04;  // relleno que indica posible segunda marca
 
             for (int i = 0; i < answers.Length; i++)
             {
                 double bestMean = bestMeans[i];
                 double secondMean = secondMeans[i];
+                double bestFill = bestFills[i];
+                double secondFill = secondFills[i];
 
-                bool bestMarked = bestMean <= effectiveThreshold;
                 bool hasSecond = !double.IsInfinity(secondMean);
 
-                bool secondLikelyMarked = hasSecond && secondMean <= effectiveThreshold - secondaryMarkedMargin;
+                bool bestFillSufficient = bestFill >= _fillThreshold;
+                bool secondFillRelevant = hasSecond && secondFill >= Math.Max(_fillThreshold - fillSecondaryMargin, 0.0);
+                bool fillTooClose = hasSecond && (bestFill - secondFill) < fillDominanceMargin;
+
+                bool secondLikelyMarked = hasSecond
+                    && secondMean <= effectiveThreshold - secondaryMarkedMargin
+                    && (secondMean - bestMean) < Math.Max(_deltaMin * 0.5, 8.0);
                 bool secondTooClose = hasSecond && (secondMean - bestMean) < _deltaMin;
                 bool secondNearThreshold = hasSecond && secondMean <= effectiveThreshold + secondaryNearMargin;
 
-                bool ambiguous = secondLikelyMarked || (secondTooClose && secondNearThreshold);
+                bool ambiguous = (secondLikelyMarked && fillTooClose)
+                                 || (secondFillRelevant && fillTooClose)
+                                 || (secondTooClose && secondNearThreshold);
 
-                if (bestMarked && !ambiguous)
+                bool meanAcceptable = bestMean <= effectiveThreshold + secondaryNearMargin;
+
+                if (bestFillSufficient && meanAcceptable && !ambiguous)
                 {
                     answers[i] = (char)('A' + bestOpts[i]);
                 }
