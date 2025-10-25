@@ -121,28 +121,31 @@ namespace api_intiSoft.Controllers.CentroEstudios
                     int startX = gp.Panel.X + (int)Math.Round(blockWidth * 0.19); // 19% hacia adentro del bloque
                     int startY = gp.Panel.Y + (int)Math.Round(dyRow * 0.16);      // 16% hacia abajo
 
+                    int adjustedBlockSpacing = (int)Math.Round(gp.BlockSpacing * 1.04); // Aumentamos 4% para compensar errores de escaneo
+
                     var grid = new ContrlAcademico.GridModel
                     {
-                        StartX       = startX,                            // primer óvalo (A, fila 1)
+                        StartX       = startX,
                         StartY       = startY,
-                        Rows         = gp.RowsPerBlock,                   // 25
-                        Cols         = gp.ColsPerQuestion,                // 5 (A..E)
-                        BlockCount   = gp.BlockCount,                     // 4
-                        Dx           = (int)Math.Round(dxOpt),            // ← HORIZONTAL entre A..E
-                        Dy           = (int)Math.Round(dyRow),            // ← VERTICAL entre filas
-                        BubbleW      = (int)Math.Round(gp.BubbleW),       // diámetro aproximado
+                        Rows         = gp.RowsPerBlock,         // 25
+                        Cols         = gp.ColsPerQuestion,      // 5
+                        BlockCount   = gp.BlockCount,           // 4
+                        Dx           = (int)Math.Round(dxOpt),
+                        Dy           = (int)Math.Round(dyRow),
+                        BubbleW      = (int)Math.Round(gp.BubbleW),
                         BubbleH      = (int)Math.Round(gp.BubbleH),
-                        BlockSpacing = (int)Math.Round(gp.BlockSpacing)   // distancia entre inicios de bloque
+                        BlockSpacing = (int)Math.Round(gp.BlockSpacing)
                     };
+
 
                     // --- Crear OMR con umbrales recomendados ---
                     var omr = new OmrProcessor(
-                                grid,
-                                cfg.DniRegion,      // RegionModel
-                                fillThreshold: 0.40,
-                                meanThreshold: 250,
-                                deltaMin: 38
-                              );
+                        grid,
+                        cfg.DniRegion,
+                        fillThreshold: 0.40,
+                        meanThreshold: 220, // valor base, el algoritmo ahora ajusta dinámicamente por página
+                        deltaMin: 18         // tolerancia para diferencias pequeñas entre 1º y 2º opción
+                    );
 
                     // --- Respuestas (100): 'A'..'E' o '-' (guardamos "X") ---
                     var answers = omr.Process(aligned);
@@ -198,6 +201,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                     {
                         pagina = i + 1,
                         dni = string.IsNullOrWhiteSpace(dni) ? "(no leído)" : dni,
+                        umbralUtilizado = Math.Round(omr.LastThreshold, 1),
                         insertados = inserted,
                         actualizados = updated
                     });
