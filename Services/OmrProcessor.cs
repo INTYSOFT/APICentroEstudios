@@ -1,6 +1,7 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.Extensions;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 
 
@@ -12,7 +13,6 @@ namespace ContrlAcademico.Services
     {
         public double FillThreshold => _fillThreshold;
 
-        private readonly GridModel _grid;
         private readonly RegionModel _dniRegion;
         private readonly double _fillThreshold; // % de área para considerar marcado
 
@@ -20,7 +20,10 @@ namespace ContrlAcademico.Services
         readonly GridModel _g;
         readonly Mat _mask;         // máscara elíptica de la burbuja
         readonly double _meanThreshold; // umbral sobre media de gris
-        readonly double _deltaMin;      // separación mínima entre 1º y 2º     
+        readonly double _deltaMin;      // separación mínima entre 1º y 2º
+        double _lastThreshold = double.NaN;
+
+        public double LastThreshold => _lastThreshold;
 
         public string ReadDni(Mat threshDni)
         {
@@ -102,7 +105,14 @@ namespace ContrlAcademico.Services
             int blocks = _g.BlockCount;
             int space = _g.BlockSpacing;
 
-            char[] answers = new char[rows * blocks];
+            int totalQuestions = rows * blocks;
+            char[] answers = new char[totalQuestions];
+            Array.Fill(answers, '-');
+
+            var bestMeans = new double[totalQuestions];
+            var secondMeans = new double[totalQuestions];
+            var bestOpts = new int[totalQuestions];
+
             int idx = 0;
 
             // 2) Recorremos cada bloque de preguntas
@@ -140,24 +150,97 @@ namespace ContrlAcademico.Services
                         .OrderBy(t => t.mean) // las más oscuras (menor mean) primero
                         .ToArray();
 
-                    // 4) Decidir: 
-                    //    - si la mejor media > meanThreshold => ninguna  
-                    //    - si la segunda es demasiado cercana => ambigua
                     var best = stats[0];
-                    if (best.mean > _meanThreshold ||
-                        (cols > 1 && stats[1].mean - best.mean < _deltaMin))
-                    {
-                        answers[idx] = '-';
-                    }
-                    else
-                    {
-                        answers[idx] = (char)('A' + best.opt);
-                    }
+                    var second = stats.Length > 1
+                        ? stats[1]
+                        : (opt: -1, mean: double.PositiveInfinity);
+
+                    bestMeans[idx] = best.mean;
+                    secondMeans[idx] = second.mean;
+                    bestOpts[idx] = best.opt;
+                }
+            }
+
+            double adaptiveThreshold = ComputeAdaptiveThreshold(bestMeans);
+            double effectiveThreshold = ResolveThreshold(adaptiveThreshold);
+            _lastThreshold = effectiveThreshold;
+
+            const double secondaryMarkedMargin = 5.0;   // margen para considerar que otra burbuja también está marcada
+            const double secondaryNearMargin   = 3.0;   // tolerancia alrededor del umbral para decidir ambigüedad
+
+            for (int i = 0; i < answers.Length; i++)
+            {
+                double bestMean = bestMeans[i];
+                double secondMean = secondMeans[i];
+
+                bool bestMarked = bestMean <= effectiveThreshold;
+                bool hasSecond = !double.IsInfinity(secondMean);
+
+                bool secondLikelyMarked = hasSecond && secondMean <= effectiveThreshold - secondaryMarkedMargin;
+                bool secondTooClose = hasSecond && (secondMean - bestMean) < _deltaMin;
+                bool secondNearThreshold = hasSecond && secondMean <= effectiveThreshold + secondaryNearMargin;
+
+                bool ambiguous = secondLikelyMarked || (secondTooClose && secondNearThreshold);
+
+                if (bestMarked && !ambiguous)
+                {
+                    answers[i] = (char)('A' + bestOpts[i]);
                 }
             }
 
             return answers;
-        }       
+        }
 
+        private double ComputeAdaptiveThreshold(double[] bestMeans)
+        {
+            if (bestMeans.Length == 0)
+                return double.NaN;
+
+            var valid = bestMeans
+                .Where(v => !double.IsNaN(v) && !double.IsInfinity(v))
+                .ToArray();
+
+            if (valid.Length < 5)
+                return double.NaN;
+
+            Array.Sort(valid);
+
+            double min = valid[0];
+            double max = valid[^1];
+            if (max - min < 10)
+                return double.NaN;
+
+            int cluster = Math.Clamp(valid.Length / 6, 3, 30);
+
+            double darkAvg = valid.Take(cluster).Average();
+            double lightAvg = valid.Skip(valid.Length - cluster).Average();
+
+            if (lightAvg - darkAvg < 8)
+                return double.NaN;
+
+            double threshold = darkAvg + (lightAvg - darkAvg) * 0.65; // sesgo hacia burbujas en blanco
+            threshold = Math.Clamp(threshold, min + 2, max - 2);
+
+            return threshold;
+        }
+
+        private double ResolveThreshold(double adaptive)
+        {
+            if (double.IsNaN(adaptive))
+                return _meanThreshold;
+
+            double lowerBound = Math.Max(120, _meanThreshold - 80);
+            double upperBound = 250;
+
+            double clamped = Math.Clamp(adaptive, lowerBound, upperBound);
+
+            // Suavizamos cambios muy bruscos respecto al valor configurado
+            if (Math.Abs(clamped - _meanThreshold) > 45)
+            {
+                clamped = (_meanThreshold + clamped) / 2.0;
+            }
+
+            return clamped;
+        }
     }
 }

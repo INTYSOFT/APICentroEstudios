@@ -143,8 +143,8 @@ namespace api_intiSoft.Controllers.CentroEstudios
                         grid,
                         cfg.DniRegion,
                         fillThreshold: 0.40,
-                        meanThreshold: 220, // antes: 250. Valor más estable
-                        deltaMin: 36         // valor que mantiene separación entre burbujas
+                        meanThreshold: 220, // valor base, el algoritmo ahora ajusta dinámicamente por página
+                        deltaMin: 18         // tolerancia para diferencias pequeñas entre 1º y 2º opción
                     );
 
                     // --- Respuestas (100): 'A'..'E' o '-' (guardamos "X") ---
@@ -201,6 +201,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                     {
                         pagina = i + 1,
                         dni = string.IsNullOrWhiteSpace(dni) ? "(no leído)" : dni,
+                        umbralUtilizado = Math.Round(omr.LastThreshold, 1),
                         insertados = inserted,
                         actualizados = updated
                     });
