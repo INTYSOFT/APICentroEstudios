@@ -130,10 +130,18 @@ namespace ContrlAcademico.Services
                     var stats = Enumerable.Range(0, cols)
                         .Select(c =>
                         {
-                            int x = baseX + c * _g.Dx;
-                            // Clamp ROI
+                            // Los parámetros StartX/StartY representan el CENTRO del óvalo A1
+                            // (ver calibración en SheetCalibrator). Convertimos a esquina sup-izq
+                            // restando la mitad del tamaño de la burbuja para construir el ROI.
+                            double centerX = baseX + c * _g.Dx;
+                            double centerY = y;
+
+                            int x = (int)Math.Round(centerX - _g.BubbleW / 2.0);
+                            int yTop = (int)Math.Round(centerY - _g.BubbleH / 2.0);
+
+                            // Clamp ROI para mantenernos dentro del bitmap renderizado
                             int x2 = Math.Clamp(x, 0, gray.Width);
-                            int y2 = Math.Clamp(y, 0, gray.Height);
+                            int y2 = Math.Clamp(yTop, 0, gray.Height);
                             int w2 = Math.Min(_g.BubbleW, gray.Width  - x2);
                             int h2 = Math.Min(_g.BubbleH, gray.Height - y2);
 
