@@ -112,6 +112,23 @@ namespace api_intiSoft.Controllers.CentroEstudios
                     // Dx = paso HORIZONTAL entre opciones A..E
                     // Dy = paso VERTICAL entre filas 1..25
 
+
+                    double blockWidth = gp.BlockSpacing;     // ancho de bloque (columna de 25)
+                    double dyRow = gp.DxRow;                 // separación VERTICAL entre filas
+                    double dxOpt = gp.DyOption;              // separación HORIZONTAL entre A..E
+
+                    // Coordenadas del centro del primer óvalo (pregunta 1, opción A)
+                    double startXCenter = gp.Panel.X + blockWidth * 0.19; // 19% hacia adentro del bloque
+                    double startYCenter = gp.Panel.Y + dyRow * 0.16;       // 16% hacia abajo
+
+                    // Distancia entre centros del mismo ítem en columnas consecutivas
+                    double blockStride = gp.BlockSpacing;                   // centro a centro entre bloques
+
+                    int startX = (int)Math.Round(startXCenter);
+                    int startY = (int)Math.Round(startYCenter);
+                    int stride = (int)Math.Round(blockStride);
+
+
                     var grid = new ContrlAcademico.GridModel
                     {
                         StartX       = gp.FirstBubbleCenterX,
@@ -119,6 +136,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                         Rows         = gp.RowsPerBlock,         // 25
                         Cols         = gp.ColsPerQuestion,      // 5
                         BlockCount   = gp.BlockCount,           // 4
+
                         Dx           = gp.DyOption,
                         Dy           = gp.DxRow,
                         BubbleW      = gp.BubbleW,
@@ -127,6 +145,13 @@ namespace api_intiSoft.Controllers.CentroEstudios
                         ColumnOffsets = gp.ColumnOffsets,
                         RowOffsets = gp.RowOffsets,
                         BlockOffsets = gp.BlockOffsets
+
+                        Dx           = (int)Math.Round(dxOpt),
+                        Dy           = (int)Math.Round(dyRow),
+                        BubbleW      = (int)Math.Round(gp.BubbleW),
+                        BubbleH      = (int)Math.Round(gp.BubbleH),
+                        BlockSpacing = stride
+
                     };
 
 
