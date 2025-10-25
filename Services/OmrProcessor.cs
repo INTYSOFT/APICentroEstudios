@@ -108,7 +108,9 @@ namespace ContrlAcademico.Services
             // 2) Recorremos cada bloque de preguntas
             for (int b = 0; b < blocks; b++)
             {
-                int baseX = _g.StartX + b * (cols * _g.Dx + space);
+                //int baseX = _g.StartX + b * (cols * _g.Dx + space);
+
+                int baseX = _g.StartX + b * space;
 
                 for (int r = 0; r < rows; r++, idx++)
                 {
