@@ -1,5 +1,6 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.Extensions;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,11 @@ namespace ContrlAcademico.Services
 
         readonly GridModel _g;
         readonly Mat _mask;         // máscara elíptica de la burbuja
+        readonly int _maskW;
+        readonly int _maskH;
+        readonly double[]? _columnOffsets;
+        readonly double[]? _rowOffsets;
+        readonly double[]? _blockOffsets;
         readonly double _meanThreshold; // umbral sobre media de gris
         readonly double _deltaMin;      // separación mínima entre 1º y 2º
         double _lastThreshold = double.NaN;
@@ -79,16 +85,21 @@ namespace ContrlAcademico.Services
 
 
             // Creamos la máscara elíptica del tamaño exacto de la burbuja:
-            _mask = new Mat(_g.BubbleH, _g.BubbleW, MatType.CV_8UC1, Scalar.All(0));
+            _maskW = Math.Max(3, (int)Math.Round(_g.BubbleW * 1.08));
+            _maskH = Math.Max(3, (int)Math.Round(_g.BubbleH * 1.08));
+            _mask = new Mat(_maskH, _maskW, MatType.CV_8UC1, Scalar.All(0));
             Cv2.Ellipse(
                 _mask,
-                //new Point(_g.BubbleW/2, _g.BubbleH/2),
-                new OpenCvSharp.Point(_g.BubbleW/2, _g.BubbleH/2),
-                new OpenCvSharp.Size(_g.BubbleW/2, _g.BubbleH/2),
+                new OpenCvSharp.Point(_maskW / 2.0, _maskH / 2.0),
+                new OpenCvSharp.Size(_maskW / 2.0, _maskH / 2.0),
                 angle: 0, startAngle: 0, endAngle: 360,
                 color: Scalar.All(255),
                 thickness: -1
             );
+
+            _columnOffsets = grid.ColumnOffsets?.Length == grid.Cols ? grid.ColumnOffsets : null;
+            _rowOffsets = grid.RowOffsets?.Length == grid.Rows ? grid.RowOffsets : null;
+            _blockOffsets = grid.BlockOffsets?.Length == grid.BlockCount ? grid.BlockOffsets : null;
         }
 
 
@@ -103,7 +114,14 @@ namespace ContrlAcademico.Services
             int rows = _g.Rows;
             int cols = _g.Cols;
             int blocks = _g.BlockCount;
-            int space = _g.BlockSpacing;
+
+            // Trabajamos en punto flotante para evitar acumulación de errores
+            double space = _g.BlockSpacing;
+            double dx = _g.Dx;
+            double dy = _g.Dy;
+
+            double halfW = _maskW / 2.0;
+            double halfH = _maskH / 2.0;
 
             int totalQuestions = rows * blocks;
             char[] answers = new char[totalQuestions];
@@ -118,24 +136,26 @@ namespace ContrlAcademico.Services
             // 2) Recorremos cada bloque de preguntas
             for (int b = 0; b < blocks; b++)
             {
-                //int baseX = _g.StartX + b * (cols * _g.Dx + space);
-
-                int baseX = _g.StartX + b * space;
+                double baseCenterX = _g.StartX + (_blockOffsets != null && b < _blockOffsets.Length ? _blockOffsets[b] : b * space);
 
                 for (int r = 0; r < rows; r++, idx++)
                 {
-                    int y = _g.StartY + r * _g.Dy;
+                    double centerY = _g.StartY + (_rowOffsets != null && r < _rowOffsets.Length ? _rowOffsets[r] : r * dy);
 
                     // 3) Para cada opción A–E calculamos la media dentro de la elipse
                     var stats = Enumerable.Range(0, cols)
                         .Select(c =>
                         {
-                            int x = baseX + c * _g.Dx;
+                            double centerX = baseCenterX + (_columnOffsets != null && c < _columnOffsets.Length ? _columnOffsets[c] : c * dx);
+
+                            int x = (int)Math.Round(centerX - halfW);
+                            int y = (int)Math.Round(centerY - halfH);
+
                             // Clamp ROI
-                            int x2 = Math.Clamp(x, 0, gray.Width);
-                            int y2 = Math.Clamp(y, 0, gray.Height);
-                            int w2 = Math.Min(_g.BubbleW, gray.Width  - x2);
-                            int h2 = Math.Min(_g.BubbleH, gray.Height - y2);
+                            int x2 = Math.Clamp(x, 0, Math.Max(0, gray.Width - 1));
+                            int y2 = Math.Clamp(y, 0, Math.Max(0, gray.Height - 1));
+                            int w2 = Math.Min(_maskW, gray.Width  - x2);
+                            int h2 = Math.Min(_maskH, gray.Height - y2);
 
                             if (w2 <= 0 || h2 <= 0)
                                 return (opt: c, mean: 255.0);

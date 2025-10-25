@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace ContrlAcademico
@@ -64,22 +65,22 @@ namespace ContrlAcademico
     public class GridModel
     {
         [JsonPropertyName("startX")]
-        public int StartX { get; set; }
+        public double StartX { get; set; }
 
         [JsonPropertyName("startY")]
-        public int StartY { get; set; }
+        public double StartY { get; set; }
 
         [JsonPropertyName("dx")]
-        public int Dx { get; set; }
+        public double Dx { get; set; }
 
         [JsonPropertyName("dy")]
-        public int Dy { get; set; }
+        public double Dy { get; set; }
 
         [JsonPropertyName("bubbleW")]
-        public int BubbleW { get; set; }
+        public double BubbleW { get; set; }
 
         [JsonPropertyName("bubbleH")]
-        public int BubbleH { get; set; }
+        public double BubbleH { get; set; }
 
         [JsonPropertyName("cols")]
         public int Cols { get; set; }
@@ -91,7 +92,16 @@ namespace ContrlAcademico
         public int BlockCount { get; set; }
 
         [JsonPropertyName("blockSpacing")]
-        public int BlockSpacing { get; set; }
+        public double BlockSpacing { get; set; }
+
+        [JsonPropertyName("columnOffsets")]
+        public double[] ColumnOffsets { get; set; } = Array.Empty<double>();
+
+        [JsonPropertyName("rowOffsets")]
+        public double[] RowOffsets { get; set; } = Array.Empty<double>();
+
+        [JsonPropertyName("blockOffsets")]
+        public double[] BlockOffsets { get; set; } = Array.Empty<double>();
     }
 
     public class NormGridModel
