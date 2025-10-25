@@ -103,7 +103,14 @@ namespace ContrlAcademico.Services
             int rows = _g.Rows;
             int cols = _g.Cols;
             int blocks = _g.BlockCount;
-            int space = _g.BlockSpacing;
+
+            // Trabajamos en punto flotante para evitar acumulación de errores
+            double space = _g.BlockSpacing;
+            double dx = _g.Dx;
+            double dy = _g.Dy;
+
+            double halfW = _g.BubbleW / 2.0;
+            double halfH = _g.BubbleH / 2.0;
 
             int totalQuestions = rows * blocks;
             char[] answers = new char[totalQuestions];
@@ -118,22 +125,24 @@ namespace ContrlAcademico.Services
             // 2) Recorremos cada bloque de preguntas
             for (int b = 0; b < blocks; b++)
             {
-                //int baseX = _g.StartX + b * (cols * _g.Dx + space);
-
-                int baseX = _g.StartX + b * space;
+                double baseCenterX = _g.StartX + b * space;
 
                 for (int r = 0; r < rows; r++, idx++)
                 {
-                    int y = _g.StartY + r * _g.Dy;
+                    double centerY = _g.StartY + r * dy;
 
                     // 3) Para cada opción A–E calculamos la media dentro de la elipse
                     var stats = Enumerable.Range(0, cols)
                         .Select(c =>
                         {
-                            int x = baseX + c * _g.Dx;
+                            double centerX = baseCenterX + c * dx;
+
+                            int x = (int)Math.Round(centerX - halfW);
+                            int y = (int)Math.Round(centerY - halfH);
+
                             // Clamp ROI
-                            int x2 = Math.Clamp(x, 0, gray.Width);
-                            int y2 = Math.Clamp(y, 0, gray.Height);
+                            int x2 = Math.Clamp(x, 0, Math.Max(0, gray.Width - 1));
+                            int y2 = Math.Clamp(y, 0, Math.Max(0, gray.Height - 1));
                             int w2 = Math.Min(_g.BubbleW, gray.Width  - x2);
                             int h2 = Math.Min(_g.BubbleH, gray.Height - y2);
 
