@@ -1,0 +1,6550 @@
+[
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoApoderadoesController",
+    "Method": "GetAlumnoApoderado",
+    "RelativePath": "api/AlumnoApoderadoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.AlumnoApoderado, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoApoderadoesController",
+    "Method": "PostAlumnoApoderado",
+    "RelativePath": "api/AlumnoApoderadoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alumnoApoderado",
+        "Type": "api_intiSoft.Models.CentroEstudios.AlumnoApoderado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.AlumnoApoderado",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoApoderadoesController",
+    "Method": "GetAlumnoApoderado",
+    "RelativePath": "api/AlumnoApoderadoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.AlumnoApoderado",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoApoderadoesController",
+    "Method": "PutAlumnoApoderado",
+    "RelativePath": "api/AlumnoApoderadoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "alumnoApoderado",
+        "Type": "api_intiSoft.Models.CentroEstudios.AlumnoApoderado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoApoderadoesController",
+    "Method": "DeleteAlumnoApoderado",
+    "RelativePath": "api/AlumnoApoderadoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoApoderadoesController",
+    "Method": "GetAlumnoApoderadoByAlumnoId",
+    "RelativePath": "api/AlumnoApoderadoes/alumnoId/{alumnoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alumnoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.AlumnoApoderado, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoesController",
+    "Method": "GetAlumno",
+    "RelativePath": "api/Alumnoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Alumno, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoesController",
+    "Method": "PostAlumno",
+    "RelativePath": "api/Alumnoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "api_intiSoft.Dto.CentroEstudios.AlumnoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Alumno",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoesController",
+    "Method": "GetAlumno",
+    "RelativePath": "api/Alumnoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Alumno",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoesController",
+    "Method": "PutAlumno",
+    "RelativePath": "api/Alumnoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "alumno",
+        "Type": "api_intiSoft.Models.CentroEstudios.Alumno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoesController",
+    "Method": "PatchAlumno",
+    "RelativePath": "api/Alumnoes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "api_intiSoft.Dto.CentroEstudios.AlumnoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoesController",
+    "Method": "DeleteAlumno",
+    "RelativePath": "api/Alumnoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AlumnoesController",
+    "Method": "GetAlumnoByDni",
+    "RelativePath": "api/Alumnoes/dni/{dni}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dni",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Alumno, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "GetAperturaCiclo",
+    "RelativePath": "api/AperturaCicloes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.AperturaCiclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "PostAperturaCiclo",
+    "RelativePath": "api/AperturaCicloes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aperturaCiclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaCiclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaCiclo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "GetAperturaCiclo",
+    "RelativePath": "api/AperturaCicloes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaCiclo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "PutAperturaCiclo",
+    "RelativePath": "api/AperturaCicloes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "aperturaCiclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaCiclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "PatchAperturaCiclo",
+    "RelativePath": "api/AperturaCicloes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "aperturaCiclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaCiclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "DeleteAperturaCiclo",
+    "RelativePath": "api/AperturaCicloes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "GetAperturaCicloByCiclo",
+    "RelativePath": "api/AperturaCicloes/ciclo/{cicloId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.AperturaCiclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaCicloesController",
+    "Method": "GetAperturaCicloBySede",
+    "RelativePath": "api/AperturaCicloes/sede/{sedeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sedeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.AperturaCiclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaSeccionsController",
+    "Method": "GetAperturaSeccion",
+    "RelativePath": "api/AperturaSeccions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.AperturaSeccion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaSeccionsController",
+    "Method": "PostAperturaSeccion",
+    "RelativePath": "api/AperturaSeccions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aperturaSeccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaSeccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaSeccionsController",
+    "Method": "GetAperturaSeccion",
+    "RelativePath": "api/AperturaSeccions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaSeccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaSeccionsController",
+    "Method": "PutAperturaSeccion",
+    "RelativePath": "api/AperturaSeccions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "aperturaSeccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaSeccionsController",
+    "Method": "PatchAperturaSeccion",
+    "RelativePath": "api/AperturaSeccions/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "aperturaSeccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.AperturaSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.AperturaSeccionsController",
+    "Method": "DeleteAperturaSeccion",
+    "RelativePath": "api/AperturaSeccions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ApoderadoesController",
+    "Method": "GetApoderado",
+    "RelativePath": "api/Apoderadoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Apoderado, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ApoderadoesController",
+    "Method": "PostApoderado",
+    "RelativePath": "api/Apoderadoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "apoderado",
+        "Type": "api_intiSoft.Models.CentroEstudios.Apoderado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Apoderado",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ApoderadoesController",
+    "Method": "GetApoderado",
+    "RelativePath": "api/Apoderadoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Apoderado",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ApoderadoesController",
+    "Method": "PutApoderado",
+    "RelativePath": "api/Apoderadoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "apoderado",
+        "Type": "api_intiSoft.Models.CentroEstudios.Apoderado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ApoderadoesController",
+    "Method": "PatchApoderado",
+    "RelativePath": "api/Apoderadoes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "apoderado",
+        "Type": "api_intiSoft.Models.CentroEstudios.Apoderado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ApoderadoesController",
+    "Method": "DeleteApoderado",
+    "RelativePath": "api/Apoderadoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ApoderadoesController",
+    "Method": "GetApoderadoPorDocumento",
+    "RelativePath": "api/Apoderadoes/documento/{documento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Apoderado",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CarrerasController",
+    "Method": "GetCarrera",
+    "RelativePath": "api/Carreras",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Carrera, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CarrerasController",
+    "Method": "PostCarrera",
+    "RelativePath": "api/Carreras",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrera",
+        "Type": "api_intiSoft.Models.CentroEstudios.Carrera",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Carrera",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CarrerasController",
+    "Method": "GetCarrera",
+    "RelativePath": "api/Carreras/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Carrera",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CarrerasController",
+    "Method": "PutCarrera",
+    "RelativePath": "api/Carreras/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "carrera",
+        "Type": "api_intiSoft.Models.CentroEstudios.Carrera",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CarrerasController",
+    "Method": "PatchCarrera",
+    "RelativePath": "api/Carreras/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "carrera",
+        "Type": "api_intiSoft.Models.CentroEstudios.Carrera",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CarrerasController",
+    "Method": "DeleteCarrera",
+    "RelativePath": "api/Carreras/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CicloesController",
+    "Method": "GetCiclo",
+    "RelativePath": "api/Cicloes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Ciclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CicloesController",
+    "Method": "PostCiclo",
+    "RelativePath": "api/Cicloes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ciclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.Ciclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Ciclo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CicloesController",
+    "Method": "GetCiclo",
+    "RelativePath": "api/Cicloes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Ciclo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CicloesController",
+    "Method": "PutCiclo",
+    "RelativePath": "api/Cicloes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ciclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.Ciclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CicloesController",
+    "Method": "PatchCiclo",
+    "RelativePath": "api/Cicloes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ciclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.Ciclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CicloesController",
+    "Method": "DeleteCiclo",
+    "RelativePath": "api/Cicloes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ColegiosController",
+    "Method": "GetColegio",
+    "RelativePath": "api/Colegios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Colegio, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ColegiosController",
+    "Method": "PostColegio",
+    "RelativePath": "api/Colegios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "colegio",
+        "Type": "api_intiSoft.Models.CentroEstudios.Colegio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Colegio",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ColegiosController",
+    "Method": "GetColegio",
+    "RelativePath": "api/Colegios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Colegio",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ColegiosController",
+    "Method": "PutColegio",
+    "RelativePath": "api/Colegios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "colegio",
+        "Type": "api_intiSoft.Models.CentroEstudios.Colegio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ColegiosController",
+    "Method": "PatchColegio",
+    "RelativePath": "api/Colegios/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "colegio",
+        "Type": "api_intiSoft.Models.CentroEstudios.Colegio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ColegiosController",
+    "Method": "DeleteColegio",
+    "RelativePath": "api/Colegios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoesController",
+    "Method": "GetConcepto",
+    "RelativePath": "api/Conceptoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Concepto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoesController",
+    "Method": "PostConcepto",
+    "RelativePath": "api/Conceptoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "concepto",
+        "Type": "api_intiSoft.Models.CentroEstudios.Concepto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Concepto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoesController",
+    "Method": "GetConcepto",
+    "RelativePath": "api/Conceptoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Concepto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoesController",
+    "Method": "PutConcepto",
+    "RelativePath": "api/Conceptoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "concepto",
+        "Type": "api_intiSoft.Models.CentroEstudios.Concepto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoesController",
+    "Method": "PatchConcepto",
+    "RelativePath": "api/Conceptoes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "concepto",
+        "Type": "api_intiSoft.Models.CentroEstudios.Concepto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoesController",
+    "Method": "DeleteConcepto",
+    "RelativePath": "api/Conceptoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoTipoesController",
+    "Method": "GetConceptoTipo",
+    "RelativePath": "api/ConceptoTipoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.ConceptoTipo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoTipoesController",
+    "Method": "PostConceptoTipo",
+    "RelativePath": "api/ConceptoTipoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conceptoTipo",
+        "Type": "api_intiSoft.Models.CentroEstudios.ConceptoTipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.ConceptoTipo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoTipoesController",
+    "Method": "GetConceptoTipo",
+    "RelativePath": "api/ConceptoTipoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.ConceptoTipo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoTipoesController",
+    "Method": "PutConceptoTipo",
+    "RelativePath": "api/ConceptoTipoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "conceptoTipo",
+        "Type": "api_intiSoft.Models.CentroEstudios.ConceptoTipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoTipoesController",
+    "Method": "PatchConceptoTipo",
+    "RelativePath": "api/ConceptoTipoes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "conceptoTipo",
+        "Type": "api_intiSoft.Models.CentroEstudios.ConceptoTipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ConceptoTipoesController",
+    "Method": "DeleteConceptoTipo",
+    "RelativePath": "api/ConceptoTipoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Contabilidad.CtPlanContablesController",
+    "Method": "GetCtPlanContable",
+    "RelativePath": "api/CtPlanContables",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Contabilidad.CtPlanContable, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Contabilidad.CtPlanContablesController",
+    "Method": "PostCtPlanContable",
+    "RelativePath": "api/CtPlanContables",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ctPlanContable",
+        "Type": "api_intiSoft.Models.Contabilidad.CtPlanContable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Contabilidad.CtPlanContable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Contabilidad.CtPlanContablesController",
+    "Method": "GetCtPlanContable",
+    "RelativePath": "api/CtPlanContables/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Contabilidad.CtPlanContable",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Contabilidad.CtPlanContablesController",
+    "Method": "PutCtPlanContable",
+    "RelativePath": "api/CtPlanContables/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ctPlanContable",
+        "Type": "api_intiSoft.Models.Contabilidad.CtPlanContable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Contabilidad.CtPlanContablesController",
+    "Method": "DeleteCtPlanContable",
+    "RelativePath": "api/CtPlanContables/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CursoesController",
+    "Method": "GetCurso",
+    "RelativePath": "api/Cursoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Curso, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CursoesController",
+    "Method": "PostCurso",
+    "RelativePath": "api/Cursoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "curso",
+        "Type": "api_intiSoft.Models.CentroEstudios.Curso",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Curso",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CursoesController",
+    "Method": "GetCurso",
+    "RelativePath": "api/Cursoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Curso",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CursoesController",
+    "Method": "PutCurso",
+    "RelativePath": "api/Cursoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "curso",
+        "Type": "api_intiSoft.Models.CentroEstudios.Curso",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CursoesController",
+    "Method": "PatchCurso",
+    "RelativePath": "api/Cursoes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "curso",
+        "Type": "api_intiSoft.Models.CentroEstudios.Curso",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.CursoesController",
+    "Method": "DeleteCurso",
+    "RelativePath": "api/Cursoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.DocentesController",
+    "Method": "GetDocente",
+    "RelativePath": "api/Docentes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Docente, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.DocentesController",
+    "Method": "PostDocente",
+    "RelativePath": "api/Docentes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "docente",
+        "Type": "api_intiSoft.Models.CentroEstudios.Docente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Docente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.DocentesController",
+    "Method": "GetDocente",
+    "RelativePath": "api/Docentes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Docente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.DocentesController",
+    "Method": "PutDocente",
+    "RelativePath": "api/Docentes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "docente",
+        "Type": "api_intiSoft.Models.CentroEstudios.Docente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.DocentesController",
+    "Method": "PatchDocente",
+    "RelativePath": "api/Docentes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "patchDoc",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.DocentesController",
+    "Method": "DeleteDocente",
+    "RelativePath": "api/Docentes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EspecialidadsController",
+    "Method": "GetEspecialidad",
+    "RelativePath": "api/Especialidads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Especialidad, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EspecialidadsController",
+    "Method": "PostEspecialidad",
+    "RelativePath": "api/Especialidads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "especialidad",
+        "Type": "api_intiSoft.Models.CentroEstudios.Especialidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Especialidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EspecialidadsController",
+    "Method": "GetEspecialidad",
+    "RelativePath": "api/Especialidads/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Especialidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EspecialidadsController",
+    "Method": "PutEspecialidad",
+    "RelativePath": "api/Especialidads/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "especialidad",
+        "Type": "api_intiSoft.Models.CentroEstudios.Especialidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EspecialidadsController",
+    "Method": "PatchEspecialidad",
+    "RelativePath": "api/Especialidads/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "especialidad",
+        "Type": "api_intiSoft.Models.CentroEstudios.Especialidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EspecialidadsController",
+    "Method": "DeleteEspecialidad",
+    "RelativePath": "api/Especialidads/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionClavesController",
+    "Method": "GetEvaluacionClave",
+    "RelativePath": "api/EvaluacionClaves",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionClave, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionClavesController",
+    "Method": "PostEvaluacionClave",
+    "RelativePath": "api/EvaluacionClaves",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacionClave",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionClave",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionClave",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionClavesController",
+    "Method": "GetEvaluacionClave",
+    "RelativePath": "api/EvaluacionClaves/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionClave",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionClavesController",
+    "Method": "PutEvaluacionClave",
+    "RelativePath": "api/EvaluacionClaves/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacionClave",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionClave",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionClavesController",
+    "Method": "DeleteEvaluacionClave",
+    "RelativePath": "api/EvaluacionClaves/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionClavesController",
+    "Method": "GetEvaluacionClaveByEvaluacionDetalleId",
+    "RelativePath": "api/EvaluacionClaves/evaluacion_detalle/{evaluacion_detalle_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacion_detalle_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionClave, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionDetallesController",
+    "Method": "GetEvaluacionDetalle",
+    "RelativePath": "api/EvaluacionDetalles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionDetalle, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionDetallesController",
+    "Method": "PostEvaluacionDetalle",
+    "RelativePath": "api/EvaluacionDetalles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacionDetalle",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionDetalle",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionDetalle",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionDetallesController",
+    "Method": "GetEvaluacionDetalle",
+    "RelativePath": "api/EvaluacionDetalles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionDetalle",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionDetallesController",
+    "Method": "PutEvaluacionDetalle",
+    "RelativePath": "api/EvaluacionDetalles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacionDetalle",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionDetalle",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionDetallesController",
+    "Method": "DeleteEvaluacionDetalle",
+    "RelativePath": "api/EvaluacionDetalles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "GetEvaluacionProgramadaSeccion",
+    "RelativePath": "api/EvaluacionProgramadaSeccions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "PostEvaluacionProgramadaSeccion",
+    "RelativePath": "api/EvaluacionProgramadaSeccions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacionProgramadaSeccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "GetEvaluacionProgramadaSeccion",
+    "RelativePath": "api/EvaluacionProgramadaSeccions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "PutEvaluacionProgramadaSeccion",
+    "RelativePath": "api/EvaluacionProgramadaSeccions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacionProgramadaSeccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "PatchEvaluacionProgramadaSeccion",
+    "RelativePath": "api/EvaluacionProgramadaSeccions/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacionProgramadaSeccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "DeleteEvaluacionProgramadaSeccion",
+    "RelativePath": "api/EvaluacionProgramadaSeccions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "GetEvaluacionProgramadaSeccionByEvaluacionProgramadaId",
+    "RelativePath": "api/EvaluacionProgramadaSeccions/evaluacion_programada/{evaluacion_programada_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacion_programada_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "GetEvaluacionProgramadaSeccionBySeccionCicloId",
+    "RelativePath": "api/EvaluacionProgramadaSeccions/seccion_ciclo/{seccion_ciclo_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seccion_ciclo_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadaSeccionsController",
+    "Method": "GetEvaluacionProgramadaSeccionBySeccionId",
+    "RelativePath": "api/EvaluacionProgramadaSeccions/seccion/{seccion_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seccion_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadaSeccion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionRespuestumsController",
+    "Method": "GetEvaluacionRespuestum",
+    "RelativePath": "api/EvaluacionRespuestums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionRespuestum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionRespuestumsController",
+    "Method": "PostEvaluacionRespuestum",
+    "RelativePath": "api/EvaluacionRespuestums",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacionRespuestum",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionRespuestum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionRespuestum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionRespuestumsController",
+    "Method": "GetEvaluacionRespuestum",
+    "RelativePath": "api/EvaluacionRespuestums/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionRespuestum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionRespuestumsController",
+    "Method": "PutEvaluacionRespuestum",
+    "RelativePath": "api/EvaluacionRespuestums/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacionRespuestum",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionRespuestum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionRespuestumsController",
+    "Method": "DeleteEvaluacionRespuestum",
+    "RelativePath": "api/EvaluacionRespuestums/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "GetEvaluacion",
+    "RelativePath": "api/Evaluacions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Evaluacion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "PostEvaluacion",
+    "RelativePath": "api/Evaluacions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacion",
+        "Type": "api_intiSoft.Models.CentroEstudios.Evaluacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Evaluacion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "GetEvaluacion",
+    "RelativePath": "api/Evaluacions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Evaluacion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "PutEvaluacion",
+    "RelativePath": "api/Evaluacions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacion",
+        "Type": "api_intiSoft.Models.CentroEstudios.Evaluacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "DeleteEvaluacion",
+    "RelativePath": "api/Evaluacions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "GetEvaluacionByAlumno",
+    "RelativePath": "api/Evaluacions/porAlumno/{alumnoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alumnoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Evaluacion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "GetEvaluacionByEvaluacionProgramada",
+    "RelativePath": "api/Evaluacions/porEvaluacionProgramada/{evaluacionProgramadaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacionProgramadaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Evaluacion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "GetEvaluacionBySedeCiclo",
+    "RelativePath": "api/Evaluacions/sede/{sedeId}/ciclo/{cicloId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sedeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Evaluacion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "GetEvaluacionBySedeCicloAlumno",
+    "RelativePath": "api/Evaluacions/sede/{sedeId}/ciclo/{cicloId}/alumno/{alumnoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sedeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "alumnoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Evaluacion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionsController",
+    "Method": "GetEvaluacionBySedeCicloSeccion",
+    "RelativePath": "api/Evaluacions/sede/{sedeId}/ciclo/{cicloId}/seccion/{seccionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sedeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seccionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Evaluacion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionTipoPreguntumsController",
+    "Method": "GetEvaluacionTipoPreguntum",
+    "RelativePath": "api/EvaluacionTipoPreguntums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionTipoPreguntum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionTipoPreguntumsController",
+    "Method": "PostEvaluacionTipoPreguntum",
+    "RelativePath": "api/EvaluacionTipoPreguntums",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacionTipoPreguntum",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionTipoPreguntum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionTipoPreguntum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionTipoPreguntumsController",
+    "Method": "GetEvaluacionTipoPreguntum",
+    "RelativePath": "api/EvaluacionTipoPreguntums/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionTipoPreguntum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionTipoPreguntumsController",
+    "Method": "PutEvaluacionTipoPreguntum",
+    "RelativePath": "api/EvaluacionTipoPreguntums/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacionTipoPreguntum",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionTipoPreguntum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionTipoPreguntumsController",
+    "Method": "DeleteEvaluacionTipoPreguntum",
+    "RelativePath": "api/EvaluacionTipoPreguntums/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
+    "Method": "GetLgCategoriaFichaTecnicaDetalle",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalle, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
+    "Method": "PostLgCategoriaFichaTecnicaDetalle",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgCategoriaFichaTecnicaDetalle",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalle",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalle",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
+    "Method": "GetLgCategoriaFichaTecnicaDetalle",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalle",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
+    "Method": "PutLgCategoriaFichaTecnicaDetalle",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalles/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgCategoriaFichaTecnicaDetalle",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalle",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
+    "Method": "Patch",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalles/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "patch",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalle",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
+    "Method": "DeleteLgCategoriaFichaTecnicaDetalle",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetallesController",
+    "Method": "GetByCategoriaFichaTecnicaId",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalles/getByCategoriaFichaTecnicaId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalle, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValorsController",
+    "Method": "GetLgCategoriaFichaTecnicaDetalleValor",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalleValors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValor, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValorsController",
+    "Method": "PostLgCategoriaFichaTecnicaDetalleValor",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalleValors",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgCategoriaFichaTecnicaDetalleValor",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValor",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValorsController",
+    "Method": "GetLgCategoriaFichaTecnicaDetalleValor",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalleValors/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValor",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValorsController",
+    "Method": "PutLgCategoriaFichaTecnicaDetalleValor",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalleValors/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgCategoriaFichaTecnicaDetalleValor",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValorsController",
+    "Method": "DeleteLgCategoriaFichaTecnicaDetalleValor",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalleValors/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValorsController",
+    "Method": "GetLgCategoriaFichaTecnicaDetalleValorByCategoriaFichaTecnicaDetalleId",
+    "RelativePath": "api/LgCategoriaFichaTecnicaDetalleValors/ByCategoriaFichaTecnicaDetalleId/{categoriaFichaTecnicaDetalleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoriaFichaTecnicaDetalleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnicaDetalleValor, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicasController",
+    "Method": "GetLgCategoriaFichaTecnica",
+    "RelativePath": "api/LgCategoriaFichaTecnicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicasController",
+    "Method": "PostLgCategoriaFichaTecnica",
+    "RelativePath": "api/LgCategoriaFichaTecnicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgCategoriaFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicasController",
+    "Method": "GetLgCategoriaFichaTecnica",
+    "RelativePath": "api/LgCategoriaFichaTecnicas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicasController",
+    "Method": "PutLgCategoriaFichaTecnica",
+    "RelativePath": "api/LgCategoriaFichaTecnicas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgCategoriaFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoriaFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicasController",
+    "Method": "DeleteLgCategoriaFichaTecnica",
+    "RelativePath": "api/LgCategoriaFichaTecnicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriaFichaTecnicasController",
+    "Method": "GetByCategoriaId",
+    "RelativePath": "api/LgCategoriaFichaTecnicas/GetByCategoriaId/{categoria_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoria_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[api_intiSoft.Dto.Logistica.Producto.CategoriaFichaTecnicaDetalleDto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "GetLgCategorium",
+    "RelativePath": "api/LgCategoriums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgCategoria, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "PostLgCategorium",
+    "RelativePath": "api/LgCategoriums",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgCategorium",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoria",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoria",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "GetLgCategorium",
+    "RelativePath": "api/LgCategoriums/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoria",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "PutLgCategorium",
+    "RelativePath": "api/LgCategoriums/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgCategorium",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgCategoria",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "PatchLgCategorium",
+    "RelativePath": "api/LgCategoriums/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "patchDoc",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "DeleteLgCategorium",
+    "RelativePath": "api/LgCategoriums/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "GetLgCategoriaByCategoria",
+    "RelativePath": "api/LgCategoriums/GetLgCategoriaByCategoria/{categoria}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoria",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgCategoriumsController",
+    "Method": "GetLgProductosByCategoria",
+    "RelativePath": "api/LgCategoriums/GetProductoByCategoria/{idCategoria}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoria",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Universal.DatoGenericoDto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgConversionUnidadsController",
+    "Method": "GetLgConversionUnidad",
+    "RelativePath": "api/LgConversionUnidads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgConversionUnidad, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgConversionUnidadsController",
+    "Method": "PostLgConversionUnidad",
+    "RelativePath": "api/LgConversionUnidads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgConversionUnidad",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgConversionUnidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgConversionUnidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgConversionUnidadsController",
+    "Method": "GetLgConversionUnidad",
+    "RelativePath": "api/LgConversionUnidads/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgConversionUnidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgConversionUnidadsController",
+    "Method": "PutLgConversionUnidad",
+    "RelativePath": "api/LgConversionUnidads/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgConversionUnidad",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgConversionUnidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgConversionUnidadsController",
+    "Method": "DeleteLgConversionUnidad",
+    "RelativePath": "api/LgConversionUnidads/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgDetalleListaFichaTecnicasController",
+    "Method": "GetLgDetalleListaFichaTecnica",
+    "RelativePath": "api/LgDetalleListaFichaTecnicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgDetalleListaFichaTecnicasController",
+    "Method": "PostLgDetalleListaFichaTecnica",
+    "RelativePath": "api/LgDetalleListaFichaTecnicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgDetalleListaFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgDetalleListaFichaTecnicasController",
+    "Method": "GetLgDetalleListaFichaTecnica",
+    "RelativePath": "api/LgDetalleListaFichaTecnicas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgDetalleListaFichaTecnicasController",
+    "Method": "PutLgDetalleListaFichaTecnica",
+    "RelativePath": "api/LgDetalleListaFichaTecnicas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgDetalleListaFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgDetalleListaFichaTecnicasController",
+    "Method": "DeleteLgDetalleListaFichaTecnica",
+    "RelativePath": "api/LgDetalleListaFichaTecnicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgDetalleListaFichaTecnicasController",
+    "Method": "GetLgDetalleListaFichaTecnicaByListaFichaTecnicaId",
+    "RelativePath": "api/LgDetalleListaFichaTecnicas/listaFichaTecnica/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaqueProductoesController",
+    "Method": "GetLgEmpaqueProducto",
+    "RelativePath": "api/LgEmpaqueProductoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgEmpaqueProducto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaqueProductoesController",
+    "Method": "PostLgEmpaqueProducto",
+    "RelativePath": "api/LgEmpaqueProductoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgEmpaqueProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaqueProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaqueProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaqueProductoesController",
+    "Method": "GetLgEmpaqueProducto",
+    "RelativePath": "api/LgEmpaqueProductoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaqueProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaqueProductoesController",
+    "Method": "PutLgEmpaqueProducto",
+    "RelativePath": "api/LgEmpaqueProductoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgEmpaqueProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaqueProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaqueProductoesController",
+    "Method": "DeleteLgEmpaqueProducto",
+    "RelativePath": "api/LgEmpaqueProductoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaquesController",
+    "Method": "GetLgEmpaque",
+    "RelativePath": "api/LgEmpaques",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgEmpaque, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaquesController",
+    "Method": "PostLgEmpaque",
+    "RelativePath": "api/LgEmpaques",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgEmpaque",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaque",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaque",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaquesController",
+    "Method": "GetLgEmpaque",
+    "RelativePath": "api/LgEmpaques/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaque",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaquesController",
+    "Method": "PutLgEmpaque",
+    "RelativePath": "api/LgEmpaques/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgEmpaque",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpaque",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpaquesController",
+    "Method": "DeleteLgEmpaque",
+    "RelativePath": "api/LgEmpaques/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadaProductoesController",
+    "Method": "GetLgEmpresaAsociadaProducto",
+    "RelativePath": "api/LgEmpresaAsociadaProductoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadaProducto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadaProductoesController",
+    "Method": "PostLgEmpresaAsociadaProducto",
+    "RelativePath": "api/LgEmpresaAsociadaProductoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgEmpresaAsociadaProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadaProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadaProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadaProductoesController",
+    "Method": "GetLgEmpresaAsociadaProducto",
+    "RelativePath": "api/LgEmpresaAsociadaProductoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadaProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadaProductoesController",
+    "Method": "PutLgEmpresaAsociadaProducto",
+    "RelativePath": "api/LgEmpresaAsociadaProductoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgEmpresaAsociadaProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadaProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadaProductoesController",
+    "Method": "DeleteLgEmpresaAsociadaProducto",
+    "RelativePath": "api/LgEmpresaAsociadaProductoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadumsController",
+    "Method": "GetLgEmpresaAsociadum",
+    "RelativePath": "api/LgEmpresaAsociadums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadumsController",
+    "Method": "PostLgEmpresaAsociadum",
+    "RelativePath": "api/LgEmpresaAsociadums",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgEmpresaAsociadum",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadumsController",
+    "Method": "GetLgEmpresaAsociadum",
+    "RelativePath": "api/LgEmpresaAsociadums/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadumsController",
+    "Method": "PutLgEmpresaAsociadum",
+    "RelativePath": "api/LgEmpresaAsociadums/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgEmpresaAsociadum",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgEmpresaAsociadumsController",
+    "Method": "DeleteLgEmpresaAsociadum",
+    "RelativePath": "api/LgEmpresaAsociadums/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgFichaTecnicasController",
+    "Method": "GetLgFichaTecnica",
+    "RelativePath": "api/LgFichaTecnicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgFichaTecnica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgFichaTecnicasController",
+    "Method": "PostLgFichaTecnica",
+    "RelativePath": "api/LgFichaTecnicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgFichaTecnicasController",
+    "Method": "GetLgFichaTecnica",
+    "RelativePath": "api/LgFichaTecnicas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgFichaTecnicasController",
+    "Method": "PutLgFichaTecnica",
+    "RelativePath": "api/LgFichaTecnicas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgFichaTecnicasController",
+    "Method": "DeleteLgFichaTecnica",
+    "RelativePath": "api/LgFichaTecnicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgLineaController",
+    "Method": "GetLgLinea",
+    "RelativePath": "api/LgLinea",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgLinea, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgLineaController",
+    "Method": "PostLgLinea",
+    "RelativePath": "api/LgLinea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LgLinea",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgLinea",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgLinea",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgLineaController",
+    "Method": "GetLgLinea",
+    "RelativePath": "api/LgLinea/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgLinea",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgLineaController",
+    "Method": "PutLgLinea",
+    "RelativePath": "api/LgLinea/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "LgLinea",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgLinea",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgLineaController",
+    "Method": "DeleteLgLinea",
+    "RelativePath": "api/LgLinea/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgLinea",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgListaFichaTecnicasController",
+    "Method": "GetLgListaFichaTecnica",
+    "RelativePath": "api/LgListaFichaTecnicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgListaFichaTecnica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgListaFichaTecnicasController",
+    "Method": "PostLgListaFichaTecnica",
+    "RelativePath": "api/LgListaFichaTecnicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgListaFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgListaFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgListaFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgListaFichaTecnicasController",
+    "Method": "GetLgListaFichaTecnica",
+    "RelativePath": "api/LgListaFichaTecnicas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgListaFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgListaFichaTecnicasController",
+    "Method": "PutLgListaFichaTecnica",
+    "RelativePath": "api/LgListaFichaTecnicas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgListaFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgListaFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgListaFichaTecnicasController",
+    "Method": "DeleteLgListaFichaTecnica",
+    "RelativePath": "api/LgListaFichaTecnicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgMarcasController",
+    "Method": "GetLgMarca",
+    "RelativePath": "api/LgMarcas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgMarca, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgMarcasController",
+    "Method": "PostLgMarca",
+    "RelativePath": "api/LgMarcas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgMarca",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgMarca",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgMarca",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgMarcasController",
+    "Method": "GetLgMarca",
+    "RelativePath": "api/LgMarcas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgMarca",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgMarcasController",
+    "Method": "PutLgMarca",
+    "RelativePath": "api/LgMarcas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgMarca",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgMarca",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgMarcasController",
+    "Method": "DeleteLgMarca",
+    "RelativePath": "api/LgMarcas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgMarca",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoesController",
+    "Method": "GetLgProducto",
+    "RelativePath": "api/LgProductoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgProducto, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoesController",
+    "Method": "PostLgProducto",
+    "RelativePath": "api/LgProductoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoesController",
+    "Method": "GetLgProducto",
+    "RelativePath": "api/LgProductoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.ProductoDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoesController",
+    "Method": "PutLgProducto",
+    "RelativePath": "api/LgProductoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgProducto",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoesController",
+    "Method": "DeleteLgProducto",
+    "RelativePath": "api/LgProductoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoesController",
+    "Method": "GetLgProductoByCategoriaId",
+    "RelativePath": "api/LgProductoes/GetLgProductoByCategoriaId/{categoria_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoria_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoFichaTecnicasController",
+    "Method": "GetLgProductoFichaTecnica",
+    "RelativePath": "api/LgProductoFichaTecnicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgProductoFichaTecnica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoFichaTecnicasController",
+    "Method": "PostLgProductoFichaTecnica",
+    "RelativePath": "api/LgProductoFichaTecnicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgProductoFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoFichaTecnicasController",
+    "Method": "GetLgProductoFichaTecnica",
+    "RelativePath": "api/LgProductoFichaTecnicas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoFichaTecnica",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoFichaTecnicasController",
+    "Method": "PutLgProductoFichaTecnica",
+    "RelativePath": "api/LgProductoFichaTecnicas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgProductoFichaTecnica",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgProductoFichaTecnica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoFichaTecnicasController",
+    "Method": "DeleteLgProductoFichaTecnica",
+    "RelativePath": "api/LgProductoFichaTecnicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgProductoFichaTecnicasController",
+    "Method": "GetLgProductoFichaTecnicaByCategoriaFichaTecnicaId",
+    "RelativePath": "api/LgProductoFichaTecnicas/ByCategoriaFichaTecnicaId/{categoriaFichaTecnicaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoriaFichaTecnicaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgProductoFichaTecnica, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoMarcasController",
+    "Method": "GetLgTipoMarca",
+    "RelativePath": "api/LgTipoMarcas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgTipoMarca, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoMarcasController",
+    "Method": "PostLgTipoMarca",
+    "RelativePath": "api/LgTipoMarcas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgTipoMarca",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoMarca",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoMarca",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoMarcasController",
+    "Method": "GetLgTipoMarca",
+    "RelativePath": "api/LgTipoMarcas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoMarca",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoMarcasController",
+    "Method": "PutLgTipoMarca",
+    "RelativePath": "api/LgTipoMarcas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgTipoMarca",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoMarca",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoMarcasController",
+    "Method": "DeleteLgTipoMarca",
+    "RelativePath": "api/LgTipoMarcas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoTransaccionsController",
+    "Method": "GetLgTipoTransaccion",
+    "RelativePath": "api/LgTipoTransaccions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgTipoTransaccion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoTransaccionsController",
+    "Method": "PostLgTipoTransaccion",
+    "RelativePath": "api/LgTipoTransaccions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgTipoTransaccion",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoTransaccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoTransaccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoTransaccionsController",
+    "Method": "GetLgTipoTransaccion",
+    "RelativePath": "api/LgTipoTransaccions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoTransaccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoTransaccionsController",
+    "Method": "PutLgTipoTransaccion",
+    "RelativePath": "api/LgTipoTransaccions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgTipoTransaccion",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgTipoTransaccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgTipoTransaccionsController",
+    "Method": "DeleteLgTipoTransaccion",
+    "RelativePath": "api/LgTipoTransaccions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int16",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgUnidadMedidumsController",
+    "Method": "GetLgUnidadMedidum",
+    "RelativePath": "api/LgUnidadMedidums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Logistica.Producto.LgUnidadMedidum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgUnidadMedidumsController",
+    "Method": "PostLgUnidadMedidum",
+    "RelativePath": "api/LgUnidadMedidums",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lgUnidadMedidum",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgUnidadMedidum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgUnidadMedidum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgUnidadMedidumsController",
+    "Method": "GetLgUnidadMedidum",
+    "RelativePath": "api/LgUnidadMedidums/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgUnidadMedidum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgUnidadMedidumsController",
+    "Method": "PutLgUnidadMedidum",
+    "RelativePath": "api/LgUnidadMedidums/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "lgUnidadMedidum",
+        "Type": "api_intiSoft.Models.Logistica.Producto.LgUnidadMedidum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Logistica.Producto.LgUnidadMedidumsController",
+    "Method": "DeleteLgUnidadMedidum",
+    "RelativePath": "api/LgUnidadMedidums/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculaItemsController",
+    "Method": "GetMatriculaItem",
+    "RelativePath": "api/MatriculaItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.MatriculaItem, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculaItemsController",
+    "Method": "PostMatriculaItem",
+    "RelativePath": "api/MatriculaItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matriculaItem",
+        "Type": "api_intiSoft.Models.CentroEstudios.MatriculaItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.MatriculaItem",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculaItemsController",
+    "Method": "GetMatriculaItem",
+    "RelativePath": "api/MatriculaItems/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.MatriculaItem",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculaItemsController",
+    "Method": "PutMatriculaItem",
+    "RelativePath": "api/MatriculaItems/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "matriculaItem",
+        "Type": "api_intiSoft.Models.CentroEstudios.MatriculaItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculaItemsController",
+    "Method": "DeleteMatriculaItem",
+    "RelativePath": "api/MatriculaItems/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "GetMatricula",
+    "RelativePath": "api/Matriculas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Matricula, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "PostMatricula",
+    "RelativePath": "api/Matriculas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matricula",
+        "Type": "api_intiSoft.Models.CentroEstudios.Matricula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Matricula",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "GetMatricula",
+    "RelativePath": "api/Matriculas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Matricula",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "PutMatricula",
+    "RelativePath": "api/Matriculas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "matricula",
+        "Type": "api_intiSoft.Models.CentroEstudios.Matricula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "DeleteMatricula",
+    "RelativePath": "api/Matriculas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "GetMatriculaByAlumnoSeccion",
+    "RelativePath": "api/Matriculas/GetMatriculaByAlumnoSeccion/{alumnoId}/{seccionCicloId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alumnoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seccionCicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Matricula",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "GetMatriculasByAlumnoCiclo",
+    "RelativePath": "api/Matriculas/GetMatriculasByAlumnoCiclo/{alumnoId}/{cicloId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alumnoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Matricula, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "GetMatriculasBySeccionCiclo",
+    "RelativePath": "api/Matriculas/GetMatriculasBySeccionCiclo/{seccionCicloId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seccionCicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Matricula, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.MatriculasController",
+    "Method": "GetMatriculasBySedeCiclo",
+    "RelativePath": "api/Matriculas/GetMatriculasBySedeCiclo/{sedeId}/{cicloId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sedeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cicloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Matricula, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.NivelsController",
+    "Method": "GetNivel",
+    "RelativePath": "api/Nivels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Nivel, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.NivelsController",
+    "Method": "PostNivel",
+    "RelativePath": "api/Nivels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nivel",
+        "Type": "api_intiSoft.Models.CentroEstudios.Nivel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Nivel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.NivelsController",
+    "Method": "GetNivel",
+    "RelativePath": "api/Nivels/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Nivel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.NivelsController",
+    "Method": "PutNivel",
+    "RelativePath": "api/Nivels/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "nivel",
+        "Type": "api_intiSoft.Models.CentroEstudios.Nivel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.NivelsController",
+    "Method": "DeleteNivel",
+    "RelativePath": "api/Nivels/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ParentescoesController",
+    "Method": "GetParentesco",
+    "RelativePath": "api/Parentescoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Parentesco, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ParentescoesController",
+    "Method": "PostParentesco",
+    "RelativePath": "api/Parentescoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parentesco",
+        "Type": "api_intiSoft.Models.CentroEstudios.Parentesco",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Parentesco",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ParentescoesController",
+    "Method": "GetParentesco",
+    "RelativePath": "api/Parentescoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Parentesco",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ParentescoesController",
+    "Method": "PutParentesco",
+    "RelativePath": "api/Parentescoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "parentesco",
+        "Type": "api_intiSoft.Models.CentroEstudios.Parentesco",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.ParentescoesController",
+    "Method": "DeleteParentesco",
+    "RelativePath": "api/Parentescoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "GetSeccionCiclo",
+    "RelativePath": "api/SeccionCicloes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.SeccionCiclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "PostSeccionCiclo",
+    "RelativePath": "api/SeccionCicloes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seccionCiclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.SeccionCiclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.SeccionCiclo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "GetSeccionCiclo",
+    "RelativePath": "api/SeccionCicloes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.SeccionCiclo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "PutSeccionCiclo",
+    "RelativePath": "api/SeccionCicloes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seccionCiclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.SeccionCiclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "PatchSeccionCiclo",
+    "RelativePath": "api/SeccionCicloes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seccionCiclo",
+        "Type": "api_intiSoft.Models.CentroEstudios.SeccionCiclo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "DeleteSeccionCiclo",
+    "RelativePath": "api/SeccionCicloes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "GetSeccionCicloByCiclo",
+    "RelativePath": "api/SeccionCicloes/ciclo/{ciclo_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ciclo_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.SeccionCiclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "GetSeccionCicloBySede",
+    "RelativePath": "api/SeccionCicloes/sede/{sede_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sede_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.SeccionCiclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionCicloesController",
+    "Method": "GetSeccionCicloBySedeAndCiclo",
+    "RelativePath": "api/SeccionCicloes/sede/{sede_id}/ciclo/{ciclo_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sede_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ciclo_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.SeccionCiclo, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionsController",
+    "Method": "GetSeccion",
+    "RelativePath": "api/Seccions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Seccion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionsController",
+    "Method": "PostSeccion",
+    "RelativePath": "api/Seccions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.Seccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Seccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionsController",
+    "Method": "GetSeccion",
+    "RelativePath": "api/Seccions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Seccion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionsController",
+    "Method": "PutSeccion",
+    "RelativePath": "api/Seccions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seccion",
+        "Type": "api_intiSoft.Models.CentroEstudios.Seccion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SeccionsController",
+    "Method": "DeleteSeccion",
+    "RelativePath": "api/Seccions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SedesController",
+    "Method": "GetSede",
+    "RelativePath": "api/Sedes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Sede, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SedesController",
+    "Method": "PostSede",
+    "RelativePath": "api/Sedes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sede",
+        "Type": "api_intiSoft.Models.CentroEstudios.Sede",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Sede",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SedesController",
+    "Method": "GetSede",
+    "RelativePath": "api/Sedes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Sede",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SedesController",
+    "Method": "PutSede",
+    "RelativePath": "api/Sedes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sede",
+        "Type": "api_intiSoft.Models.CentroEstudios.Sede",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SedesController",
+    "Method": "PatchSede",
+    "RelativePath": "api/Sedes/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sede",
+        "Type": "api_intiSoft.Models.CentroEstudios.Sede",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.SedesController",
+    "Method": "DeleteSede",
+    "RelativePath": "api/Sedes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.TipoEvaluacionsController",
+    "Method": "GetTipoEvaluacion",
+    "RelativePath": "api/TipoEvaluacions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.TipoEvaluacion, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.TipoEvaluacionsController",
+    "Method": "PostTipoEvaluacion",
+    "RelativePath": "api/TipoEvaluacions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoEvaluacion",
+        "Type": "api_intiSoft.Models.CentroEstudios.TipoEvaluacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.TipoEvaluacion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.TipoEvaluacionsController",
+    "Method": "GetTipoEvaluacion",
+    "RelativePath": "api/TipoEvaluacions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.TipoEvaluacion",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.TipoEvaluacionsController",
+    "Method": "PutTipoEvaluacion",
+    "RelativePath": "api/TipoEvaluacions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipoEvaluacion",
+        "Type": "api_intiSoft.Models.CentroEstudios.TipoEvaluacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.TipoEvaluacionsController",
+    "Method": "DeleteTipoEvaluacion",
+    "RelativePath": "api/TipoEvaluacions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.UniversidadsController",
+    "Method": "GetUniversidad",
+    "RelativePath": "api/Universidads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.Universidad, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.UniversidadsController",
+    "Method": "PostUniversidad",
+    "RelativePath": "api/Universidads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "universidad",
+        "Type": "api_intiSoft.Models.CentroEstudios.Universidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Universidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.UniversidadsController",
+    "Method": "GetUniversidad",
+    "RelativePath": "api/Universidads/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.Universidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.UniversidadsController",
+    "Method": "PutUniversidad",
+    "RelativePath": "api/Universidads/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "universidad",
+        "Type": "api_intiSoft.Models.CentroEstudios.Universidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.UniversidadsController",
+    "Method": "PatchUniversidad",
+    "RelativePath": "api/Universidads/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updates",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.UniversidadsController",
+    "Method": "DeleteUniversidad",
+    "RelativePath": "api/Universidads/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Universal.UnTipoDatoesController",
+    "Method": "GetUnTipoDato",
+    "RelativePath": "api/UnTipoDatoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.Universal.UnTipoDato, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Universal.UnTipoDatoesController",
+    "Method": "PostUnTipoDato",
+    "RelativePath": "api/UnTipoDatoes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "unTipoDato",
+        "Type": "api_intiSoft.Models.Universal.UnTipoDato",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Universal.UnTipoDato",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Universal.UnTipoDatoesController",
+    "Method": "GetUnTipoDato",
+    "RelativePath": "api/UnTipoDatoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.Universal.UnTipoDato",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Universal.UnTipoDatoesController",
+    "Method": "PutUnTipoDato",
+    "RelativePath": "api/UnTipoDatoes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "unTipoDato",
+        "Type": "api_intiSoft.Models.Universal.UnTipoDato",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.Universal.UnTipoDatoesController",
+    "Method": "DeleteUnTipoDato",
+    "RelativePath": "api/UnTipoDatoes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
