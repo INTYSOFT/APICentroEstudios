@@ -2360,6 +2360,234 @@
     ]
   },
   {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "GetEvaluacionProgramadum",
+    "RelativePath": "api/EvaluacionProgramadums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "PostEvaluacionProgramadum",
+    "RelativePath": "api/EvaluacionProgramadums",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evaluacionProgramadum",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "GetEvaluacionProgramadum",
+    "RelativePath": "api/EvaluacionProgramadums/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "PutEvaluacionProgramadum",
+    "RelativePath": "api/EvaluacionProgramadums/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "evaluacionProgramadum",
+        "Type": "api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "DeleteEvaluacionProgramadum",
+    "RelativePath": "api/EvaluacionProgramadums/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "GetEvaluacionProgramadumActivoByAnioMes",
+    "RelativePath": "api/EvaluacionProgramadums/activo/{anio}/{mes}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anio",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "mes",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "GetEvaluacionProgramadumByFechaInicio",
+    "RelativePath": "api/EvaluacionProgramadums/fechaInicio/{fecha_inicio}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha_inicio",
+        "Type": "System.DateOnly",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "GetEvaluacionProgramadumByFechaInicioAndCiclo",
+    "RelativePath": "api/EvaluacionProgramadums/fechaInicio/{fecha_inicio}/ciclo/{ciclo_id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha_inicio",
+        "Type": "System.DateOnly",
+        "IsRequired": true
+      },
+      {
+        "Name": "ciclo_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionProgramadumsController",
+    "Method": "GetEvaluacionProgramadumByRangoFechaInicio",
+    "RelativePath": "api/EvaluacionProgramadums/fechaInicio/rango",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fechaInicioDesde",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "fechaInicioHasta",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[api_intiSoft.Models.CentroEstudios.EvaluacionProgramadum, api_intiSoft, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "api_intiSoft.Controllers.CentroEstudios.EvaluacionRespuestumsController",
     "Method": "GetEvaluacionRespuestum",
     "RelativePath": "api/EvaluacionRespuestums",

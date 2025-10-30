@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TCSmgD8WZZk=",
+  "dgSpecHash": "MxZ2IrWcLtg=",
   "success": true,
-  "projectFilePath": "D:\\INTI\\INTYSoft\\APICentroEstudios\\api_intiSoft.csproj",
+  "projectFilePath": "D:\\inti\\INTYSoft\\APICentroEstudios\\api_intiSoft.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\omara\\.nuget\\packages\\finbuckle.multitenant\\9.0.0\\finbuckle.multitenant.9.0.0.nupkg.sha512",
     "C:\\Users\\omara\\.nuget\\packages\\finbuckle.multitenant.aspnetcore\\9.0.0\\finbuckle.multitenant.aspnetcore.9.0.0.nupkg.sha512",
