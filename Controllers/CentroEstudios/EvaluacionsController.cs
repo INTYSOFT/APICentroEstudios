@@ -31,10 +31,96 @@ namespace api_intiSoft.Controllers.CentroEstudios
 
             if (evaluacion == null)
             {
-                return NotFound();
+                return new ActionResult<Evaluacion>(new Evaluacion());
             }
 
             return evaluacion;
+        }
+
+        //Get. por sedeId
+        [HttpGet("sede/{sedeId}")]
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionBySede(int sedeId)
+        {
+            var evaluacions = await _context.Evaluacion
+                .Where(e => e.SedeId == sedeId)
+                .ToListAsync();
+            if (evaluacions == null || evaluacions.Count == 0)
+            {
+                return new List<Evaluacion>();
+            }
+            return evaluacions;
+        }
+
+        //GET: por sedeId y cicloId.
+        [HttpGet("sedes/{sedeId}/ciclo/{cicloId}")]
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionBySedeAndCiclo(int sedeId, int cicloId)
+        {
+            var evaluacions = await _context.Evaluacion
+                .Where(e => e.SedeId == sedeId && e.CicloId == cicloId)
+                .ToListAsync();
+            if (evaluacions == null || evaluacions.Count == 0)
+            {
+                return new List<Evaluacion>();
+            }
+            return evaluacions;
+        }
+
+
+        //GET por sedeId, cicloId y seccionId
+        [HttpGet("sede/{sedeId}/ciclos/{cicloId}/seccion/{seccionId}")]
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionBySedeCicloSeccion(int sedeId, int cicloId, int seccionId)
+        {
+            var evaluacions = await _context.Evaluacion
+                .Where(e => e.SedeId == sedeId && e.CicloId == cicloId && e.SeccionId == seccionId)
+                .ToListAsync();
+            if (evaluacions == null || evaluacions.Count == 0)
+            {
+                return new List<Evaluacion>();
+            }
+            return evaluacions;
+        }
+
+        //GET por alumnoId
+        [HttpGet("alumno/{alumnoId}")]
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionByAlumnoId(int alumnoId)
+        {
+            var evaluacions = await _context.Evaluacion
+                .Where(e => e.AlumnoId == alumnoId)
+                .ToListAsync();
+            if (evaluacions == null || evaluacions.Count == 0)
+            {
+                return new List<Evaluacion>();
+            }
+            return evaluacions;
+        }
+
+        //Get por evaluacionProgramadaId
+        [HttpGet("evaluacionProgramada/{evaluacionProgramadaId}")]
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionByEvaluacionProgramadaId(int evaluacionProgramadaId)
+        {
+            var evaluacions = await _context.Evaluacion
+                .Where(e => e.EvaluacionProgramadaId == evaluacionProgramadaId)
+                .ToListAsync();
+            if (evaluacions == null || evaluacions.Count == 0)
+            {
+                return new List<Evaluacion>();
+            }
+            return evaluacions;
+        }
+
+
+        //Get por evaluacionProgramadaId y alumnoId
+        [HttpGet("evaluacionProgramada/{evaluacionProgramadaId}/alumno/{alumnoId}")]
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionByEvaluacionProgramadaAndAlumno(int evaluacionProgramadaId, int alumnoId)
+        {
+            var evaluacions = await _context.Evaluacion
+                .Where(e => e.EvaluacionProgramadaId == evaluacionProgramadaId && e.AlumnoId == alumnoId)
+                .ToListAsync();
+            if (evaluacions == null || evaluacions.Count == 0)
+            {
+                return new List<Evaluacion>();
+            }
+            return evaluacions;
         }
 
         // PUT: api/Evaluacions/5
@@ -98,7 +184,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
 
         //get por sedeid, cicloid, seccionid
         [HttpGet("sede/{sedeId}/ciclo/{cicloId}/seccion/{seccionId}")]
-        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionBySedeCicloSeccion(int sedeId, int cicloId, int seccionId)
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionBySedeCicloSecciones(int sedeId, int cicloId, int seccionId)
         {
             var evaluacions = await _context.Evaluacion
                 .Where(e => e.SedeId == sedeId && e.CicloId == cicloId && e.SeccionId == seccionId)
@@ -123,6 +209,23 @@ namespace api_intiSoft.Controllers.CentroEstudios
             }
             return evaluacions;
         }
+
+        //GET: por evaluacionProgramadaId
+        [HttpGet("evaluacionProgramadaId/{evaluacionProgramadaId}")]
+        public async Task<ActionResult<IEnumerable<Evaluacion>>> GetEvaluacionByEvaluacionProgramadaIdAlt(int evaluacionProgramadaId)
+        {
+            var evaluacions = await _context.Evaluacion
+                .Where(e => e.EvaluacionProgramadaId == evaluacionProgramadaId)
+                .ToListAsync();
+            if (evaluacions == null || evaluacions.Count == 0)
+            {
+                return new List<Evaluacion>();
+            }
+            return evaluacions;
+        }
+
+
+
 
         // GET: api/Evaluacions/porEvaluacionProgramada/5
         [HttpGet("porEvaluacionProgramada/{evaluacionProgramadaId}")]

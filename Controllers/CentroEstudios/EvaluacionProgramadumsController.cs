@@ -36,7 +36,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
 
             if (evaluacionProgramadum == null)
             {
-                return NotFound();
+                return new ActionResult<EvaluacionProgramadum>(NotFound());
             }
 
             return evaluacionProgramadum;
@@ -69,7 +69,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                 .ToListAsync();
             if (evaluacionProgramadums == null || evaluacionProgramadums.Count == 0)
             {
-                return NotFound();
+                return new ActionResult<IEnumerable<EvaluacionProgramadum>>(NotFound());
             }
             return evaluacionProgramadums;
         }
@@ -85,7 +85,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                 .ToListAsync();
             if (evaluacionProgramadums == null || evaluacionProgramadums.Count == 0)
             {
-                return NotFound();
+                return new ActionResult<IEnumerable<EvaluacionProgramadum>>(NotFound());
             }
             return evaluacionProgramadums;
         }
@@ -99,7 +99,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                 .ToListAsync();
             if (evaluacionProgramadums == null || evaluacionProgramadums.Count == 0)
             {
-                return NotFound();
+                return new ActionResult<IEnumerable<EvaluacionProgramadum>>(NotFound());
             }
             return evaluacionProgramadums;
         }
@@ -133,6 +133,33 @@ namespace api_intiSoft.Controllers.CentroEstudios
                 }
             }
 
+            return NoContent();
+        }
+
+        //PATCH
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchEvaluacionProgramadum(int id, EvaluacionProgramadum evaluacionProgramadum)
+        {
+            if (id != evaluacionProgramadum.Id)
+            {
+                return BadRequest();
+            }
+            _context.Entry(evaluacionProgramadum).State = EntityState.Modified;
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EvaluacionProgramadumExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
             return NoContent();
         }
 

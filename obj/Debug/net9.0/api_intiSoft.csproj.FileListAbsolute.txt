@@ -510,9 +510,8 @@ D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\api_inti.CCE327D1.Up2Date
 D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\api_intiSoft.genruntimeconfig.cache
 D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\ref\api_intiSoft.dll
 D:\inti\INTYSoft\APICentroEstudios\obj\Debug\net9.0\api_intiSoft.sourcelink.json
-D:\inti\INTYSoft\APICentroEstudios\obj\Debug\net9.0\staticwebassets\msbuild.api_intiSoft.Microsoft.AspNetCore.StaticWebAssets.props
-D:\inti\INTYSoft\APICentroEstudios\obj\Debug\net9.0\staticwebassets\msbuild.api_intiSoft.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\inti\INTYSoft\APICentroEstudios\obj\Debug\net9.0\staticwebassets\msbuild.build.api_intiSoft.props
-D:\inti\INTYSoft\APICentroEstudios\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.api_intiSoft.props
-D:\inti\INTYSoft\APICentroEstudios\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.api_intiSoft.props
-D:\inti\INTYSoft\APICentroEstudios\obj\Debug\net9.0\staticwebassets.pack.json
+D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\rjimswa.dswa.cache.json
+D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\INTI\INTYSoft\APICentroEstudios\obj\Debug\net9.0\staticwebassets.build.json.cache

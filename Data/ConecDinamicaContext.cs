@@ -10,6 +10,7 @@ using api_intiSoft.Data;
 using api_intiSoft.Models.Logistica.Producto;
 using api_intiSoft.Models.Contabilidad;
 using Finbuckle.MultiTenant.Abstractions;
+using api_intiSoft.Models.CentroEstudios;
 
 //using api_intiSoft.Models.Logistica.Producto;
 
@@ -122,6 +123,7 @@ namespace intiSoft
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgEmpresaAsociadaProducto> LgEmpresaAsociadaProducto { get; set; } = default!;
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgListaFichaTecnica> LgListaFichaTecnica { get; set; } = default!;
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica> LgDetalleListaFichaTecnica { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.EstadoEvaluacionProgramadum> EstadoEvaluacionProgramadum { get; set; } = default!;
         
         
         

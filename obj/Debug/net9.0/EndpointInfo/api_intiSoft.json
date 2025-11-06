@@ -3521,6 +3521,201 @@
         }
       }
     },
+    "/api/EstadoEvaluacionProgramadums": {
+      "get": {
+        "tags": [
+          "EstadoEvaluacionProgramadums"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EstadoEvaluacionProgramadums"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EstadoEvaluacionProgramadums/{id}": {
+      "get": {
+        "tags": [
+          "EstadoEvaluacionProgramadums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "EstadoEvaluacionProgramadums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoEvaluacionProgramadum"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EstadoEvaluacionProgramadums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/EvaluacionClaves": {
       "get": {
         "tags": [
@@ -3956,6 +4151,75 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/consulta/evaluaciones-programadas/{evaluacionProgramadaId}": {
+      "get": {
+        "tags": [
+          "EvaluacionesProgramadas"
+        ],
+        "parameters": [
+          {
+            "name": "evaluacionProgramadaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EvaluacionProgramadaConsultaDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EvaluacionProgramadaConsultaDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EvaluacionProgramadaConsultaDto"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -4476,6 +4740,51 @@
         }
       },
       "put": {
+        "tags": [
+          "EvaluacionProgramadums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluacionProgramadum"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluacionProgramadum"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluacionProgramadum"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluacionProgramadum"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
         "tags": [
           "EvaluacionProgramadums"
         ],
@@ -5153,6 +5462,336 @@
         }
       }
     },
+    "/api/Evaluacions/sede/{sedeId}": {
+      "get": {
+        "tags": [
+          "Evaluacions"
+        ],
+        "parameters": [
+          {
+            "name": "sedeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Evaluacions/sedes/{sedeId}/ciclo/{cicloId}": {
+      "get": {
+        "tags": [
+          "Evaluacions"
+        ],
+        "parameters": [
+          {
+            "name": "sedeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cicloId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Evaluacions/sede/{sedeId}/ciclos/{cicloId}/seccion/{seccionId}": {
+      "get": {
+        "tags": [
+          "Evaluacions"
+        ],
+        "parameters": [
+          {
+            "name": "sedeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cicloId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "seccionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Evaluacions/alumno/{alumnoId}": {
+      "get": {
+        "tags": [
+          "Evaluacions"
+        ],
+        "parameters": [
+          {
+            "name": "alumnoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Evaluacions/evaluacionProgramada/{evaluacionProgramadaId}": {
+      "get": {
+        "tags": [
+          "Evaluacions"
+        ],
+        "parameters": [
+          {
+            "name": "evaluacionProgramadaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Evaluacions/evaluacionProgramada/{evaluacionProgramadaId}/alumno/{alumnoId}": {
+      "get": {
+        "tags": [
+          "Evaluacions"
+        ],
+        "parameters": [
+          {
+            "name": "evaluacionProgramadaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "alumnoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Evaluacions/sede/{sedeId}/ciclo/{cicloId}/alumno/{alumnoId}": {
       "get": {
         "tags": [
@@ -5353,6 +5992,55 @@
           },
           {
             "name": "cicloId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Evaluacion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Evaluacions/evaluacionProgramadaId/{evaluacionProgramadaId}": {
+      "get": {
+        "tags": [
+          "Evaluacions"
+        ],
+        "parameters": [
+          {
+            "name": "evaluacionProgramadaId",
             "in": "path",
             "required": true,
             "schema": {
@@ -10427,6 +11115,73 @@
         }
       }
     },
+    "/api/Matriculas/GetMatriculasBySedeCicloSeccion/{sedeId}/{cicloId}/{seccionId}": {
+      "get": {
+        "tags": [
+          "Matriculas"
+        ],
+        "parameters": [
+          {
+            "name": "sedeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cicloId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "seccionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Matricula"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Matricula"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Matricula"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Matriculas/GetMatriculasBySedeCiclo/{sedeId}/{cicloId}": {
       "get": {
         "tags": [
@@ -14127,6 +14882,53 @@
         },
         "additionalProperties": false
       },
+      "EvaluacionProgramadaConsultaDto": {
+        "type": "object",
+        "properties": {
+          "estadoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "evaluacionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evaluacionProgramadaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sede": {
+            "type": "string",
+            "nullable": true
+          },
+          "ciclo": {
+            "type": "string",
+            "nullable": true
+          },
+          "seccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "alumnoDni": {
+            "type": "string",
+            "nullable": true
+          },
+          "alumnoApellidos": {
+            "type": "string",
+            "nullable": true
+          },
+          "alumnoNombres": {
+            "type": "string",
+            "nullable": true
+          },
+          "alumnoCelular": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "EvaluacionProgramadaSeccion": {
         "type": "object",
         "properties": {
@@ -17566,6 +18368,33 @@
           }
         },
         "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
       },
       "ProductoDto": {
         "type": "object",

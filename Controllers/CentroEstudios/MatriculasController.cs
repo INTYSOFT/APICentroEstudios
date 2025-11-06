@@ -31,7 +31,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
 
             if (matricula == null)
             {
-                return NotFound();
+                return new ActionResult<Matricula>(NotFound());
             }
 
             return matricula;
@@ -46,7 +46,7 @@ namespace api_intiSoft.Controllers.CentroEstudios
                 .FirstOrDefaultAsync();
             if (matricula == null)
             {
-                return NotFound();
+                return new ActionResult<Matricula>(NotFound());
             }
             return matricula;
         }
@@ -72,6 +72,21 @@ namespace api_intiSoft.Controllers.CentroEstudios
         {
             var matriculas = await _context.Matricula
                 .Where(m => m.SeccionCicloId == seccionCicloId)
+                .ToListAsync();
+            if (matriculas == null || matriculas.Count == 0)
+            {
+                // Return an empty list instead of NotFound
+                return new List<Matricula>();
+            }
+            return matriculas;
+        }
+
+        //Get sede , ciclo, seccion
+        [HttpGet("GetMatriculasBySedeCicloSeccion/{sedeId}/{cicloId}/{seccionId}")]
+        public async Task<ActionResult<IEnumerable<Matricula>>> GetMatriculasBySedeCicloSeccion(int sedeId, int cicloId, int seccionId)
+        {
+            var matriculas = await _context.Matricula
+                .Where(m => m.SedeId == sedeId && m.CicloId == cicloId && m.SeccionId == seccionId)
                 .ToListAsync();
             if (matriculas == null || matriculas.Count == 0)
             {

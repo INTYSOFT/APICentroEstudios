@@ -49,7 +49,8 @@ public sealed class EvaluacionesProgramadasController : ControllerBase
 
         if (resultados.Count == 0)
         {
-            return NotFound();
+            //return vacio
+            return resultados = new List<EvaluacionProgramadaConsultaDto>();
         }
 
         return Ok(resultados);
