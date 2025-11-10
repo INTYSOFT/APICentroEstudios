@@ -104,6 +104,20 @@ namespace api_intiSoft.Controllers.CentroEstudios
             return evaluacionProgramadums;
         }
 
+        //GEt por estadoId
+        [HttpGet("estado/{estadoId}")]
+        public async Task<ActionResult<IEnumerable<EvaluacionProgramadum>>> GetEvaluacionProgramadumByEstadoId(int estadoId)
+        {
+            var evaluacionProgramadums = await _context.EvaluacionProgramadum
+                .Where(e => e.EstadoId == estadoId)
+                .ToListAsync();
+            if (evaluacionProgramadums == null || evaluacionProgramadums.Count == 0)
+            {
+                return new ActionResult<IEnumerable<EvaluacionProgramadum>>(NotFound());
+            }
+            return evaluacionProgramadums;
+        }
+
 
         // PUT: api/EvaluacionProgramadums/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

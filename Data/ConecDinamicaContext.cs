@@ -124,11 +124,18 @@ namespace intiSoft
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgListaFichaTecnica> LgListaFichaTecnica { get; set; } = default!;
         public DbSet<api_intiSoft.Models.Logistica.Producto.LgDetalleListaFichaTecnica> LgDetalleListaFichaTecnica { get; set; } = default!;
         public DbSet<api_intiSoft.Models.CentroEstudios.EstadoEvaluacionProgramadum> EstadoEvaluacionProgramadum { get; set; } = default!;
-        
-        
-        
+
+
+        //SgUsuario
+        public DbSet<api_intiSoft.Models.Seguridad.SgUsuario> SgUsuario { get; set; } = default!;
+
         //public DbSet<LgCategorium> LgCategorium { get; set; } = default!;
         //public DbSet<api_intiSoft.Models.Logistica.Producto.LgProducto> LgProducto { get; set; } = default!;
+        
+        //EvaluacionDetalleDefatult
+        public DbSet<api_intiSoft.Models.CentroEstudios.EvaluacionDetalleDefatult> EvaluacionDetalleDefatult { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.AttendanceLog> AttendanceLog { get; set; } = default!;
+        public DbSet<api_intiSoft.Models.CentroEstudios.AttendanceDaily> AttendanceDaily { get; set; } = default!;
 
 
     }

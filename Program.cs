@@ -64,6 +64,8 @@ builder.Services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
 //services    .AddControllersWithViews()    .AddNewtonsoftJson();
 builder.Services.AddControllersWithViews();
 //AddNewtonsoftJson
